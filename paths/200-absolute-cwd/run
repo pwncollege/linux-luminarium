@@ -1,7 +1,7 @@
 #!/opt/pwn.college/bash
 
 RANDOM=$(cksum /flag  | awk '{print $1}')
-CANDIDATES==("/" "/tmp" "/usr/bin" "/var/log" "/etc/apt/sources.list.d" "/usr/share/doc" "/var/lib/apt/lists" )
+CANDIDATES=("/" "/tmp" "/usr/bin" "/var/log" "/etc/apt/sources.list.d" "/usr/share/doc" "/var/lib/apt/lists" )
 NEEDED=${CANDIDATES[ $RANDOM % ${#CANDIDATES[@]} ]}
 
 if [ "$PWD" != "$NEEDED" ]
@@ -9,6 +9,7 @@ then
 	echo -e "${COLOR_RED}Incorrect...${COLORLESS}"
 	echo "You are not currently in the $NEEDED directory."
 	echo 'Please use the `cd` utility to change directory appropriately.'
+	exit 1
 fi
 
 if [ "${0:0:1}" != "/" ]
