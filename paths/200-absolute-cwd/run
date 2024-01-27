@@ -37,7 +37,7 @@ fi
 
 if [ "${0:0:1}" != "/" ]
 then
-	echo -e "${COLOR_RED}Inorrect...${COLORLESS}"
+	echo -e "${COLOR_RED}Incorrect...${COLORLESS}"
 	echo "You did not call this challenge using an absolute path!"
 	echo "An absolute path is anchored at the root of the filesystem, so it starts with /"
 	exit 1

@@ -1,0 +1,30 @@
+#!/opt/pwn.college/bash
+
+NEEDED="/"
+
+if [ "$PWD" != "$NEEDED" ]
+then
+	echo -e "${COLOR_RED}Incorrect...${COLORLESS}"
+	echo "You are not currently in the $NEEDED directory."
+	echo 'Please use the `cd` utility to change directory appropriately.'
+	exit 1
+fi
+
+if [ "${0:0:1}" == "/" ]
+then
+	echo -e "${COLOR_RED}Incorrect...${COLORLESS}"
+	echo "You invoked this challenge with an absolute path. This challenge needs a relative path!"
+	exit 1
+fi
+
+if [ "${0:0:1}" == "." ]
+then
+	echo -e "${COLOR_RED}Incorrect...${COLORLESS}"
+	echo "This challenge must be invoked with a relative path that starts with a letter!"
+	exit 1
+fi
+
+echo -e "${COLOR_GREEN}Correct!!!${COLORLESS}"
+echo "$0 is a relative path, invoked from the right directory!"
+echo "Here is your flag:"
+/bin/cat /flag

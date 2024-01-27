@@ -10,3 +10,5 @@ If your relative path is `asdf/fdsa`, the full resolved path will be `/var/asdf/
 
 Let's try it here!
 You'll need to run `/challenge/run` using a relative path while having a current working directory of `/`.
+For this level, I'll give you a hint.
+Your relative path starts with the letter `c` 😊

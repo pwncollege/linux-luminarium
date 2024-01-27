@@ -1,6 +1,5 @@
 #!/opt/pwn.college/bash
 
-RANDOM=$(cksum /flag  | awk '{print $1}')
 NEEDED="/"
 
 if [ "$PWD" != "$NEEDED" ]
@@ -11,11 +10,17 @@ then
 	exit 1
 fi
 
-if [ "${0:0:1}" != "/" ]
+if [ "${0:0:1}" == "/" ]
 then
-	echo -e "${COLOR_RED}Inorrect...${COLORLESS}"
-	echo "You did not call this challenge using an absolute path!"
-	echo "An absolute path is anchored at the root of the filesystem, so it starts with /"
+	echo -e "${COLOR_RED}Incorrect...${COLORLESS}"
+	echo "You invoked this challenge with an absolute path. This challenge needs a relative path!"
+	exit 1
+fi
+
+if [ "${0:0:1}" != "." ]
+then
+	echo -e "${COLOR_RED}Incorrect...${COLORLESS}"
+	echo 'This challenge must be called with a relative path that explicitly starts with a `.`!'
 	exit 1
 fi
 
