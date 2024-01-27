@@ -10,3 +10,7 @@ challenges:
   name: Running programs with absolute paths
 - id: "200-absolute-cwd"
   name: Running programs with absolute from a specific directory
+- id: "201-absolute-cwd"
+  name: Running programs with absolute from another directory
+- id: "202-absolute-cwd"
+  name: Running programs with absolute from a third directory
