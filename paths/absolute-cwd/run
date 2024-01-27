@@ -8,7 +8,7 @@ CANDIDATES=(
 	"/etc"
 	"/sys"
 	"/proc/$PPID"
-	"/proc/$PPID/fds"
+	"/proc/$PPID/fd"
 	"/home"
 	"/usr/bin"
 	"/var/log"
