@@ -11,8 +11,8 @@ challenges:
 - id: "200-absolute-cwd"
   name: Running programs via absolute path from a specific directory
 - id: "201-absolute-cwd"
-  name: Running programs via absolute path from another directory
+  name: More practice: the previous challenge, with a different directory
 - id: "202-absolute-cwd"
-  name: Running programs via absolute path from a third directory
+  name: More practice: the previous challenge, with a different directory
 - id: "300-relative"
   name: "Running programs via relative path from /"
