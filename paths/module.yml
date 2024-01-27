@@ -10,9 +10,9 @@ challenges:
   name: Running programs via absolute paths
 - id: "absolute-cwd"
   name: Running programs via absolute path from a specific directory
-- id: "absolute-cwd.2"
+- id: "absolute-cwd-2"
   name: "More practice: the previous challenge, with a different directory"
-- id: "absolute-cwd.3"
+- id: "absolute-cwd-3"
   name: "More practice: the previous challenge, with a different directory"
 - id: "relative-naked"
   name: "Running programs via implicit relative path from /"
