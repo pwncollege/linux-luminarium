@@ -1,0 +1,6 @@
+id: "learning-linux"
+name: Linux Luminarium
+award:
+  emoji: 🐧
+modules:
+- id: "paths"
