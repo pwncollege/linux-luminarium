@@ -7,10 +7,12 @@ resources:
 
 challenges:
 - id: "100-absolute"
-  name: Running programs with absolute paths
+  name: Running programs via absolute paths
 - id: "200-absolute-cwd"
-  name: Running programs with absolute from a specific directory
+  name: Running programs via absolute path from a specific directory
 - id: "201-absolute-cwd"
-  name: Running programs with absolute from another directory
+  name: Running programs via absolute path from another directory
 - id: "202-absolute-cwd"
-  name: Running programs with absolute from a third directory
+  name: Running programs via absolute path from a third directory
+- id: "300-relative"
+  name: "Running programs via relative path from /"
