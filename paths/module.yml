@@ -18,3 +18,5 @@ challenges:
   name: "Running programs via implicit relative path from /"
 - id: "310-relative-dot"
   name: "Running programs via explicit relative path from /"
+- id: "320-relative-dot-local"
+  name: "Running programs via implicit relative path from their own directory"
