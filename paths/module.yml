@@ -1,0 +1,10 @@
+name: Other Challenges
+resources:
+- name: Resources
+  type: markdown
+  content: |
+    - [What is PATH?](https://www.linfo.org/path_env_var.html)
+
+challenges:
+- id: "100-absolute"
+  name: Running programs with absolute paths
