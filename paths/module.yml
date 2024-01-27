@@ -6,17 +6,17 @@ resources:
     - [What is PATH?](https://www.linfo.org/path_env_var.html)
 
 challenges:
-- id: "100-absolute"
+- id: "absolute"
   name: Running programs via absolute paths
-- id: "200-absolute-cwd"
+- id: "absolute-cwd"
   name: Running programs via absolute path from a specific directory
-- id: "201-absolute-cwd"
+- id: "absolute-cwd.2"
   name: More practice: the previous challenge, with a different directory
-- id: "202-absolute-cwd"
+- id: "absolute-cwd.3"
   name: More practice: the previous challenge, with a different directory
-- id: "300-relative-naked"
+- id: "relative-naked"
   name: "Running programs via implicit relative path from /"
-- id: "310-relative-dot"
+- id: "relative-dot"
   name: "Running programs via explicit relative path from /"
-- id: "320-relative-dot-local"
+- id: "relative-dot-local"
   name: "Running programs via implicit relative path from their own directory"
