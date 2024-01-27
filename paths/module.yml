@@ -8,3 +8,5 @@ resources:
 challenges:
 - id: "100-absolute"
   name: Running programs with absolute paths
+- id: "200-absolute-cwd"
+  name: Running programs with absolute from a specific directory
