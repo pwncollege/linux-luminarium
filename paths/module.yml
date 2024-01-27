@@ -16,5 +16,5 @@ challenges:
   name: More practice: the previous challenge, with a different directory
 - id: "300-relative-naked"
   name: "Running programs via implicit relative path from /"
-- id: "300-relative-dot"
+- id: "310-relative-dot"
   name: "Running programs via explicit relative path from /"
