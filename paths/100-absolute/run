@@ -10,4 +10,4 @@ fi
 
 echo -e "${COLOR_GREEN}Correct!!!${COLORLESS}"
 echo "$0 is an absolute path! Here is your flag:"
-cat /flag
+/bin/cat /flag

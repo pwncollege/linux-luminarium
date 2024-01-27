@@ -1,7 +1,30 @@
 #!/opt/pwn.college/bash
 
 RANDOM=$(cksum /flag  | awk '{print $1}')
-CANDIDATES=("/" "/tmp" "/usr/bin" "/var/log" "/etc/apt/sources.list.d" "/usr/share/doc" "/var/lib/apt/lists" )
+CANDIDATES=(
+	"/"
+	"/tmp"
+	"/var"
+	"/etc"
+	"/sys"
+	"/proc/$PPID"
+	"/proc/$PPID/fds"
+	"/home"
+	"/usr/bin"
+	"/var/log"
+	"/sys/kernel"
+	"/etc/apt/sources.list.d"
+	"/etc/X11/fonts/Type1"
+	"/usr/include"
+	"/usr/share/zoneinfo/posix/Asia"
+	"/usr/aarch64-linux-gnu/include/gnu"
+	"/usr/share/doc"
+	"/usr/share/doc/fontconfig"
+	"/usr/share/build-essential"
+	"/var/lib/apt/lists"
+	"/var/lib/ghostscript/CMap"
+	"/usr/share/locale/lb/LC_MESSAGES"
+)
 NEEDED=${CANDIDATES[ $RANDOM % ${#CANDIDATES[@]} ]}
 
 if [ "$PWD" != "$NEEDED" ]
@@ -23,4 +46,4 @@ fi
 echo -e "${COLOR_GREEN}Correct!!!${COLORLESS}"
 echo "$0 is an absolute path, invoked from the right directory!"
 echo "Here is your flag:"
-cat /flag
+/bin/cat /flag
