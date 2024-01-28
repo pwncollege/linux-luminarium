@@ -1,4 +1,4 @@
 #!/bin/bash
 
 read -a FLAG < /flag
-echo -n "export FLAGVAR=$FLAG" >> /challenge/.bashrc
+echo -n "export FLAG=$FLAG" >> /challenge/.bashrc
