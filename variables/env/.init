@@ -1,0 +1,4 @@
+#!/bin/bash
+
+read -a FLAG < /flag
+echo -n "export FLAG=$FLAG" >> /challenge/.bashrc

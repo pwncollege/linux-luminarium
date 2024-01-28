@@ -8,3 +8,5 @@ resources:
 challenges:
 - id: "echo"
   name: "Learn to print out variables!"
+- id: "env"
+  name: "Printing out variables without echo!"
