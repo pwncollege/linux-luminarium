@@ -12,3 +12,5 @@ challenges:
   name: "Printing out variables without echo!"
 - id: "setvar"
   name: "Learn to set variables!"
+- id: "setvar-multi"
+  name: "Learn to set multi-word variables!"

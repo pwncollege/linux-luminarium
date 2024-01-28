@@ -1,0 +1,16 @@
+#!/bin/bash
+
+read -a FLAG < /flag
+FLA=$RANDOM
+FLB=$RANDOM
+echo $FLAG > /tmp/.$FLA-$FLB
+echo "export FLA=$FLA" >> /challenge/.bashrc
+echo "export FLB=$FLB" >> /challenge/.bashrc
+
+mv /challenge/pwn /bin/pwn
+ln -s /bin/pwn /bin/PWN
+rm -f /usr/local/bin/pwn
+mv /challenge/college /bin/college
+ln -s /bin/college /bin/COLLEGE
+mv /challenge/yeah /bin/yeah
+ln -s /bin/yeah /bin/YEAH

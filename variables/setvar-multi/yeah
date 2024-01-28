@@ -1,0 +1,3 @@
+#!/bin/bash
+
+fold -s <<< "It looks like you did not put quotes around the multi-word value in your variable assignment! This caused the shell to treat '$0' as a command. Quote your multi-word values!"
