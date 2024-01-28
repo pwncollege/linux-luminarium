@@ -10,3 +10,5 @@ challenges:
   name: "Learn to print out variables!"
 - id: "env"
   name: "Printing out variables without echo!"
+- id: "setvar"
+  name: "Learn to set variables!"
