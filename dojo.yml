@@ -4,3 +4,4 @@ award:
   emoji: 🐧
 modules:
 - id: "paths"
+- id: "variables"

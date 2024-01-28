@@ -1,0 +1,7 @@
+#!/bin/bash
+
+/bin/fold -w $(/bin/tput cols) -s <<END
+You cannot solve this challenge using /challenge/run.
+However, the flag is already in the FLAG variable in your shell.
+Print it out!
+END

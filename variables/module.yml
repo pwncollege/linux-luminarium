@@ -1,0 +1,10 @@
+name: Shell Variables
+resources:
+- name: Resources
+  type: markdown
+  content: |
+    - The Linux Documentation Project has a section n [shell variables](https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-5.html)
+
+challenges:
+- id: "echo"
+  name: "Learn to print out variables!"
