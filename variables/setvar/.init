@@ -9,3 +9,4 @@ echo "export FLB=$FLB" >> /challenge/.bashrc
 
 mv /challenge/pwn /bin/pwn
 ln -s /bin/pwn /bin/PWN
+rm -f /usr/local/bin/pwn
