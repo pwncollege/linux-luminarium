@@ -6,3 +6,6 @@ FLB=$RANDOM
 echo $FLAG > /tmp/.$FLA-$FLB
 echo "export FLA=$FLA" >> /challenge/.bashrc
 echo "export FLB=$FLB" >> /challenge/.bashrc
+
+mv /challenge/pwn /bin/pwn
+ln -s /bin/pwn /bin/PWN
