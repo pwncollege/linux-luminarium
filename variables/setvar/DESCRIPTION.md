@@ -2,7 +2,7 @@ Naturally, as well as reading values stored in variables, you can write values t
 This is done, as with many other languages, using `=`.
 To set variable `VAR` to value `1337`, you would use:
 
-```
+```sh
 $ VAR=1337
 ```
 
@@ -11,7 +11,7 @@ In shell terms, this is called *variable expansion*, and is, surprisingly, the s
 
 After setting variables, you can access them using the techniques you've learned previously, such as:
 
-```
+```sh
 $ echo $VAR
 1337
 ```
