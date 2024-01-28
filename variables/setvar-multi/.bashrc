@@ -1,5 +1,6 @@
 function give_flag {
 	if [ "$PWN" == "COLLEGE YEAH" ]
+	then
 		fold -s <<< "You've set the PWN variable properly! As promised, here is the flag:"
 		cat "/tmp/.$FLA-$FLB"
 	elif [ "$PWN" == "COLLEGE" ]
