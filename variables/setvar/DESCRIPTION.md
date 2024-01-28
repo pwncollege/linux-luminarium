@@ -6,8 +6,11 @@ To set variable `VAR` to value `1337`, you would use:
 $ VAR=1337
 ```
 
-Note that this uses `VAR` and *not* `$VAR`: the `$` is only prepended to *access* variables.
-In shell terms, this is called *variable expansion*, and is, surprisingly, the source of many potential vulnerabilities (if you're interested in that, check out the Art of the Shell dojo when you get comfortable with the command line!).
+Note that there are no spaces around the `=`!
+If you put spaces (e.g., `VAR = 1337`), the shell won't recognize a variable assignment and will, instead, try to run the `VAR` command (which does not exist).
+
+Also note that this uses `VAR` and *not* `$VAR`: the `$` is only prepended to *access* variables.
+In shell terms, this prepending of `$` triggers what is called *variable expansion*, and is, surprisingly, the source of many potential vulnerabilities (if you're interested in that, check out the Art of the Shell dojo when you get comfortable with the command line!).
 
 After setting variables, you can access them using the techniques you've learned previously, such as:
 
