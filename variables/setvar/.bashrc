@@ -3,7 +3,7 @@ function give_flag {
 	then
 		fold -s <<< "You've set the PWN variable properly! As promised, here is the flag:"
 		cat "/tmp/.$FLA-$FLB"
-	if [ "${PWN^^}" == "COLLEGE" ]
+	elif [ "${PWN^^}" == "COLLEGE" ]
 	then
 		fold -s <<< "You've set the PWN variable, but it looks like you didn't it to COLLEGE with all uppercase letters. This variable check is case-sensitive!"
 	elif [ -n "$PWN" ]
