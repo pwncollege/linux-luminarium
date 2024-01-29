@@ -2,8 +2,8 @@ Naturally, as well as reading values stored in variables, you can write values t
 This is done, as with many other languages, using `=`.
 To set variable `VAR` to value `1337`, you would use:
 
-```sh
-$ VAR=1337
+```console
+hacker@dojo:~$ VAR=1337
 ```
 
 Note that there are no spaces around the `=`!
@@ -14,8 +14,8 @@ In shell terms, this prepending of `$` triggers what is called *variable expansi
 
 After setting variables, you can access them using the techniques you've learned previously, such as:
 
-```sh
-$ echo $VAR
+```console
+hacker@dojo:~$ echo $VAR
 1337
 ```
 

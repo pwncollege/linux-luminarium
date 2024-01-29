@@ -5,9 +5,9 @@ Here, things get slightly tricky.
 Linux explicitly avoids automatically looking in the current directory when you provide a "naked" path.
 Consider the following:
 
-```
-$ cd /challenge
-$ run
+```console
+hacker@dojo:~$ cd /challenge
+hacker@dojo:/challenge$ run
 ```
 
 This will *not* invoke /challenge/run.

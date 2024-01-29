@@ -1,8 +1,9 @@
 The Linux filesystem has tons of directories with tons of files.
 You can navigate around directories by using the `cd` (`c`hange `d`irectory) command and passing a path to it, as so:
 
-```
-$ cd /some/new/directory
+```console
+hacker@dojo:~$ cd /some/new/directory
+hacker@dojo:/some/new/directory$ cd /some/new/directory
 ```
 
 This affects the "current working directory" of your process (in this case, the bash shell).

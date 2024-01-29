@@ -11,8 +11,8 @@ You can accomplish this using a number of ways, but we'll start with `echo`.
 This command just prints stuff.
 For example:
 
-```
-$ echo Hello Hackers!
+```console
+hacker@dojo:~$ echo Hello Hackers!
 Hello Hackers!
 ```
 
@@ -20,8 +20,8 @@ You can also print out variables with `echo`, by prepending the variable name wi
 For example, there is a variable, `PWD`, that always holds the current working directory of the current shell.
 You print it out as so:
 
-```
-$ echo $PWD
+```console
+hacker@dojo:~$ echo $PWD
 /home/hacker
 ```
 
