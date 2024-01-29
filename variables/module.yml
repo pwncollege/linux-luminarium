@@ -14,3 +14,5 @@ challenges:
   name: "Learn to set variables!"
 - id: "setvar-multi"
   name: "Learn to set multi-word variables!"
+- id: "export"
+  name: "Learn to export variables into child processes!"

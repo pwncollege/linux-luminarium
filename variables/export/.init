@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cp /challenge/space_catch /bin/pwn
+cp /challenge/space_catch /bin/college
+cp /challenge/space_catch /bin/PWN
+cp /challenge/space_catch /bin/COLLEGE
+rm /challenge/space_catch
