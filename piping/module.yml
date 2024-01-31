@@ -9,3 +9,5 @@ resources:
 challenges:
 - id: "echo"
   name: "Learn to redirect the output of commands!"
+- id: "stdout-myflag"
+  name: "Learn to redirect the output of more commands!"
