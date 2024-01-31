@@ -5,3 +5,4 @@ award:
 modules:
 - id: "paths"
 - id: "variables"
+- id: "piping"

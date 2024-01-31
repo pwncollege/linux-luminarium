@@ -1,0 +1,11 @@
+name: Piping
+resources:
+- name: Resources
+  type: markdown
+  content: |
+    - A [treatise on I/O redirection in Linux shells](https://web.archive.org/web/20220629044814/http://bencane.com:80/2012/04/16/unix-shell-the-art-of-io-redirection/), which has applications in this assignment.
+    - A great [visual guide to I/O redirection](http://www.rozmichelle.com/pipes-forks-dups/) in Linux.
+
+challenges:
+- id: "echo"
+  name: "Learn to redirect the output of commands!"
