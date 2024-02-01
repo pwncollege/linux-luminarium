@@ -11,5 +11,5 @@ challenges:
   name: "Learn to redirect the output of commands!"
 - id: "stdout-myflag"
   name: "Learn to redirect the output of more commands!"
-- id: "stdout-myflag"
+- id: "stderr-myflag"
   name: "Learn to redirect error output of commands!"
