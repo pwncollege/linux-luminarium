@@ -1,3 +1,4 @@
 #!/opt/pwn.college/bash
 
-exec /challenge/chio.py --reward /flag --stdout_path $PWD/myflag
+DIR=$(/bin/dirname ${BASH_SOURCE[0]})
+exec $DIR/chio.py --reward /flag --check_stdout_path myflag --chio_hint_fd -1
