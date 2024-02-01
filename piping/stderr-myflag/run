@@ -1,0 +1,4 @@
+#!/opt/pwn.college/bash
+
+DIR=$(/bin/dirname ${BASH_SOURCE[0]})
+exec $DIR/chio.py --reward /flag --check_stdout_path myflag --check_stderr_path instructions --chio_hint_fd -1 --chio_flag_fd 1
