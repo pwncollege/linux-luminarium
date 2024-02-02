@@ -4,5 +4,6 @@ award:
   emoji: 🐧
 modules:
 - id: "paths"
+- id: "commands"
 - id: "variables"
 - id: "piping"

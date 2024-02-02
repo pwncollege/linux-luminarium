@@ -1,4 +1,4 @@
-Welcome to the Linux Learning Dojo!
+Welcome to the Linux Luminarium!
 This dojo will gently teach you how to use the Linux command line interface.
 This is far from the only resource like this on the internet, and we will strive to link to others where appropriate.
 
