@@ -8,7 +8,6 @@ https://www.youtube.com/watch?v=BUnb1PKKMBA
   - 
 
 piping:
-- /challenge/run > myflag 2> instructions
 - /challenge/run < something?
 - echo PWN | /challenge/run
 - echo PWN | /challenge/run > myflag

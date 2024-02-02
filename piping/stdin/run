@@ -1,0 +1,29 @@
+#!/opt/pwn.college/bash
+
+
+STDIN_DIRNAME=$(dirname $(readlink /proc/self/fd/0))
+STDIN_BASENAME=$(basename $(readlink /proc/self/fd/0))
+
+if [ "$STDIN_DIRNAME" == "/dev/pts" ]
+then
+	/bin/fold -s <<< "You have not redirected anything to my standard input. Please do so, using '<'."
+	exit 1
+fi
+
+if [ "$STDIN_BASENAME" != "PWN" ]
+then
+	/bin/fold -s <<< "You must redirect a file called PWN into my standard input! You are currently redirecting $STDIN_BASENAME, which is not PWN."
+	exit 2
+fi
+
+echo "Reading from standard input..."
+read COLLEGE
+if [ "$COLLEGE" != "COLLEGE" ]
+then
+	/bin/fold -s <<< "Your PWN file must have the value 'COLLEGE', but I instead read: $COLLEGE"
+	exit 3
+fi
+
+/bin/fold -s <<< "Correct! You have redirected the PWN file into my standard input, and I read the value 'COLLEGE' out of it!"
+/bin/fold -s <<< "Here is your flag:"
+/bin/cat /flag
