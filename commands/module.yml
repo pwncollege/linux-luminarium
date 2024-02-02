@@ -2,4 +2,4 @@ name: Critical Commands
 
 challenges:
 - id: "cat"
-  name: "Not the pet, but the command!"
+  name: "cat: not the pet, but the command!"
