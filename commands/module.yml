@@ -1,0 +1,5 @@
+name: Critical Commands
+
+challenges:
+- id: "cat"
+  name: "Not the pet, but the command!"
