@@ -1,0 +1,7 @@
+#!/bin/bash
+
+/bin/fold -w $(/bin/tput cols) -s <<END
+You cannot solve this challenge using /challenge/run.
+To solve this challenge, you must set the PWN variable to the value "COLLEGE" using the "read" command.
+The challenge will detect this and give you the flag!
+END
