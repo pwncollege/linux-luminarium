@@ -7,3 +7,4 @@ modules:
 - id: "commands"
 - id: "variables"
 - id: "piping"
+- id: "builtins"

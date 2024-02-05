@@ -1,0 +1,5 @@
+name: Bash Builtins
+
+challenges:
+- id: "read"
+  name: "Setting variables with 'read'"
