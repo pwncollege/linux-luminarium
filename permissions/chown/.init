@@ -1,0 +1,4 @@
+#!/bin/bash
+
+chmod u+s /usr/bin/chown
+chmod u+s /usr/bin/chgrp
