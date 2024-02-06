@@ -1,0 +1,22 @@
+name: Understanding permissions 
+resources:
+- name: Resources
+  type: markdown
+  content: |
+    - [Chmod Calculator](https://chmod-calculator.com/)
+
+challenges:
+- id: "Work in progress"
+  name: Something that I might add here.
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -8,3 +8,4 @@ modules:
 - id: "variables"
 - id: "piping"
 - id: "builtins"
+- id: "permissions"
