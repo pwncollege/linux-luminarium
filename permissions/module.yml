@@ -6,9 +6,16 @@ resources:
     - [Chmod Calculator](https://chmod-calculator.com/)
 
 challenges:
-- id: "Work in progress"
-  name: Something that I might add here.
-
+- id: "chmod"
+  name: "Keep calm and chmod"
+- id: "chown"
+  name: "My dentist said I need to chown"
+- id: "setuid"
+  name: "I tried to tell a setuid joke, but it escalated too quickly"
+- id: "setgid"
+  name: "Why do programmers love setgid? It's group effort without chaos"
+- id: "execute"
+  name: "Why did the code feel enpowered after chmod +x? It got a license to thrill!"
 
 
 
