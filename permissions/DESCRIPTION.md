@@ -20,7 +20,7 @@ There are four parts to a file permissions:
 
 The first part is the filetype, which is the first character in the sequence, in this case it's a `d` to indicate that it's a directory. Otherwise, you would commonly see a `-` for a regular file.
 
-The next three part is the actual permissions. The permissions are grouped into 3 bits each. The first 3 is owner's permissions, middle 3 is group permissions and then the rest is public permissions. 
+The next three part is the actual permissions. The permissions are grouped into 3 bits each. The first 3 is owner's permissions, middle 3 is group permissions and then public permissions. 
 
 Each character represent a different permissions
 ```
@@ -29,3 +29,5 @@ w - user can write into and modify the files
 x - user can execute the file as a program 
 - - nothing 
 ```
+
+So, let's get started with permissions!
