@@ -2,3 +2,4 @@
 
 chmod 666 /flag
 chown hacker:hacker /challenge/getflag
+chmod 666 /challenge/getflag
