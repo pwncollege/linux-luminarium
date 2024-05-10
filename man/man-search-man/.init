@@ -10,7 +10,8 @@ LETTERS = re.sub("[^a-z]", "", FLAG[FLAG.index('{'):]) + "ab"
 NUMBERS = re.sub("[^0-9]", "", FLAG[FLAG.index('{'):]) + "1"
 OPT,ARG = LETTERS[:6], NUMBERS[:3]
 
-with gzip.open(random.choice(glob.glob("/usr/share/man/man1/*.1.gz")), "w") as o:
+MAN = random.choice(glob.glob("/usr/share/man/man1/*.1.gz"))
+with gzip.open(MAN, "w") as o:
 	o.write((r"""
 .TH CHALLENGE "1" "May 2024" "pwn.college" "Challenge Commands"
 .SH NAME
@@ -39,3 +40,5 @@ The repository for this dojo: <https://github.com/pwncollege/linux-luminarium/>
 .SH "SEE ALSO"
 man(1) bash-builtins(7)
 """).encode())
+
+os.system("mandb -f "+MAN)
