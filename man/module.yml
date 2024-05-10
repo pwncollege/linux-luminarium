@@ -10,3 +10,5 @@ challenges:
   name: Reading Manuals
 - id: "man-search"
   name: Searching Manuals
+- id: "man-search-man"
+  name: Searching For Manuals
