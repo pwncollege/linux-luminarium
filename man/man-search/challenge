@@ -4,10 +4,13 @@ import random
 import sys
 import re
 
+def randbytes(n):
+	return bytes(RND.randrange(0,256) for _ in range(n))
+
 def generate_args():
 	args = set()
 	for i in range(RND.randrange(500,1000)):
-		letters = re.sub("[^a-z]", "", RND.randbytes(0x1000).decode('latin1')) + "ab"
+		letters = re.sub("[^a-z]", "", randbytes(0x1000).decode('latin1')) + "ab"
 		opt = letters[:RND.randrange(1,8)]
 		args.add("--"+opt if len(opt)>1 else "-"+opt)
 
