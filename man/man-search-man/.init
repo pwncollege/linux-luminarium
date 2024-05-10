@@ -4,6 +4,7 @@ import random
 import gzip
 import glob
 import re
+import os
 
 FLAG = open("/flag").read().strip()
 LETTERS = re.sub("[^a-z]", "", FLAG[FLAG.index('{'):]) + "ab"
