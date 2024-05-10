@@ -15,7 +15,7 @@ with gzip.open("/usr/share/man/man1/challenge.1.gz", "w") as o:
 /challenge/challenge \- print the flag!
 .SH SYNOPSIS
 .B challenge
-[\fI\,OPTION\/\fR]...
+\fI\,OPTION\/\fR
 .br
 .SH DESCRIPTION
 .\" Add any additional description here

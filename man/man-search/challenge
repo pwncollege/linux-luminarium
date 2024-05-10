@@ -23,7 +23,9 @@ RND = random.Random(int(re.sub("[^0-9]", "", FLAG) + "1"))
 ARGS = generate_args()
 FLAG_OPT = ARGS[RND.randrange(300,len(ARGS))]
 
-if sys.argv[1] == "--fortune":
+if len(sys.argv) == 1:
+	print("Incorrect usage! Please read the challenge man page!")
+elif sys.argv[1] == "--fortune":
 	os.system("/usr/games/fortune")
 elif sys.argv[1] == "--version":
 	print("I'm exactly the version I need to be!")
