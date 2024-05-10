@@ -69,6 +69,8 @@ DESCRIPTION
 
 SEE ALSO
 	Other man pages or online resources that might be useful.
+
+COLLECTION                        DATE                          NAME(1)
 ```
 
 You can scroll the man page with the arrow keys (and PgUp/PgDn) and search with `/`.
