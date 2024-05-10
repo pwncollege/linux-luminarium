@@ -54,7 +54,7 @@ NAME
 	concept discussed by the page.
 
 SYNOPSIS
-	This gives a short usage synopsis. These synopses have a stanard
+	This gives a short usage synopsis. These synopses have a standard
 	format. Typically, each line is a different valid invocation of the
 	command, and the lines can be read as:
 
