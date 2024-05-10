@@ -11,7 +11,7 @@ OPT,ARG = LETTERS[:6], NUMBERS[:3]
 
 if sys.argv[1] == "--fortune":
 	os.system("/usr/games/fortune")
-if sys.argv[1] == "--version":
+elif sys.argv[1] == "--version":
 	print("I'm exactly the version I need to be!")
 elif sys.argv[1:] == ["--"+OPT, ARG]:
 	print("Correct usage! Your flag:", FLAG)
