@@ -1,0 +1,10 @@
+name: Reading Documentation
+resources:
+- name: Resources
+  type: markdown
+  content: |
+    - [Online repository of man pages](https://man7.org/linux/man-pages/)
+
+challenges:
+- id: "man"
+  name: Reading Manuals

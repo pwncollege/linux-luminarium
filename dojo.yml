@@ -6,6 +6,7 @@ award:
 modules:
 - id: "paths"
 - id: "commands"
+- id: "man"
 - id: "variables"
 - id: "piping"
 - id: "builtins"
