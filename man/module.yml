@@ -8,3 +8,5 @@ resources:
 challenges:
 - id: "man"
   name: Reading Manuals
+- id: "man-search"
+  name: Searching Manuals

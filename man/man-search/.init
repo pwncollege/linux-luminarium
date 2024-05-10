@@ -1,0 +1,56 @@
+#!/usr/bin/env python
+
+import random
+import gzip
+import re
+
+def generate_args():
+	args = set()
+	for i in range(RND.randrange(500,1000)):
+		letters = re.sub("[^a-z]", "", RND.randbytes(0x1000).decode('latin1')) + "ab"
+		opt = letters[:RND.randrange(1,8)]
+		args.add(r"\-\-"+opt if len(opt)>1 else r"\-"+opt)
+
+	arg_list = sorted(args)
+	RND.shuffle(arg_list)
+	return arg_list
+
+RND = random.Random(int(re.sub("[^0-9]", "", open("/flag").read()) + "1"))
+ARGS = generate_args()
+FLAG_OPT = ARGS[RND.randrange(300,len(ARGS))]
+DOCS = "".join(
+r"""
+.TP
+\fB"""+ARG+r"""\fR""" + ("""
+A neat argument, but not the right one.
+""" if ARG != FLAG_OPT else """
+This argument will give you the flag!
+""") for ARG in ARGS
+)
+
+with gzip.open("/usr/share/man/man1/challenge.1.gz", "w") as o:
+	o.write((r"""
+.TH CHALLENGE "1" "May 2024" "pwn.college" "Challenge Commands"
+.SH NAME
+/challenge/challenge \- print the flag!
+.SH SYNOPSIS
+.B challenge
+[\fI\,OPTION\/\fR]...
+.br
+.SH DESCRIPTION
+.\" Add any additional description here
+.PP
+Output the flag when called with the right argument.
+.TP
+\fB\-\-fortune\fR
+read a fortune
+.TP
+\fB\-\-version\fR
+output version information and exit"""+DOCS+r"""
+.SH AUTHOR
+Written by Zardus.
+.SH "REPORTING BUGS"
+The repository for this dojo: <https://github.com/pwncollege/linux-luminarium/>
+.SH "SEE ALSO"
+man(1) bash-builtins(7)
+""").encode())

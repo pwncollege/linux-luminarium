@@ -73,7 +73,6 @@ SEE ALSO
 COLLECTION                        DATE                          NAME(1)
 ```
 
-You can scroll the man page with the arrow keys (and PgUp/PgDn) and search with `/`.
 When you're done reading the manpage, you can hit `q` to quit.
 
 The challenge in this level has a secret option that, when you use it, will cause the challenge to print the flag.
