@@ -49,6 +49,8 @@ GNU coreutils 8.32               February 2022                          YES(1)
 The important sections are:
 
 ```man
+NAME(1)                           CATEGORY                          NAME(1)
+
 NAME
 	This gives the name (and short description) of the command or
 	concept discussed by the page.
