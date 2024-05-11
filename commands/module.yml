@@ -3,3 +3,5 @@ name: Critical Commands
 challenges:
 - id: "cat"
   name: "cat: not the pet, but the command!"
+- id: "grep"
+  name: "grepping for a needle in a haystack"
