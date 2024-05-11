@@ -1,0 +1,4 @@
+#!/opt/pwn.college/bash
+
+DIR=$(/bin/dirname ${BASH_SOURCE[0]})
+$DIR/chio.py --check_stdout_pipe grep --reward /challenge/.data.txt --chio_flag_fd 1

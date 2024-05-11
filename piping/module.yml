@@ -15,3 +15,7 @@ challenges:
   name: "Learn to redirect error output of commands!"
 - id: "stdin"
   name: "Learn to redirect the input into commands!"
+- id: "redir-then-grep"
+  name: "Grep through some stored results"
+- id: "pipe-grep"
+  name: "Grep through live output!"
