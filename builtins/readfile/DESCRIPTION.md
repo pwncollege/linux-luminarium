@@ -24,5 +24,5 @@ test
 
 What happened there?
 The example redirects `some_file` into the *standard input* of `read`, and so when `read` reads into `VAR`, it reads from the file!
-Now, use that to read `/flag`.
-We made it readable for you in this level.
+Now, use that to read `/challenge/read_me` into the `PWN` environment variable, and we'll give you the flag!
+The `/challenge/read_me` will keep changing, so you'll need to read it right into the `PWN` variable with one command!

@@ -1,0 +1,4 @@
+#!/opt/pwn.college/bash
+
+head -c200 /dev/urandom | tr -dc 0-9a-zA-Z > /challenge/read_me
+chmod 644 /challenge/read_me

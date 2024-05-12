@@ -1,0 +1,10 @@
+#!/bin/bash
+
+read -a FLAG < /flag
+FLA=$RANDOM
+FLB=$RANDOM
+echo $FLAG > /tmp/.$FLA-$FLB
+echo "export FLA=$FLA" >> /challenge/.bashrc
+echo "export FLB=$FLB" >> /challenge/.bashrc
+
+/challenge/.reset_read_me
