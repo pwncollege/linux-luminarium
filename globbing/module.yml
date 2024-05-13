@@ -1,5 +1,5 @@
 name: File Globbing
 
 challenges:
-- id: "astersik"
+- id: "asterisk"
   name: "Matching with `*`"
