@@ -2,7 +2,7 @@
 
 if [ "$PWD" != "/challenge" ]
 then
-	fold -s <<< "You must run me from /challenge. Try to change your working directory to /challenge, then re-run me."
+	fold -s <<< "You must run me /challenge as the working directory. Try to change your working directory to /challenge, then re-run me."
 elif [ ! -f /tmp/.good_cd ]
 then
 	fold -s <<< "You've somehow made your working directory /challenge without using 'cd' and globbing. Please try again."
