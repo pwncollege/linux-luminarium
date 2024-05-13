@@ -1,0 +1,5 @@
+name: File Globbing
+
+challenges:
+- id: "astersik"
+  name: "Matching with `*`"

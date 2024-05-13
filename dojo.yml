@@ -8,6 +8,7 @@ modules:
 - id: "commands"
 - id: "man"
 - id: "variables"
+- id: "globbing"
 - id: "piping"
 - id: "builtins"
 - id: "permissions"

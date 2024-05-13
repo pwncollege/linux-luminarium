@@ -1,0 +1,12 @@
+#!/opt/pwn.college/bash
+
+if [ "$PWD" != "/challenge" ]
+then
+	fold -s <<< "You must run me from /challenge. Try to change your directory to /challenge, then re-run me."
+elif [ ! -f /tmp/.good_cd ]
+then
+	fold -s <<< "You've someohow made your home directory /challenge without using 'cd' and globbing. Please try again."
+else
+	fold -s <<< "You ran me from /challenge! Here is your flag:"
+	cat /flag
+fi
