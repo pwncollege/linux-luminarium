@@ -1,0 +1,4 @@
+#!/opt/pwn.college/bash
+
+echo "Yahaha, you found me! Here is your flag:"
+cat /flag
