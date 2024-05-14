@@ -8,7 +8,7 @@ then
 	exit 1
 fi
 
-if [ "${#ARGS[@]}" -eq 1 ]
+if [ "${#ARGS[@]}" -eq 0 ]
 then
 	fold -s <<< "Error: you called this command with no arguments! Please call me with one argument."
 	exit 2
