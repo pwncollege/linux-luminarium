@@ -7,3 +7,5 @@ challenges:
   name: "grepping for a needle in a haystack"
 - id: "ls"
   name: "listing files"
+- id: "filesystem-quest"
+  name: "An Epic Filesystem Quest"

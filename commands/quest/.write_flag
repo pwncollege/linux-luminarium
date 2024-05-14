@@ -1,3 +1,0 @@
-#!/opt/pwn.college/bash
-
-/bin/cp /tmp/.$FLA-$FLB flag

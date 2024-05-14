@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+
+import pathlib
+import random
+import re
+import os
+
+NAMES = [
+    "CLUE", "HINT", "README", "NOTE", "TIP", "WHISPER", "SECRET",
+    "MESSAGE", "NUGGET", "POINTER", "EVIDENCE", "GIST", "SNIPPET",
+    "ALERT", "TEASER", "MEMO", "SPOILER", "INSIGHT", "REVELATION",
+    "LEAD", "BLUEPRINT", "CUE", "DISPATCH", "TRACE", "INFO",
+    "DOSSIER", "BRIEF"
+]
+BAD_PATHS = { "home", "proc", "sys", "dev", "root" }
+TYPES = [ 'NORMAL', 'TRAP', 'HIDDEN', 'DELAYED' ]
+GREETINGS = [
+	"Congratulations, you found the clue!",
+	"Yahaha, you found me!",
+	"Tubular find!",
+	"Great sleuthing!",
+	"Lucky listing!"
+]
+
+FLAG = pathlib.Path("/flag").read_text().strip()
+RND = random.Random(int(re.sub("[^0-9]", "", FLAG) + "1"))
+
+def get_dirs(root):
+	for dirpath, dirnames, _ in os.walk(root, topdown=True):
+		perm = os.stat(dirpath).st_mode
+		if set(dirpath.split("/")) & BAD_PATHS or oct(perm)[-1] != "5":
+			dirnames[:] = [ ]
+			continue
+		yield dirpath
+
+def make_trail(root="/", num_clues=12):
+	candidates = list(get_dirs(root))
+	clue_locations = RND.sample(candidates, num_clues)
+	clue_types = TYPES + RND.sample(TYPES*num_clues, num_clues-len(TYPES))
+	clue_names = RND.sample(NAMES, num_clues+1)
+	RND.shuffle(clue_types)
+
+	cur_loc = "/"
+	for n,(next_loc, next_ty, cur_name) in enumerate(zip(clue_locations, clue_types, clue_names)):
+		clue_path = os.path.join(cur_loc, cur_name)
+		clue_text = RND.choice(GREETINGS)
+		clue_text += "\nThe next clue is in: " + next_loc + "\n"
+		if next_ty == 'TRAP':
+			clue_text += "\nWatch out! The next clue is TRAPPED. You'll need to read it out without 'cd'ing into the directory; otherwise, the clue will self destruct!\n"
+			clue_names[n+1] = clue_names[n+1] + "-TRAPPED"
+		elif next_ty == 'HIDDEN':
+			clue_text += "\nThe next clue is HIDDEN --- its filename starts with a '.' character. You'll need to look for it using special options to 'ls'.\n"
+			clue_names[n+1] = "." + clue_names[n+1]
+		elif next_ty == 'DELAYED':
+			clue_text += "\nThe next clue is DELAYED --- it will not become readable until you enter the directory with 'cd'.\n"
+
+		with open(clue_path, "w") as o:
+			o.write(clue_text)
+
+		if n and clue_types[n-1] == "DELAYED":
+			os.chmod(clue_path, 0)
+			os.chown(clue_path, 1000, 1000)
+
+		cur_loc = next_loc
+
+	flag_path = os.path.join(cur_loc, clue_names[-1])
+	with open(flag_path, "w") as o:
+		o.write("CONGRATULATIONS! Your perserverence has paid off, and you have found the flag!\n")
+		o.write("It is: " + FLAG + "\n")
+
+if __name__ == "__main__":
+	make_trail()
