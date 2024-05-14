@@ -7,3 +7,5 @@ challenges:
   name: "Matching with `?`"
 - id: "bracket"
   name: "Matching with `[]`"
+- id: "bracket-absolute"
+  name: "Matching paths with `[]`"
