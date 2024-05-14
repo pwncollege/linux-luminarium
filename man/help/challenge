@@ -1,0 +1,39 @@
+#!/opt/pwn.college/python
+
+import argparse
+import random
+import sys
+import re
+import os
+
+FLAG = open("/flag").read().strip()
+N = int((re.sub("[^0-9]", "", FLAG[FLAG.index('{'):]) + "1")[:3])
+
+parser = argparse.ArgumentParser("a challenge to make you ask for help")
+parser.add_argument("--fortune", action='store_true', help="read your fortune")
+parser.add_argument("-v", "--version", action='store_true', help="get the version number")
+parser.add_argument("-g", "--give-the-flag", type=int, help="get the flag, if given the correct value")
+parser.add_argument("-p", "--print-value", action='store_true', help="print the value that will cause the -g option to give you the flag")
+
+args = parser.parse_args()
+
+if args.fortune:
+	os.system("/usr/games/fortune")
+	sys.exit(0)
+
+if args.version:
+	print("I'm exactly the version I need to be!")
+	sys.exit(0)
+
+if args.give_the_flag is not None:
+	if args.give_the_flag == N:
+		print("Correct usage! Your flag:", FLAG)
+	else:
+		print("Incorrect number! Look at the program help.")
+	sys.exit(0)
+
+if args.print_value:
+	print("The secret value is:", N)
+	sys.exit(0)
+
+print("No options specified.")

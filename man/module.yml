@@ -12,3 +12,5 @@ challenges:
   name: Searching Manuals
 - id: "man-search-man"
   name: Searching For Manuals
+- id: "help"
+  name: Helpful Programs
