@@ -1,4 +1,4 @@
-#!/opt/pwn.college/bash -x
+#!/opt/pwn.college/bash
 
 read -a ARGS < /tmp/.last_arg
 
