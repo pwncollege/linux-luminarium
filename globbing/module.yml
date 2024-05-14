@@ -5,3 +5,5 @@ challenges:
   name: "Matching with `*`"
 - id: "question"
   name: "Matching with `?`"
+- id: "bracket"
+  name: "Matching with `[]`"
