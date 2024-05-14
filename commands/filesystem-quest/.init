@@ -60,6 +60,8 @@ def make_trail(root="/", num_clues=12):
 		if n and clue_types[n-1] == "DELAYED":
 			os.chmod(clue_path, 0)
 			os.chown(clue_path, 1000, 1000)
+		elif "TRAPPED" in clue_path:
+			os.chown(clue_path, 1000, 1000)
 
 		cur_loc = next_loc
 
