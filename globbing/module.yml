@@ -11,3 +11,5 @@ challenges:
   name: "Matching paths with []"
 - id: "mixing"
   name: "Mixing globs"
+- id: "unmatching"
+  name: "Exclusionary globbing"
