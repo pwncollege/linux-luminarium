@@ -1,0 +1,42 @@
+#!/opt/pwn.college/bash
+
+read -a ARGS < /tmp/.last_arg
+
+if [ "$PWD" != "/challenge/files" ]
+then
+	fold -s <<< "Error: please run with a working directory of /challenge/files!"
+	exit 1
+fi
+
+if [ "${#ARGS[@]}" -eq 0 ]
+then
+	fold -s <<< "Error: you called this command with no arguments! Please call me with one argument."
+	exit 2
+fi
+
+if [ "${#ARGS[@]}" -gt 1 ]
+then
+	fold -s <<< "Error: you called this command with more than 1 argument (pre-globbing)! Please call me with one argument."
+	exit 3
+fi
+
+if [[ "${ARGS[0]}" != *"["* ]]
+then
+	fold -s <<< "Error: you did not use a square bracket glob..."
+	exit 4
+fi
+
+if [[ "${#ARGS[0]}" -gt 6 ]]
+then
+	fold -s <<< "Error: your argument is too long! It must be 6 characters or less."
+	exit 4
+fi
+
+if [ "$1" == "challenging" ] && [ "$2" == "educational" ] && [ "$3" == "pwning" ]
+then
+	fold -s <<< "You got it! Here is your flag!"
+	cat /flag
+else
+	fold -s <<< "Your expansion did not expand to the requested files (challenging, educational, pwning). Instead, it expanded to:"
+	echo "$@"
+fi

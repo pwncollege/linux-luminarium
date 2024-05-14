@@ -9,3 +9,5 @@ challenges:
   name: "Matching with []"
 - id: "bracket-absolute"
   name: "Matching paths with []"
+- id: "mixing"
+  name: "Mixing globs"
