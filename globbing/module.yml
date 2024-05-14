@@ -2,10 +2,10 @@ name: File Globbing
 
 challenges:
 - id: "asterisk"
-  name: "Matching with `*`"
+  name: "Matching with *"
 - id: "question"
-  name: "Matching with `?`"
+  name: "Matching with ?"
 - id: "bracket"
-  name: "Matching with `[]`"
+  name: "Matching with []"
 - id: "bracket-absolute"
-  name: "Matching paths with `[]`"
+  name: "Matching paths with []"
