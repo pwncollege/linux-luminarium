@@ -1,0 +1,12 @@
+#!/opt/pwn.college/bash
+
+if [ "$PWD" != "/challenge" ]
+then
+	fold -s <<< "You must run me /challenge as the working directory. Try to change your working directory to /challenge, then re-run me."
+elif [ ! -f /tmp/.good_cd ]
+then
+	fold -s <<< "You've somehow made your working directory /challenge without using 'cd' and globbing. Please try again."
+else
+	fold -s <<< "You ran me with the working directory of /challenge! Here is your flag:"
+	cat /flag
+fi

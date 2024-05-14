@@ -3,3 +3,5 @@ name: File Globbing
 challenges:
 - id: "asterisk"
   name: "Matching with `*`"
+- id: "question"
+  name: "Matching with `?`"
