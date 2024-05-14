@@ -1,3 +1,3 @@
-#!/bin/env
+#!/bin/bash
 
 mv /challenge/run /challenge/$RANDOM-renamed-run-$RANDOM
