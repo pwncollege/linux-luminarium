@@ -7,10 +7,16 @@ then
 	exit 1
 fi
 
+if [[ "$1" != /* ]]
+then
+	fold -s <<< "The argument you provided is not an absolute path!"
+	exit 2
+fi
+
 if [[ "$1" != /home/* ]]
 then
 	fold -s <<< "The argument you provided is not under your home directory!"
-	exit 2
+	exit 3
 fi
 
 echo "Writing the file to $1!"
