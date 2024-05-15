@@ -13,3 +13,5 @@ challenges:
   name: "touching files"
 - id: "mkdir"
   name: "making directories"
+- id: "find"
+  name: "finding files"
