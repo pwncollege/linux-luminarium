@@ -9,3 +9,5 @@ challenges:
   name: "listing files"
 - id: "filesystem-quest"
   name: "An Epic Filesystem Quest"
+- id: "touch"
+  name: "touching files"
