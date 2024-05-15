@@ -2,6 +2,6 @@
 
 /bin/fold -w $(/bin/tput cols) -s <<END
 You cannot solve this challenge using /challenge/run.
-To solve this challenge, you must read the file /challenge/read_me directly using the "read" builtin.
+To solve this challenge, you must read the file /challenge/read_me directly into the PWN variable using the "read" builtin.
 The challenge will detect this and give you the flag!
 END
