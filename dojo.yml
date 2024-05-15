@@ -1,6 +1,6 @@
 id: "linux-luminarium"
 name: Linux Luminarium
-type: public
+type: welcome
 award:
   emoji: 🐧
 modules:
