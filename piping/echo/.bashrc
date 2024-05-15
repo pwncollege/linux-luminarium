@@ -25,6 +25,7 @@ function give_flag {
 }
 
 function monitor_redirect {
+	[ "${#FUNCNAME[@]}" -gt 1 ] && return # only trigger on direct user input
 	TARGET=${BASH_COMMAND#*> }
 	[ "$TARGET" == "$BASH_COMMAND" ] && return
 	[ "$TARGET" == "COLLEGE" ] || return

@@ -14,13 +14,14 @@ function give_flag {
 }
 
 function check_subshell {
+	[ "${#FUNCNAME[@]}" -gt 1 ] && return # only trigger on direct user input
 	[ "$BASH_SUBSHELL" -eq 0 ] && return
 	fold -s <<< 'You appear to be invoking a subshell. This could be, for example, because you are doing something like `PWN=$(echo COLLEGE)`. Instead, you must use `read` to set the PWN variable.' >&2
 	exit
 }
 
 function check_read {
-	[ "${FUNCNAME[1]}" == "give_flag" ] && return
+	[ "${#FUNCNAME[@]}" -gt 1 ] && return # only trigger on direct user input
 	[ "${BASH_COMMAND// *}" != "read" ] && return
 
 	if [[ "$BASH_COMMAND" != *PWN* ]]

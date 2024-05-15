@@ -1,4 +1,5 @@
 function check_cd {
+	[ "${#FUNCNAME[@]}" -gt 1 ] && return # only trigger on direct user input
 	CMD="${BASH_COMMAND// *}"
 	ARG="${BASH_COMMAND//* }"
 	if [ "$CMD" != "cd" ] && [ "$CMD" != "pushd" ]
