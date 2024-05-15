@@ -4,7 +4,7 @@ We use the `find` command!
 
 The `find` command takes optional arguments describing the search criteria and the search location.
 If you don't specify a search criteria, `find` matches every file.
-If you don't specify a search location, `find` uses the current working directory.
+If you don't specify a search location, `find` uses the current working directory (`.`).
 For example:
 
 ```console
