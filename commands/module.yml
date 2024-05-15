@@ -11,3 +11,5 @@ challenges:
   name: "An Epic Filesystem Quest"
 - id: "touch"
   name: "touching files"
+- id: "mkdir"
+  name: "making directories"

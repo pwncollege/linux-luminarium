@@ -1,0 +1,16 @@
+#!/opt/pwn.college/bash
+
+if [ ! -d /tmp/pwn ]
+then
+	fold -s <<< "Uh oh! /tmp/pwn does not exist as a directory. Please use the 'mkdir' command to create it!"
+	exit 1
+fi
+
+if [ ! -f /tmp/pwn/college ]
+then
+	fold -s <<< "Uh oh! /tmp/pwn/college does not exist. Please use the 'touch' command to create it!"
+	exit 2
+fi
+
+echo "Success! Here is your flag:"
+cat /flag
