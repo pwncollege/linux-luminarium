@@ -1,0 +1,19 @@
+#!/opt/pwn.college/bash
+
+read ARG < /tmp/.last_arg
+if [ "${#ARG}" -gt 3 ]
+then
+	fold -s <<< "The argument you provided must not have been longer than 3 characters (it's currently ${#ARG} characters long)!"
+	exit 1
+fi
+
+if [[ "$1" != /home/* ]]
+then
+	fold -s <<< "The argument you provided is not under your home directory!"
+	exit 2
+fi
+
+echo "Writing the file to $1!"
+cat /flag > "$1"
+echo "... and reading it back to you:"
+cat "$1"

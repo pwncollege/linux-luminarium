@@ -20,3 +20,5 @@ challenges:
   name: "explicit relative paths, from /"
 - id: "relative-dot-local"
   name: "implicit relative path"
+- id: "home"
+  name: "home sweet home"
