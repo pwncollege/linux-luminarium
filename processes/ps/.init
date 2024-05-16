@@ -3,3 +3,4 @@
 NEWNAME=/challenge/$RANDOM-run-$RANDOM
 mv /challenge/run $NEWNAME
 $NEWNAME &
+chmod 711 /challenge
