@@ -26,3 +26,4 @@ function check_cd {
 shopt -s extdebug
 set -T
 trap 'check_cd' debug
+PROMPT_COMMAND="trap 'check_cd' debug"

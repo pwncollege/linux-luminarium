@@ -38,4 +38,4 @@ function check_read {
 
 set -T
 trap 'check_subshell; check_read' debug
-PROMPT_COMMAND=give_flag
+PROMPT_COMMAND="give_flag; trap 'check_subshell; check_read' debug"
