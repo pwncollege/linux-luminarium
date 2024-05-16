@@ -6,3 +6,4 @@ function log_arg
 }
 
 trap log_arg DEBUG
+PROMPT_COMMAND="trap log_arg DEBUG"

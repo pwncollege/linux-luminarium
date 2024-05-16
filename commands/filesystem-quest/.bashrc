@@ -12,3 +12,4 @@ function hint_handler
 }
 
 trap hint_handler DEBUG
+PROMPT_COMMAND="trap hint_handler DEBUG"

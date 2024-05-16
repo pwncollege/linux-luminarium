@@ -32,5 +32,5 @@ function monitor_redirect {
 	touch /tmp/.redirected
 }
 
-PROMPT_COMMAND="give_flag; rm -f /tmp/.redirected"
 trap monitor_redirect DEBUG
+PROMPT_COMMAND="give_flag; rm -f /tmp/.redirected; trap monitor_redirect DEBUG"
