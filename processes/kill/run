@@ -1,0 +1,12 @@
+#!/opt/pwn.college/bash
+
+if [ -z "$DOIT" ]
+then
+	export DOIT=yes
+	exec -a $0 bash < $0
+fi
+
+echo "Yahaha, you found me! Here is your flag:"
+cat /flag
+echo "Now I will sleep for a while (so that you could find me with 'ps')."
+sleep 6h
