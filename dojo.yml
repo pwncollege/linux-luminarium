@@ -11,4 +11,5 @@ modules:
 - id: "globbing"
 - id: "piping"
 - id: "builtins"
+- id: "processes"
 - id: "permissions"

@@ -1,0 +1,5 @@
+name: Processes and Jobs
+
+challenges:
+- id: "ps"
+  name: Listing Processes
