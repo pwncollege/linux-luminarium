@@ -2,21 +2,21 @@ You've launched processes, you've viewed processes, now you will learn to _termi
 In Linux, this is done using the aggressively-named `kill` command.
 With default options (which is all we'll cover in this level), `kill` will terminate a process in a way that gives it a chance to get its affairs in order before ceasing to exist.
 
-You use `kill` by providing it with a process identifier (the `PID` from `ps`), as so:
+Let's say you had a pesky `sleep` process (`sleep` is a program that simply hanges out for the number of seconds specified on the commandline, in this case, 1337 seconds) that you launched in another terminal, like so:
 
+```console
+hacker@dojo:~$ sleep 1337
 ```
-hacker@dojo:~$ sleep 1337 &
-hacker@dojo:~$ ps
-    PID TTY          TIME CMD
- 318 pts/0    00:00:00 bash
+
+How do we get rid of it?
+You use `kill` to terminate it by passing the process identifier (the `PID` from `ps`) as an argument, like so:
+
+```console
+hacker@dojo:~$ ps -e | grep sleep
  342 pts/0    00:00:00 sleep
- 359 pts/0    00:00:00 ps
 hacker@dojo:~$ kill 342
-[1]+  Terminated              sleep 1337
-hacker@dojo:~$ ps
-    PID TTY          TIME CMD
- 318 pts/0    00:00:00 bash
- 359 pts/0    00:00:00 ps
+hacker@dojo:~$ ps -e | grep sleep
+hacker@dojo:~$
 ```
 
 Now, it's time to terminate your first process!

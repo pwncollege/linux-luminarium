@@ -3,3 +3,7 @@ name: Processes and Jobs
 challenges:
 - id: "ps"
   name: Listing Processes
+- id: "kill"
+  name: Killing Processes
+- id: "int"
+  name: Interrupting Processes
