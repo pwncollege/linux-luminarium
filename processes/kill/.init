@@ -1,3 +1,3 @@
 #!/bin/bash
 
-su -c "/challenge/dont_run" hacker
+su -c "/challenge/dont_run" hacker &
