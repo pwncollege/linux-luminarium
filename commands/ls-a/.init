@@ -1,0 +1,4 @@
+#!/bin/bash
+
+chmod 644 /.flag
+mv /flag /.flag-$RANDOM$RANDOM$RANDOM
