@@ -1,0 +1,4 @@
+name: Chaining Commands
+challenges:
+  - id: semicolon
+    name: Chaining with Semicolons

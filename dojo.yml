@@ -10,6 +10,7 @@ modules:
 - id: "variables"
 - id: "globbing"
 - id: "piping"
+- id: "chaining"
 - id: "builtins"
 - id: "processes"
 - id: "permissions"
