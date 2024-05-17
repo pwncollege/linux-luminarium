@@ -1,6 +1,6 @@
 #!/opt/pwn.college/bash
 
-if ps -ef | grep -q dont_run
+if ps -ef | grep -q '[d]ont_run'
 then
 	fold -s <<< "Nope! /challenge/dont_run is still running! You gotta terminate it before I give you the flag!"
 	exit
