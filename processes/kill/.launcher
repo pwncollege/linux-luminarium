@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec -a /challenge/dont_run /challenge/dont_run
