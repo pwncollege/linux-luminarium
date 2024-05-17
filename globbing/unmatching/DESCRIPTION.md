@@ -17,6 +17,6 @@ hacker@dojo:~$ echo Look: file_[ab]
 Look: file_a file_b
 ```
 
-Armed with this knowledge, go forth and run `/challenge/run` with all files that don't contain a `p`, `w`, or `n`!
+Armed with this knowledge, go forth and run `/challenge/run` with all files that don't start with `p`, `w`, or `n`!
 
 **NOTE:** The `!` character has a different special meaning in bash when it's not the first character of a `[]` glob, so keep that in mind if things stop making sense! `^` does not have this problem, but is also not compatible with older shells.

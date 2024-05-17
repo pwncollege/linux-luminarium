@@ -32,7 +32,7 @@ then
 	exit 5
 fi
 
-read EXPECTED < <(echo *[^pwn]*)
+read EXPECTED < <(echo [^pwn]*)
 ASTR=$@
 
 if [ "$EXPECTED" == "$ASTR" ]
