@@ -12,7 +12,7 @@ function check_cd {
 		return 0
 	fi
 
-	if [[ "${#ARG}" == *[cl*]* ]]
+	if [[ "$ARG" == *[cl*]* ]]
 	then
 		fold -s <<< "You used either the 'c', 'l', or '*' characters. Disallowed!"
 		return 1
