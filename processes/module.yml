@@ -7,3 +7,7 @@ challenges:
   name: Killing Processes
 - id: "int"
   name: Interrupting Processes
+- id: "suspend"
+  name: Suspending Processes
+  visibility:
+    start: "2029-08-21T10:30:00-07:00"
