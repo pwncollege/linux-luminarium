@@ -1,0 +1,15 @@
+#!/opt/pwn.college/bash
+
+if [[ $(ps -o stat= -p $$) == *+* ]]
+then
+	fold -s <<< "You've started me in the foreground! You must start me in the background (by appending '&' to the command) to get the flag!"
+	exit
+fi
+
+echo
+echo
+echo
+fold -s <<< "Yay, you started me in the background! Because of that, this text will probably overlap weirdly with the shell prompt, but you're used to that by now..."
+echo
+fold -s <<< "Anyways! Here is your flag!"
+cat /flag

@@ -15,3 +15,5 @@ challenges:
   name: Backgrounding Processes
 - id: "foreground"
   name: Foregrounding Processes
+- id: "start-backgrounded"
+  name: Starting Backgrounded Processes
