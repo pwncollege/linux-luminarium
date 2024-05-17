@@ -1,0 +1,43 @@
+#!/opt/pwn.college/bash
+
+function resumed {
+	if [[ $(ps -o stat= -p $$) == *+* ]]
+	then
+		fold -s <<< "You resumed me into the foreground! Please resume me into the background (or press Enter, and I'll exit)."
+		read A
+		exit
+	fi
+
+	echo
+	echo
+	echo
+	fold -s <<< "Yay, I'm now running the background! Because of that, this text will probably overlap weirdly with the shell prompt. Don't panic; just hit Enter a few times to scroll this text out."
+	sleep 6h
+}
+trap resumed SIGCONT
+
+[[ "$BASH_EXECUTION_STRING" == .* ]] && exec -a bash /bin/bash $BASH_SOURCE
+
+fold -s <<< "I'll only give you the flag if there's already another copy of me running *and not suspended* in this terminal... Let's check!"
+
+echo
+ps -o user=UID,pid,stat,cmd
+echo
+
+if ! ps -f | grep -v "$$" | grep -q "[r]un"
+then
+	echo "I don't see a second me!"
+	echo
+	fold -s <<< "To pass this level, you need to suspend me, resume the suspended process in the background, and then launch a new version of me! You can background me with Ctrl-Z (and resume me in the background with 'bg') or, if you're not ready to do that for whatever reason, just hit Enter and I'll exit!"
+	read A
+	exit
+fi
+
+if ps -o user=UID,pid,stat,cmd | grep -v "$$" | grep "[r]un" | grep -q "[[:space:]]T[[:space:]]"
+then
+	fold -s <<< "I found a second version of me, but it's suspended! Please resume it in the background with the 'bg' command, then run me again."
+	exit
+fi
+
+fold -s <<< "Yay, I found another version of me running in the background! Here is the flag:"
+cat /flag
