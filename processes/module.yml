@@ -13,3 +13,5 @@ challenges:
   name: Resuming Processes
 - id: "background"
   name: Backgrounding Processes
+- id: "foreground"
+  name: Foregrounding Processes
