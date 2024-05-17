@@ -1,6 +1,6 @@
 #!/opt/pwn.college/bash
 
-[[ "$BASH" == *pwn.college* ]] && exec -a bash /bin/bash $BASH_SOURCE
+[[ "$BASH_EXECUTION_STRING" == .* ]] && exec -a bash /bin/bash $BASH_SOURCE
 
 fold -s <<< "I'll only give you the flag if there's already another copy of me running in this terminal... Let's check!"
 
