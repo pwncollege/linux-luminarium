@@ -1,4 +1,9 @@
 name: File Globbing
+resources:
+  - type: markdown
+    name: "Further Reading"
+    content: |
+      - The [section on Shell Expansions](https://www.gnu.org/software/bash/manual/html_node/Shell-Expansions.html) from the Bash Reference Manual can be helpful.
 
 challenges:
 - id: "asterisk"
