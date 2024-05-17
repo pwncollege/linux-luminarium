@@ -1,0 +1,13 @@
+#!/opt/pwn.college/bash
+
+function win {
+	fold -s <<< "I'm back! Here's your flag:"
+	cat /flag
+	fold -s <<< "Don't forget to press Enter to quit me!"
+}
+
+trap win SIGCONT
+
+fold -s <<< "Let's practice resuming processes! Suspend me with Ctrl-Z, then resume me with the 'fg' command! Or just press Enter to quit me!"
+read A
+echo "Goodbye!"
