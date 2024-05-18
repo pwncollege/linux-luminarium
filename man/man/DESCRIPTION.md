@@ -75,5 +75,9 @@ COLLECTION                        DATE                          NAME(1)
 
 When you're done reading the manpage, you can hit `q` to quit.
 
+Manpages are stored in a centralized database.
+If you're curious, this database lives in the `/usr/share/man` directory, but you never need to interact with it directly: you just query it using the `man` command.
+The arguments to the `man` command aren't file paths, but just the names of the entries themselves (e.g., you run `man yes` to look up the `yes` manpage, rather than `man /usr/bin/yes`, which would be the actual path to the `yes` program but would result in `man` displaying garbage).
+
 The challenge in this level has a secret option that, when you use it, will cause the challenge to print the flag.
 You must learn this option through the man page for `challenge`!
