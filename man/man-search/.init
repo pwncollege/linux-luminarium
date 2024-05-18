@@ -10,7 +10,7 @@ def randbytes(n):
 def generate_args():
 	args = set()
 	for i in range(RND.randrange(500,1000)):
-		letters = re.sub("[^a-z]", "", randbytes(0x1000).decode('latin1')) + "ab"
+		letters = re.sub("[^a-z]", "", randbytes(0x200).decode('latin1')) + "ab"
 		opt = letters[:RND.randrange(1,8)]
 		args.add(r"\-\-"+opt if len(opt)>1 else r"\-"+opt)
 

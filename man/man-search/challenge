@@ -10,13 +10,15 @@ def randbytes(n):
 def generate_args():
 	args = set()
 	for i in range(RND.randrange(500,1000)):
-		letters = re.sub("[^a-z]", "", randbytes(0x1000).decode('latin1')) + "ab"
+		letters = re.sub("[^a-z]", "", randbytes(0x200).decode('latin1')) + "ab"
 		opt = letters[:RND.randrange(1,8)]
 		args.add("--"+opt if len(opt)>1 else "-"+opt)
 
 	arg_list = sorted(args)
 	RND.shuffle(arg_list)
 	return arg_list
+
+print("Initializing...")
 
 FLAG = open("/flag").read().strip()
 RND = random.Random(int(re.sub("[^0-9]", "", FLAG) + "1"))
