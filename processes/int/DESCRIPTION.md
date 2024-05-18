@@ -6,4 +6,4 @@ Try it here!
 Good luck!
 
 ---
-For the very interested, check out this [article about terminals and "control codes"] (such as `Ctrl^C`).
+For the very interested, check out this [article about terminals and "control codes"](https://catern.com/posts/terminal_quirks.html) (such as `Ctrl^C`).
