@@ -4,3 +4,6 @@ Luckily, terminals have a hotkey for this: `Ctrl-C` (e.g., holding down the `Ctr
 Try it here!
 `/challenge/run` will refuse to give you the flag until you interrupt it.
 Good luck!
+
+---
+For the very interested, check out this [article about terminals and "control codes"] (such as `Ctrl^C`).
