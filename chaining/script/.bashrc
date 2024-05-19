@@ -3,7 +3,7 @@ function check_cmd {
 
 	[ "${BCMD[0]}" != "bash" ] && [ "${BCMD[0]}" != "sh" ] && return 0
 
-	if [ "${#BCMD}" > 2 ]
+	if [ "${#BCMD}" -gt 2 ]
 	then
 		fold -s <<< "No shenanigans with bash options yet, please! Just run your script with 'bash x.sh'."
 	fi
