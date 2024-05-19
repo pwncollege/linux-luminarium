@@ -21,7 +21,7 @@ function step2
 
 	if [ "$BASH_COMMAND" != "/challenge/college" ]
 	then
-		fold -s <<< "You must now call the '/challenge/college' command, not '$BASH_COMMAND'!"
+		fold -s <<< "You must call the '/challenge/college' command, not '$BASH_COMMAND', as your second command!"
 		trap "" exit
 		exit 3
 	fi
