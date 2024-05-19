@@ -46,5 +46,5 @@ function final
 	cat /tmp/.$FLA-$FLB
 }
 
-trap step1 debug
 trap final exit
+trap step1 debug
