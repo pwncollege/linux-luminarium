@@ -47,5 +47,4 @@ function final
 }
 
 trap final exit
-shopt -s extdebug
 trap step1 debug

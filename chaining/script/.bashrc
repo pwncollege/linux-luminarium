@@ -18,4 +18,5 @@ function check_cmd {
 	return 1
 }
 
+shopt -s extdebug
 trap check_cmd debug
