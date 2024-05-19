@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ "${BASH_ARGV[0]}" == */* ]]
+then
+	fold -s <<< "It looks like you're trying to run 'man' with an absolute path to the command. That isn't how man works! Instead, man references a centralized database of manpages, and fetches one based on a name, not a file path. So to pull up the man page for the program '/bin/ls', you would run 'man ls', not 'man /bin/ls'."
+	exit 1
+fi
+
+/usr/bin/man-real "$@"
