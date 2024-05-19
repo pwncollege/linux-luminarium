@@ -2,7 +2,8 @@
 
 function step1
 {
-	if [ "$BASH_COMMAND" != "/challenge/pwn" ]
+	BCMD=($BASH_COMMAND)
+	if [ "${BCMD[0]}" != "/challenge/pwn" ]
 	then
 		fold -s <<< "You must first call the '/challenge/pwn' command, not '$BASH_COMMAND'!"
 		trap "" exit
@@ -19,7 +20,8 @@ function step2
 		exit 2
 	fi
 
-	if [ "$BASH_COMMAND" != "/challenge/college" ]
+	BCMD=($BASH_COMMAND)
+	if [ "${BCMD[0]}" != "/challenge/college" ]
 	then
 		fold -s <<< "You must call the '/challenge/college' command, not '$BASH_COMMAND', as your second command!"
 		trap "" exit
@@ -29,7 +31,8 @@ function step2
 
 function step3
 {
-	if [ "$BASH_COMMAND" != "/challenge/college" ] # unhinged special case where the debug trap is yolo-called at the end wtf
+	BCMD=($BASH_COMMAND)
+	if [ "${BCMD[0]}" != "/challenge/college" ] # unhinged special case where the debug trap is yolo-called at the end wtf
 	then
 		fold -s <<< "I appreciate the enthusiasm, but you can stop after the second command! Instead, you're trying to run '$BASH_COMMAND'..."
 		trap "" exit
