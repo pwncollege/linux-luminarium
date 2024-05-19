@@ -8,8 +8,6 @@ function step1
 		trap "" exit
 		exit 1
 	fi
-
-	trap step2 debug
 }
 
 function step2
@@ -27,8 +25,6 @@ function step2
 		trap "" exit
 		exit 3
 	fi
-
-	trap step3 debug
 }
 
 function step3
@@ -37,6 +33,15 @@ function step3
 	trap "" exit
 	exit 4
 }
+
+STEP_IDX=0
+function dbg
+{
+	((STEP_IDX++))
+	step$STEP_IDX
+	return $?
+}
+
 
 function final
 {
@@ -53,4 +58,4 @@ function final
 
 unset BASH_ENV
 trap final exit
-trap step1 debug
+trap dbg debug
