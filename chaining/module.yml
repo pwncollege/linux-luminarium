@@ -4,6 +4,4 @@ challenges:
     name: Chaining with Semicolons
   - id: script
     name: Your First Shell Script
-    visibility:
-      start: "2029-08-21T10:30:00-07:00"
 
