@@ -29,9 +29,12 @@ function step2
 
 function step3
 {
-	fold -s <<< "I appreciate the enthusiasm, but you can stop after the second command! Instead, you're trying to run '$BASH_COMMAND'..."
-	trap "" exit
-	exit 4
+	if [ "$BASH_COMMAND" != "/challenge/college" ] # unhinged special case where the debug trap is yolo-called at the end wtf
+	then
+		fold -s <<< "I appreciate the enthusiasm, but you can stop after the second command! Instead, you're trying to run '$BASH_COMMAND'..."
+		trap "" exit
+		exit 4
+	fi
 }
 
 STEP_IDX=0
