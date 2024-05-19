@@ -36,7 +36,7 @@ function step3
 
 function final
 {
-	if [ -f "/tmp/.college" ]
+	if [ ! -f "/tmp/.college" ]
 	then
 		fold -s <<< "It looks like '/challenge/challenge' did not run correctly..."
 		exit 2
