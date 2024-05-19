@@ -1,0 +1,50 @@
+#!/bin/bash
+
+function step1
+{
+	if [ "$BASH_COMMAND" != "/challenge/pwn" ]
+	then
+		fold -s <<< "You must first call the '/challenge/pwn' command, not '$BASH_COMMAND'!"
+		exit 1
+	fi
+
+	trap step2 debug
+}
+
+function step2
+{
+	if [ ! -f /tmp/.pwn ]
+	then
+		fold -s <<< "It looks like '/challenge/pwn' did not run correctly..."
+		exit 2
+	fi
+
+	if [ "$BASH_COMMAND" != "/challenge/college" ]
+	then
+		fold -s <<< "You must now call the '/challenge/college' command, not '$BASH_COMMAND'!"
+		exit 3
+	fi
+
+	trap step3 debug
+}
+
+function step3
+{
+	fold -s <<< "I appreciate the enthusiasm, but you can stop after the second command! Instead, you're trying to run '$BASH_COMMAND'..."
+	exit 4
+}
+
+function final
+{
+	if [ -f "/tmp/.college" ]
+	then
+		fold -s <<< "It looks like '/challenge/challenge' did not run correctly..."
+		exit 2
+	fi
+
+	fold -s <<< "Great job, you've written your first shell script! Here is the flag:"
+	cat /tmp/.$FLA-$FLB
+}
+
+trap step1 debug
+trap final exit

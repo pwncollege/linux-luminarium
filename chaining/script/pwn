@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if ls -l /proc/$$/fd/{0,1,2} | grep -vq pts
+then
+	fold -s 1>&2 <<< "It looks like you may have chained this command with a pipe or other input redirection method. That's not what this level is about! This level is about simply running one command after another using ';'."
+	exit
+fi
+
+if [ "$1" == ";" ]
+then
+	fold -s <<< "It looks like you wrapped your semicolon in quotes, which causes the shell to treat it differently. Just put the raw ;!"
+	exit
+fi
+
+touch /tmp/.pwn
