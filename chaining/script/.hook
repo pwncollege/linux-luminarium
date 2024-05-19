@@ -35,6 +35,7 @@ function step3
 		trap "" exit
 		exit 4
 	fi
+	trap "" debug
 }
 
 STEP_IDX=0
