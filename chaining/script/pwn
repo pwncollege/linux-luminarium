@@ -2,7 +2,7 @@
 
 if ls -l /proc/$$/fd/{0,1,2} | grep -vq pts
 then
-	fold -s 1>&2 <<< "It looks like you may have chained this command with a pipe or other input redirection method. That's not what this level is about! This level is about simply running one command after another using ';'."
+	fold -s 1>&2 <<< "It looks like you may have chained the pwn command with a pipe or other input redirection method. In this level, you must script the commands to run one after the other, without piping or redirection!"
 	exit
 fi
 
