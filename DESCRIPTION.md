@@ -8,3 +8,7 @@ We do our best to avoid requiring any knowledge of Linux, but we do expect you t
 This dojo is a work in progress *and* a community effort!
 If you are interested in contributing, please make your way over to [github](https://github.com/pwncollege/linux-luminarium)!
 If you have questions, comments, feedback, and so on, join us on [the Discord channel](https://discord.com/channels/750635557666816031/1200855675039928450).
+
+**NOTE:**
+The Linux Luminarium is _very_ introductory.
+If you are already comfortable in Linux, feel free to skip it!
