@@ -19,4 +19,4 @@ function check_cmd {
 }
 
 shopt -s extdebug
-trap check_cmd debug
+PROMPT_COMMAND="trap check_cmd debug"
