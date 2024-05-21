@@ -1,0 +1,4 @@
+#!/bin/bash
+
+( cat /usr/share/dict/american-english; cat /flag ) | sort -R > /challenge/.data.txt
+chmod 600 /challenge/.data.txt

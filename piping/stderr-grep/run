@@ -1,0 +1,6 @@
+#!/opt/pwn.college/bash
+
+DIR=$(/bin/dirname ${BASH_SOURCE[0]})
+exec 5> /dev/tty
+$DIR/chio.py --check_stderr_pipe grep --reward /challenge/.data.txt --chio_info_fd 5 --chio_warn_fd 5 --chio_hint_fd 5 --chio_test_fd 5 --chio_pass_fd 5 --chio_fail_fd 5 --chio_flag_fd 2 --chio_hype_fd 5
+

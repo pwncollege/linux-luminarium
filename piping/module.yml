@@ -19,3 +19,5 @@ challenges:
   name: "Grep through some stored results"
 - id: "pipe-grep"
   name: "Grep through live output!"
+- id: "stderr-grep"
+  name: "Grep through error output!"
