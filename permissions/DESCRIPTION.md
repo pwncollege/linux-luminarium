@@ -1,32 +1,30 @@
 This module will expose you to Linux permissions, which is one of the most important part of your journey going ahead. 
 
-In Linux, files have different permissions or file modes. You can check out a permissions of a file or directory using `ls -l`:
-```
-hacker@dojo:~$ ls -l ~/.config
-total 20
--rw-r--r-- 1 hacker hacker  500 Jan 18 09:06 QtProject.conf
-drwx------ 2 hacker hacker 4096 Jan 18 09:06 Thunar
-drwxr-xr-x 2 hacker hacker 4096 Jan 18 09:06 code-server
-drwxr-xr-x 2 hacker hacker 4096 Jan 18 09:06 gtk-3.0
-drwxr-xr-x 7 hacker hacker 4096 Aug 18  2022 xfce4
-```
-The permissions character often looks like this:
+In Linux, files have different permissions or file modes. You can check out a permissions of a file or directory using `ls -l`.
+Let's make some files and look at their permissions:
 
-```
-drwxr-xr-x
+```console
+hacker@dojo:~$ mkdir pwn_directory
+hacker@dojo:~$ touch college_file
+hacker@dojo:~$ ls -l
+total 4
+-rw-r--r-- 1 yans yans    0 May 22 13:42 college_file
+drwxr-xr-x 2 yans yans 4096 May 22 13:42 pwn_directory
 ```
 
-There are four parts to a file permissions:
+The first column represents the file type and file permissions.
+There are four parts to these file details:
 
-The first part is the filetype, which is the first character in the sequence, in this case it's a `d` to indicate that it's a directory. Otherwise, you would commonly see a `-` for a regular file.
+The first character represents the file type. In `pwn_directory`'s case, the `d` indicates that it's a directory, and in `pwn_file`'s case, the `-` represents that it's a normal file.
 
-The next three part is the actual permissions. The permissions are grouped into 3 bits each. The first 3 is owner's permissions, middle 3 is group permissions and then public permissions. 
+The next nine characters are the actual access permissions of the file or directory, split into 3 characters denoting the permissions that the user who owns the file (termed the "owner") has to the file, 3 characters denoting the permissions that the group that owns the file (termed the "group") has to the file, and 3 characters denoting the permissions that all other access (e.g., by other users and other groups, termed the "world") has to the file.
 
-Each character represent a different permissions
+Each character of the three represent permission for a different type:
+
 ```
-r - user can read the file
-w - user can write into and modify the files
-x - user can execute the file as a program 
+r - user can read the file (or list the directory)
+w - user can modify the files (or create/delete files in the directory)
+x - user can execute the file as a program (or can enter the directory, e.g., using `cd`)
 - - nothing 
 ```
 
