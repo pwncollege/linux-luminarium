@@ -1,0 +1,25 @@
+#!/opt/pwn.college/bash
+
+exec 5>/dev/tty
+DIR=$(/bin/dirname ${BASH_SOURCE[0]})
+if ! $DIR/chio.py --check_stdout_path /tmp/the-flag --chio_info_fd 5 --chio_warn_fd 5 --chio_hint_fd 5 --chio_test_fd 5 --chio_pass_fd 5 --chio_fail_fd 5 --chio_hype_fd 5
+then
+	#fold -s > /dev/tty <<< "You aren't redirecting stdout to /tmp/the-flag! Rerun me with the output redirected (in append mode!)."
+	exit 1
+fi
+
+fold -s > /dev/tty <<< "I will write the flag in two parts to the file /tmp/the-flag! I'll do the first write directly to the file, and the second write, I'll do to stdout (if it's pointing at the file). If you redirect the output in append mode, the second write will append to (rather than overwrite) the first write, and you'll get the whole flag!"
+
+(
+	echo " | "
+	echo "\\|/ This is the first half:"
+	echo " v "
+	head -c16 /flag
+) > /tmp/the-flag
+
+tail -c+17 /flag
+echo "                              ^"
+echo "     that is the second half /|\\"
+echo "                              |"
+echo
+fold -s <<< "If you only see the second half above, you redirected in *truncate* mode (>) rather than *append* mode (>>), and so the write of the second half to stdout overwrote the initial write of the first half directly to the file. Try append mode!"
