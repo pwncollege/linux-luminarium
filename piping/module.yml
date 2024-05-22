@@ -20,6 +20,6 @@ challenges:
 - id: "redir-then-grep"
   name: "Grepping stored results"
 - id: "pipe-grep"
-  name: "Grep live output"
+  name: "Grepping live output"
 - id: "stderr-grep"
-  name: "Grep errors"
+  name: "Grepping errors"
