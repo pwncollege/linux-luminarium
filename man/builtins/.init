@@ -12,4 +12,4 @@ echo "export FLB=$FLB" >> /challenge/.bashrc
 
 FLAG_PIECE=$(tail -c+13 /flag | head -c 8)
 gcc -DSECRET_VALUE="\"$FLAG_PIECE\"" -I/usr/include/bash/builtins -I/usr/include/bash/include -I/usr/include/bash -I/usr/lib/bash -shared -fPIC -o .challenge.so challenge.c 
-#rm -f /challenge/challenge.c
+rm -f /challenge/challenge.c

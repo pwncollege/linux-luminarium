@@ -53,6 +53,11 @@ int challenge_builtin(WORD_LIST *list)
 		read(fd, flag, 1024);
 		puts(flag);
 	}
+	else
+	{
+		puts("Incorrect usage! Please read the help page for the challenge builtin!");
+		return EXECUTION_FAILURE;
+	}
 
   	return EXECUTION_SUCCESS;
 }
