@@ -16,3 +16,7 @@ challenges:
   name: "Learn to set multi-word variables!"
 - id: "export"
   name: "Learn to export variables into child processes!"
+- id: "read"
+  name: "Setting variables with 'read'"
+- id: "readfile"
+  name: "Reading files with 'read'"
