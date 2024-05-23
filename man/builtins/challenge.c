@@ -65,10 +65,9 @@ void challenge_builtin_unload(char *name)
 }
 
 char *challenge_doc[] = {
-	"challenge: challenge [--fortune] [--version] [--secret SECRET]",
+	"This builtin command will read you the flag, given the right arguments!"
 	(
 	 ""
-	 "\tThis builtin command will read you the flag, given the right arguments!\n"
 	 "\n"
 	 "\tOptions:\n"
 	 "\t  --fortune		display a fortune\n"
@@ -86,6 +85,6 @@ struct builtin challenge_struct = {
 	challenge_builtin,		/* function implementing the builtin */
 	BUILTIN_ENABLED,		/* initial flags for builtin */
 	challenge_doc,			/* array of long documentation strings. */
-	"challenge",			/* usage synopsis; becomes short_doc */
+	"challenge [--fortune] [--version] [--secret SECRET]",			/* usage synopsis; becomes short_doc */
 	0				/* reserved for internal use */
 };
