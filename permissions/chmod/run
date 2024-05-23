@@ -16,7 +16,7 @@ MAX_ROUNDS = 8
 def explain_permissions(when="Current", mode=None, target=TARGET):
 	u,g,o = [ int(c) for c in oct(
 		os.stat(target).st_mode if mode is None else mode
-	)[-3:] ]
+	)[2:].rjust(3, "0")[-3:] ]
 	print(f"""{when} permissions of "{target}": {PERMSTRS[u]}{PERMSTRS[g]}{PERMSTRS[o]}""")
 	for who,what in [ ("user", u), ("group", g), ("world", o) ]:
 		for bit,meaning in [ (4,"read"), (2,"write"), (1,"execute") ]:
