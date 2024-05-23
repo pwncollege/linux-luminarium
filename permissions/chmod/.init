@@ -3,4 +3,5 @@
 mv /usr/bin/chmod /usr/bin/.chmod.real
 mv /challenge/chmod /usr/bin/chmod
 touch /challenge/secret
+chown hacker.hacker /challenge/secret
 chmod 644 /challenge/secret
