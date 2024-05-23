@@ -69,13 +69,13 @@ char *challenge_doc[] = {
 	(
 	 ""
 	 "\n"
-	 "Options:\n"
-	 "  --fortune		display a fortune\n"
-	 "  --version		display the version\n"
-	 "  --secret VALUE	prints the flag, if VALUE is correct\n"
+	 "    Options:\n"
+	 "      --fortune		display a fortune\n"
+	 "      --version		display the version\n"
+	 "      --secret VALUE	prints the flag, if VALUE is correct\n"
 	 "\n"
-	 "You must be sure to provide the right value to --secret. That value\n"
-	 "is \"" SECRET_VALUE "\"."
+	 "    You must be sure to provide the right value to --secret. That value\n"
+	 "    is \"" SECRET_VALUE "\"."
 	),
 	(char *)NULL
 };
