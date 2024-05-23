@@ -67,8 +67,16 @@ void challenge_builtin_unload(char *name)
 char *challenge_doc[] = {
 	"challenge: challenge [--fortune] [--version] [--secret SECRET]",
 	(
-	 "This builtin command will read you the flag.\n"
-	 "TODO"
+	 ""
+	 "\tThis builtin command will read you the flag, given the right arguments!\n"
+	 "\n"
+	 "\tOptions:\n"
+	 "\t  --fortune		display a fortune\n"
+	 "\t  --version		display the version\n"
+	 "\t  --secret VALUE	prints the flag, if VALUE is correct\n"
+	 "\n"
+	 "\tYou must be sure to provide the right value to --secret. That value\n"
+	 "\tis \"" SECRET_VALUE "\"."
 	),
 	(char *)NULL
 };
