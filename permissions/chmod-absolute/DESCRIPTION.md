@@ -17,5 +17,7 @@ Additionally, you can zero out permissions with `-`:
 
 - `chmod u=rw,g=r,o=- /challenge/pwn` will set the user permissions to read and write, the group permissions to read-only, and the world permissions to nothing at all
 
+Keep in mind, that `-`, appearing after `=` is in a different context than if it appeared directly after the `u`, `g`, or `o` (in which case, it would cause specific bits to be removed, not everything).
+
 This level extends the previous level by requesting more radical permission changes, which you will need `=` and `,`-chaining to achieve.
 Good luck!
