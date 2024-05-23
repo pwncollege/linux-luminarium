@@ -1,3 +1,76 @@
-#!/bin/bash
+#!/opt/pwn.college/python
 
-cat /challenge/DESCRIPTION.md
+import pickle
+import random
+import sys
+import re
+import os
+
+RND = random.Random(int(re.sub("[^0-9]", "", open("/flag").read()) + "1"))
+TARGET = "/challenge/secret"
+STATE_PATH = "/tmp/.state"
+PERMSTRS = { 7: "rwx", 6: "rw-", 5: "r-x", 4: "r--", 3: "r-x", 2: "-w-", 1: "--x", 0: "---" }
+STRSPERM = { v:k for k,v in PERMSTRS.items() }
+MAX_ROUNDS = 8
+
+def explain_permissions(when="Current", mode=None, target=TARGET):
+	u,g,o = [ int(c) for c in oct(
+		os.stat(target).st_mode if mode is None else mode
+	)[-3:] ]
+	print(f"""{when} permissions of "{target}": {PERMSTRS[u]}{PERMSTRS[g]}{PERMSTRS[o]}""")
+	for who,what in [ ("user", u), ("group", g), ("world", o) ]:
+		for bit,meaning in [ (4,"read"), (2,"write"), (1,"execute") ]:
+			has = what & bit
+			print(f"""{"*" if has else "-"} the {who} does{'' if has else "n't"} have {meaning} permissions""")
+
+def next_perms(cur_perms=None, r=0):
+	if cur_perms is None:
+		cur_perms = os.stat(TARGET).st_mode & 0o777
+
+	nrnd = random.Random(RND.randrange(0, 0x1000)+cur_perms+r)
+	what = nrnd.randint(1, 7)
+	mod = 0
+	which = nrnd.randint(1, 7)
+	for w in range(3):
+		mod <<= 3
+		if which & (1<<w):
+			mod |= what
+	#print(f"{which=} {what=} {oct(mod)=} ")
+	return (cur_perms | mod) if nrnd.randint(0, 1) else (cur_perms & (~mod))
+
+def print_status():
+	print(f"Round {ROUND} (of {MAX_ROUNDS})!")
+	print("")
+	explain_permissions()
+	print("")
+	explain_permissions("Needed", NEEDED_PERMS)
+
+def check():
+	if os.stat(TARGET).st_mode & 0o777 == NEEDED_PERMS:
+		print("You set the correct permissions!")
+		with open(STATE_PATH, "wb") as o:
+			pickle.dump((ROUND+1, next_perms(r=ROUND)), o)
+		return True
+	else:
+		print("You set the permissions incorrectly! Restarting the game!")
+		os.chmod(TARGET, 0o644)
+		if os.path.exists(STATE_PATH):
+			os.unlink(STATE_PATH)
+		return False
+
+ROUND, NEEDED_PERMS = pickle.load(open(STATE_PATH, "rb")) if os.path.exists(STATE_PATH) else (0,next_perms(0o644,0))
+
+if __name__ == "__main__":
+	if len(sys.argv) > 1 and sys.argv[1] == "check":
+		o = check()
+		print("")
+		print_status()
+		sys.exit(0 if o else 1)
+	elif ROUND == MAX_ROUNDS:
+		os.chown("/flag", 1000, 1000)
+		os.rename("/usr/bin/.chmod.real", "/usr/bin/chmod")
+		print("You've solved all {MAX_ROUNDS} rounds! I have changed the ownership of the /flag file so that you can 'chmod' it. You won't be able to read it until you make it readable with chmod!")
+		print("")
+		explain_permissions(when="Current", target="/flag")
+	else:
+		print_status()

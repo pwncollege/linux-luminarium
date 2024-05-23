@@ -15,7 +15,9 @@ drwxr-xr-x 2 yans yans 4096 May 22 13:42 pwn_directory
 The first column represents the file type and file permissions.
 There are four parts to these file details:
 
-The first character represents the file type. In `pwn_directory`'s case, the `d` indicates that it's a directory, and in `pwn_file`'s case, the `-` represents that it's a normal file.
+The first character represents the file type.
+In `pwn_directory`'s case, the `d` indicates that it's a directory, and in `pwn_file`'s case, the `-` represents that it's a normal file.
+There are other types, but we will cover that later in the module.
 
 The next nine characters are the actual access permissions of the file or directory, split into 3 characters denoting the permissions that the user who owns the file (termed the "owner") has to the file, 3 characters denoting the permissions that the group that owns the file (termed the "group") has to the file, and 3 characters denoting the permissions that all other access (e.g., by other users and other groups, termed the "world") has to the file.
 
