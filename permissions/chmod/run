@@ -63,8 +63,6 @@ ROUND, NEEDED_PERMS = pickle.load(open(STATE_PATH, "rb")) if os.path.exists(STAT
 if __name__ == "__main__":
 	if len(sys.argv) > 1 and sys.argv[1] == "check":
 		o = check()
-		print("")
-		print_status()
 		sys.exit(0 if o else 1)
 	elif ROUND == MAX_ROUNDS:
 		os.chown("/flag", 1000, 1000)
