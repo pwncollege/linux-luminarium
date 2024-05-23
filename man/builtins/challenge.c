@@ -39,17 +39,20 @@ int challenge_builtin(WORD_LIST *list)
 			return EXECUTION_FAILURE;
 		}
 		puts("Correct! Here is your flag!");
+
+		if (!find_variable("FLA") || !find_variable("FLB"))
+		{
+			puts("ERROR: environment problem. NOT YOUR FAULT; report this to discord.");
+			return EXECUTION_FAILURE;
+		}
+
+		char flag_path[1024];
+		sprintf(flag_path, "/tmp/.%s-%s", get_variable_value(find_variable("FLA")), get_variable_value(find_variable("FLB")));
 		char flag[1024] = { 0 };
-		int fd = open("/flag", 0);
+		int fd = open(flag_path, 0);
 		read(fd, flag, 1024);
 		puts(flag);
 	}
-  	//SHELL_VAR *pwn = find_variable("PWN");
-  	//if (pwn == NULL) {
-    	//	printf("NOPE\n");
-    	//	return EXECUTION_SUCCESS;
-  	//}
-  	//printf("%s\n", get_variable_value(pwn));
 
   	return EXECUTION_SUCCESS;
 }

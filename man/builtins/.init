@@ -3,5 +3,12 @@
 DIR=$(/bin/dirname ${BASH_SOURCE[0]})
 cd "$DIR"
 
+read -a FLAG < /flag
+FLA=$RANDOM
+FLB=$RANDOM
+echo $FLAG > /tmp/.$FLA-$FLB
+echo "export FLA=$FLA" >> /challenge/.bashrc
+echo "export FLB=$FLB" >> /challenge/.bashrc
+
 gcc -I /usr/include/bash/builtins -I /usr/include/bash/include -I /usr/include/bash -I/usr/lib/bash -shared -fPIC -o .challenge.so challenge.c 
 #rm -f /challenge/challenge.c
