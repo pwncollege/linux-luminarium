@@ -65,7 +65,7 @@ void challenge_builtin_unload(char *name)
 }
 
 char *challenge_doc[] = {
-	"This builtin command will read you the flag, given the right arguments!"
+	"This builtin command will read you the flag, given the right arguments!",
 	(
 	 ""
 	 "\n"
