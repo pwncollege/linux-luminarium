@@ -16,5 +16,3 @@ challenges:
   name: Helpful Programs
 - id: "builtins"
   name: Help for Builtins
-  visibility:
-    start: "2029-08-21T10:30:00-07:00"
