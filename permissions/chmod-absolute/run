@@ -39,6 +39,7 @@ def print_status():
 	explain_permissions("Needed", NEEDED_PERMS)
 
 def check():
+	print(f"{oct(NEEDED_PERMS)=} {oct(os.stat(TARGET).st_mode & 0o777)=}")
 	if os.stat(TARGET).st_mode & 0o777 == NEEDED_PERMS:
 		print("You set the correct permissions!")
 		with open(STATE_PATH, "wb") as o:
@@ -46,6 +47,7 @@ def check():
 		return True
 	else:
 		explain_permissions(when="NEEDED, BUT UNMET", mode=NEEDED_PERMS)
+		print("")
 		explain_permissions(when="CURRENT, INCORRECT")
 		print("")
 		print("You set the permissions incorrectly! Restarting the game!")
