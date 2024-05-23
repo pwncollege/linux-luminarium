@@ -45,6 +45,9 @@ def check():
 			pickle.dump((ROUND+1, next_perms(r=ROUND)), o)
 		return True
 	else:
+		explain_permissions(when="NEEDED, BUT UNMET", mode=NEEDED_PERMS)
+		explain_permissions(when="CURRENT, INCORRECT")
+		print("")
 		print("You set the permissions incorrectly! Restarting the game!")
 		os.chmod(TARGET, 0o644)
 		if os.path.exists(STATE_PATH):
