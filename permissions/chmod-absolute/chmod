@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/usr/bin/.chmod.real "$@"
+/challenge/run check && /challenge/run

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mv /usr/bin/chmod /usr/bin/.chmod.real
+mv /challenge/chmod /usr/bin/chmod
+touch /challenge/pwn
+chown hacker.hacker /challenge/pwn
+chmod 644 /challenge/pwn

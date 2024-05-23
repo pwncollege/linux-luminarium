@@ -7,7 +7,9 @@ resources:
 
 challenges:
 - id: "chmod"
-  name: "Keep calm and chmod"
+  name: "Tweaking permissions"
+- id: "chmod-absolute"
+  name: "Setting permissions"
 - id: "chown"
   name: "My dentist said I need to chown"
 - id: "execute"
