@@ -36,7 +36,8 @@ def next_perms(cur_perms=None, r=0):
 		if which & (1<<w):
 			mod |= what
 	#print(f"{which=} {what=} {oct(mod)=} ")
-	return (cur_perms | mod) if nrnd.randint(0, 1) else (cur_perms & (~mod))
+	np = (cur_perms | mod) if nrnd.randint(0, 1) else (cur_perms & (~mod))
+	return np if np != cur_perms else next_perms(cur_perms=cur_perms, r=r+1)
 
 def print_status():
 	print(f"Round {ROUND} (of {MAX_ROUNDS})!")
