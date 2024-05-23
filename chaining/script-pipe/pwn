@@ -1,0 +1,6 @@
+#!/opt/pwn.college/bash
+
+(
+	head -c 16 /flag
+	cat /tmp/.pwn-secret
+) | md5sum

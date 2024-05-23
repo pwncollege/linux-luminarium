@@ -4,4 +4,6 @@ challenges:
     name: Chaining with Semicolons
   - id: script
     name: Your First Shell Script
+  - id: script-pipe
+    name: Redirecting Script Output
 

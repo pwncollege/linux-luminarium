@@ -1,0 +1,22 @@
+#!/opt/pwn.college/bash
+
+read SECRET1
+read SECRET2
+
+read REAL_SECRET1 < <( ( head -c 16 /flag; cat /tmp/.pwn-secret ) | md5sum )
+read REAL_SECRET2 < <( ( tail -c+17 /flag; cat /tmp/.pwn-secret ) | md5sum )
+
+if [ "$SECRET1" != "$REAL_SECRET1" ]
+then
+	fold -s <<< "The data piped from /challenge/pwn did not match what I expected. I re-randomize the data every time you input a new line to the shell, so you must get it right in one shot! Make sure to pipe the output from your script to /challenge/solve."
+	exit 1
+fi
+
+if [ "$SECRET2" != "$REAL_SECRET2" ]
+then
+	fold -s <<< "The data piped from /challenge/college did not match what I expected. I re-randomize the data every time you input a new line to the shell, so you must get it right in one shot! Make sure to pipe the output from your script to /challenge/solve."
+	exit 2
+fi
+
+echo "Correct! Here is your flag:"
+cat /flag
