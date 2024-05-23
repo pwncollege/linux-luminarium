@@ -13,5 +13,9 @@ You can achieve this by chaining multiple modes to chmod with `,`!
 - `chmod u=rw,g=r /challenge/pwn` will set the user permissions to read and write, and the group permissions to read-only
 - `chmod a=r,u=rw /challenge/pwn` will set the user permissions to read and write, and the group and world permissions to read-only
 
+Additionally, you can zero out permissions with `-`:
+
+- `chmod u=rw,g=r,o=- /challenge/pwn` will set the user permissions to read and write, the group permissions to read-only, and the world permissions to nothing at all
+
 This level extends the previous level by requesting more radical permission changes, which you will need `=` and `,`-chaining to achieve.
 Good luck!
