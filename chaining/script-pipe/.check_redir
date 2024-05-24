@@ -1,0 +1,15 @@
+#!/opt/pwn.college/python
+
+import psutil
+import time
+import chio
+import sys
+import os
+
+try:
+	time.sleep(1) # sleep to give the parent process enough time to spawn the partner, in case of stdout piping
+	partner = psutil.Process(chio.resolve_fd_pipe_partner(os.getpid(), 1, parent_ok=False))
+	chio.check_challenge_shellscript(partner)
+	sys.exit(0)
+except AssertionError as e:
+	sys.exit(1)
