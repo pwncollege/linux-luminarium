@@ -24,7 +24,5 @@ challenges:
 - id: "stderr-grep"
   name: "Grepping errors"
 - id: "tee"
-  name: "Duplicating piped data"
-  visibility:
-    start: "2029-08-21T10:30:00-07:00"
+  name: "Duplicating piped data with tee"
 
