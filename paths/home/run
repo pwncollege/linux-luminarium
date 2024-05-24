@@ -1,5 +1,11 @@
 #!/opt/pwn.college/bash
 
+if [ "$#" -eq 0 ]
+then
+	fold -s <<< "You must provide an argument to /challenge/run when you invoke it!"
+	exit 4
+fi
+
 read ARG < /tmp/.last_arg
 if [ "${#ARG}" -gt 3 ]
 then
