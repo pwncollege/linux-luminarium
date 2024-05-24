@@ -9,7 +9,7 @@ then
 	exit 1
 fi
 
-SECRET_VAL=$(tail -c+17 /flag | head -c8)
+SECRET_VAL=$(tail -c+13 /flag | head -c8)
 if [ "$1" != "--secret" ] || [ "$2" != "$SECRET_VAL" ]
 then
 	echo "Usage: $0 --secret [SECRET_ARG]"
