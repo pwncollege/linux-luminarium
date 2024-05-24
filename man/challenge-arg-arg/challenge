@@ -1,0 +1,22 @@
+#!/opt/pwn.college/bash
+
+if [ "$#" -eq 0 ]
+then
+	fold -s <<< "Incorrect usage! You must pass an argument to me (read the challenge description for details)."
+	exit 1
+fi
+
+if [ "$1" != "--printfile" ]
+then
+	fold -s <<< "Incorrect usage! You passed the wrong argument (read the challenge description for details)."
+	exit 2
+fi
+
+if [ "$#" -eq 1 ]
+then
+	fold -s <<< "You must pass a file for --printfile to read!"
+	exit 3
+fi
+
+echo "Correct argument! Here is the $2 file:"
+cat "$2"

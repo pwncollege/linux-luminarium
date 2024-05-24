@@ -8,6 +8,8 @@ resources:
 challenges:
 - id: "challenge-arg"
   name: Learning From Documentation
+- id: "challenge-arg-arg"
+  name: Learning Complex Usage
 - id: "man"
   name: Reading Manuals
 - id: "man-search"
