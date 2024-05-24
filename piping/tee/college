@@ -1,0 +1,20 @@
+#!/opt/pwn.college/bash
+
+sleep 5
+DIR=$(/bin/dirname ${BASH_SOURCE[0]})
+if ! $DIR/chio.py --check_stdin_pipe tee 2>/dev/null && ! $DIR/chio.py --check_stdin_pipe challenge_shellscript #2>/dev/null
+then
+	fold -s <<< "/challenge/secret needs to the on the receiving end of the output of '/challenge/pwn' (or 'tee' for debugging)."
+	exit 1
+fi
+
+read SS < <(tail -n1)
+
+if [ "$SS" != "SUPERSECRET:$(tail -c+20 /flag | head -c4)" ]
+then
+	fold -s <<< "The input is incorrect! No flag for you (use 'tee' to intercept the output of 'pwn' and figure out what's going on)."
+	exit 2
+fi
+
+echo "Great job! Here is your flag:"
+cat /flag

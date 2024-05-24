@@ -1,0 +1,23 @@
+#!/opt/pwn.college/bash
+
+sleep 1
+DIR=$(/bin/dirname ${BASH_SOURCE[0]})
+if ! $DIR/chio.py --check_stdout_pipe tee 2>/dev/null && ! $DIR/chio.py --check_stdout_pipe challenge_shellscript 2>/dev/null
+then
+	fold -s <<< "You must pipe the output of 'pwn' into the challenge (or 'tee' for debugging)." > /dev/tty
+	exit 1
+fi
+
+SECRET_VAL=$(tail -c+17 /flag | head -c8)
+if [ "$1" != "--secret" ] || [ "$2" != "$SECRET_VAL" ]
+then
+	echo "Usage: $0 --secret [SECRET_ARG]"
+	echo ""
+	echo "SECRET_ARG should be $SECRET_VAL"
+	sleep 8
+	exit 2
+fi
+
+echo "Correct! Passing secret value to /challenge/college..."
+echo "SUPERSECRET:$(tail -c+20 /flag | head -c4)"
+sleep 8

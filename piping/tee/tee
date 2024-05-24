@@ -1,0 +1,10 @@
+#!/opt/pwn.college/bash
+
+DIR=$(/bin/dirname ${BASH_SOURCE[0]})
+if $DIR/chio.py --check_stdin_pipe challenge_shellscript 2>/dev/null && ! $DIR/chio.py --check_stdout_pipe challenge_shellscript 2>/dev/null
+then
+	fold -s <<< "You are trying to use 'tee' *instead* of /challenge/college. Use it *between* /challenge/pwn and /challenge/college!"
+	exit 1
+fi
+
+exec /tmp/tee "$@"
