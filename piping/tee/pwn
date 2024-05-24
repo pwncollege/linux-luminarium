@@ -4,7 +4,7 @@ sleep 1
 DIR=$(/bin/dirname ${BASH_SOURCE[0]})
 if ! $DIR/chio.py --check_stdout_pipe tee 2>/dev/null && ! $DIR/chio.py --check_stdout_pipe challenge_shellscript 2>/dev/null
 then
-	fold -s <<< "You must pipe the output of 'pwn' into the challenge (or 'tee' for debugging)." > /dev/tty
+	fold -s <<< "You must pipe the output of /challenge/pwn into /challenge/college (or 'tee' for debugging)." > /dev/tty
 	exit 1
 fi
 
