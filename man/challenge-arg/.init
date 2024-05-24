@@ -1,0 +1,43 @@
+#!/usr/bin/env python
+
+import gzip
+import re
+import os
+
+os.rename("/usr/bin/man", "/usr/bin/man-real")
+os.rename("/challenge/man", "/usr/bin/man")
+
+FLAG = open("/flag").read().strip()
+LETTERS = re.sub("[^a-z]", "", FLAG[FLAG.index('{'):]) + "ab"
+NUMBERS = re.sub("[^0-9]", "", FLAG[FLAG.index('{'):]) + "1"
+OPT,ARG = LETTERS[:6], NUMBERS[:3]
+
+with gzip.open("/usr/share/man/man1/challenge.1.gz", "w") as o:
+	o.write((r"""
+.TH CHALLENGE "1" "May 2024" "pwn.college" "Challenge Commands"
+.SH NAME
+/challenge/challenge \- print the flag!
+.SH SYNOPSIS
+.B challenge
+\fI\,OPTION\/\fR
+.br
+.SH DESCRIPTION
+.\" Add any additional description here
+.PP
+Output the flag when called with the right arguments.
+.TP
+\fB\-\-fortune\fR
+read a fortune
+.TP
+\fB\-\-version\fR
+output version information and exit
+.TP
+\fB\-\-"""+OPT+r""" NUM\fR
+print the flag if NUM is """+ARG+r"""
+.SH AUTHOR
+Written by Zardus.
+.SH "REPORTING BUGS"
+The repository for this dojo: <https://github.com/pwncollege/linux-luminarium/>
+.SH "SEE ALSO"
+man(1) bash-builtins(7)
+""").encode())

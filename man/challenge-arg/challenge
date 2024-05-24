@@ -1,0 +1,16 @@
+#!/opt/pwn.college/bash
+
+if [ "$#" -eq 0 ]
+then
+	fold -s <<< "Incorrect usage! You must pass an argument to me (read the challenge description for details)."
+	exit 1
+fi
+
+if [ "$1" != "--giveflag" ]
+then
+	fold -s <<< "Incorrect usage! You passed the wrong argument (read the challenge description for details)."
+	exit 2
+fi
+
+echo "Correct argument! Here is your flag:"
+cat /flag

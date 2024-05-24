@@ -6,6 +6,8 @@ resources:
     - [Online repository of man pages](https://man7.org/linux/man-pages/)
 
 challenges:
+- id: "challenge-arg"
+  name: Learning From Documentation
 - id: "man"
   name: Reading Manuals
 - id: "man-search"
