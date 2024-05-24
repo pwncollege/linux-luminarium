@@ -8,10 +8,10 @@ That means you can redirect its input and output just like you did for commands 
 For example, you can write it to a file:
 
 ```console
-hacker@dojo:~$ cat x.sh
+hacker@dojo:~$ cat script.sh
 echo PWN
 echo COLLEGE
-hacker@dojo:~$ bash x.sh > output
+hacker@dojo:~$ bash script.sh > output
 hacker@dojo:~$ cat output
 PWN
 COLLEGE
