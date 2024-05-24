@@ -14,7 +14,7 @@ if [ "$1" != "--secret" ] || [ "$2" != "$SECRET_VAL" ]
 then
 	echo "Usage: $0 --secret [SECRET_ARG]"
 	echo ""
-	echo "SECRET_ARG should be $SECRET_VAL"
+	echo "SECRET_ARG should be \"$SECRET_VAL\""
 	sleep 8
 	exit 2
 fi
