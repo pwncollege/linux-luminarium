@@ -6,6 +6,4 @@ challenges:
     name: Your First Shell Script
   - id: script-pipe
     name: Redirecting Script Output
-    visibility:
-      start: "2029-08-21T10:30:00-07:00"
 
