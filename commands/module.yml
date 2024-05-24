@@ -3,6 +3,8 @@ name: Basic Commands
 challenges:
 - id: "cat"
   name: "cat: not the pet, but the command!"
+- id: "cat-absolute"
+  name: "catting absolute paths"
 - id: "grep"
   name: "grepping for a needle in a haystack"
 - id: "ls"

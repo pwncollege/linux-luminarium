@@ -27,5 +27,5 @@ This is my file!
 Finally, if you give no arguments at all, `cat` will read from the terminal input and output it.
 We'll explore that in later challenges...
 
-In this challenge, I will make the `/flag` file readable.
+In this challenge, I will copy the flag to the `flag` file in your home directory (where your shell starts).
 Go read it with `cat`!

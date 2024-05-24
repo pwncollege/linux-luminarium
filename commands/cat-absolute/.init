@@ -1,4 +1,4 @@
 #!/bin/bash
 
+rm -f /home/hacker/flag
 chmod 644 /flag
-cp /flag /home/hacker/flag
