@@ -7,8 +7,6 @@ challenges:
   name: "catting absolute paths"
 - id: "cat-chase"
   name: "more catting practice"
-  visibility:
-    start: "2029-08-21T10:30:00-07:00"
 - id: "grep"
   name: "grepping for a needle in a haystack"
 - id: "ls"
