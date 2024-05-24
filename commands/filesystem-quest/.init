@@ -46,13 +46,13 @@ def make_trail(root="/", num_clues=12):
 		clue_text = RND.choice(GREETINGS)
 		clue_text += "\nThe next clue is in: " + next_loc + "\n"
 		if next_ty == 'TRAP':
-			clue_text += "\nWatch out! The next clue is TRAPPED. You'll need to read it out without 'cd'ing into the directory; otherwise, the clue will self destruct!\n"
+			clue_text += "\nWatch out! The next clue is **trapped**. You'll need to read it out without 'cd'ing into the directory; otherwise, the clue will self destruct!\n"
 			clue_names[n+1] = clue_names[n+1] + "-TRAPPED"
 		elif next_ty == 'HIDDEN':
-			clue_text += "\nThe next clue is HIDDEN --- its filename starts with a '.' character. You'll need to look for it using special options to 'ls'.\n"
+			clue_text += "\nThe next clue is **hidden** --- its filename starts with a '.' character. You'll need to look for it using special options to 'ls'.\n"
 			clue_names[n+1] = "." + clue_names[n+1]
 		elif next_ty == 'DELAYED':
-			clue_text += "\nThe next clue is DELAYED --- it will not become readable until you enter the directory with 'cd'.\n"
+			clue_text += "\nThe next clue is **delayed** --- it will not become readable until you enter the directory with 'cd'.\n"
 
 		with open(clue_path, "w") as o:
 			o.write(clue_text)
