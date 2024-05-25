@@ -31,6 +31,6 @@ then
 	fold -s <<< "You got it! Here is your flag!"
 	cat /flag
 else
-	fold -s <<< "Your expansion did not expand to the requested files (file_b, file_a, file_s, and file_h). Instead, it expanded to:"
+	fold -s <<< "Your expansion did not expand to the requested files (file_a, file_b, file_h, and file_s). Instead, it expanded to:"
 	echo "$@"
 fi
