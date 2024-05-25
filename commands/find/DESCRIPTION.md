@@ -44,7 +44,7 @@ hacker@dojo:~$
 You can search the whole filesystem if you want!
 
 ```console
-hacker@dojo:~$ find -name hacker /
+hacker@dojo:~$ find / -name hacker
 /home/hacker
 hacker@dojo:~$
 ```
