@@ -14,4 +14,4 @@ Look: file_a file_b
 ```
 
 Try it here!
-With a single argument, run `/challenge/run` with a single argument that that bracket-globs into `file_b`, `file_a`, `file_s`, and `file_h`!
+With a single argument, run `/challenge/run` with a single argument that bracket-globs into `file_b`, `file_a`, `file_s`, and `file_h`!
