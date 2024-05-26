@@ -29,6 +29,8 @@ fi
 if [[ "${ARGS[0]}" != *"/challenge/files/"* ]]
 then
 	fold -s <<< "Error: you will need to specify the path to the files as part of your glob argument, since they are in a different directory than your current working directory!"
+	[[ "${ARGS[0]}" == *"/challenge/"* ]] && fold -s <<< "HINT: You are trying to specify files in the $(dirname ${ARGS[0]}) directory, but the files are actually in the /challenge/files directory."
+
 	exit 5
 fi
 

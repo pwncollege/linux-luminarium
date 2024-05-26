@@ -3,6 +3,9 @@
 import random
 import gzip
 import re
+import os
+
+os.chmod("/challenge/challenge", 0o4711)
 
 def randbytes(n):
 	return bytes(RND.randrange(0,256) for _ in range(n))
