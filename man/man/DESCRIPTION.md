@@ -73,6 +73,7 @@ SEE ALSO
 COLLECTION                        DATE                          NAME(1)
 ```
 
+You can scroll around the manpage with your arrow keys and PgUp/PgDn.
 When you're done reading the manpage, you can hit `q` to quit.
 
 Manpages are stored in a centralized database.
