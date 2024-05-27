@@ -8,7 +8,7 @@ hacker@dojo:~$ man yes
 
 This will display the manual page for `yes`, which will look something like this:
 
-```man
+```text
 YES(1)                           User Commands                          YES(1)
 
 NAME
@@ -48,7 +48,7 @@ GNU coreutils 8.32               February 2022                          YES(1)
 
 The important sections are:
 
-```man
+```text
 NAME(1)                           CATEGORY                          NAME(1)
 
 NAME
