@@ -6,6 +6,8 @@ resources:
     - [What is PATH?](https://www.linfo.org/path_env_var.html)
 
 challenges:
+- id: "root"
+  name: The Root
 - id: "absolute"
   name: Program and absolute paths
 - id: "absolute-cwd"

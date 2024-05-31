@@ -1,0 +1,13 @@
+#!/opt/pwn.college/bash
+
+if [ "${0:0:1}" != "/" ]
+then
+	echo -e "${COLOR_RED}Incorrect...${COLORLESS}"
+	echo "You did not call this challenge using an absolute path!"
+	echo "An absolute path is anchored at the root of the filesystem, so it starts with /"
+	exit 1
+fi
+
+echo -e "${COLOR_GREEN}Correct!!!${COLORLESS}"
+echo "$0 is an absolute path! Here is your flag:"
+/bin/cat /flag

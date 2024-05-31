@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -f /usr/local/bin/pwn /usr/bin/pwn
+mv /challenge/wrong-pwn /usr/bin/pwn

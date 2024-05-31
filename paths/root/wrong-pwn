@@ -1,0 +1,3 @@
+#!/bin/bash
+
+fold -s <<< "It looks like you invoked 'pwn' instead of the absolute path ('/pwn'). You'll learn more about how this is different later, but suffice it to say: you ran the wrong thing. Use the absolute path, instead!"
