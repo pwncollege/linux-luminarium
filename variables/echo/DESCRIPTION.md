@@ -1,9 +1,4 @@
-The Linux command line interface is actually a sophisticated programming language with which you can write actual programs!
-Because the command line interface is colloquially referred to as a "shell", programs written in this language are referred to as "shell scripts".
-When you're using the command line, you are basically writing a shell script line by line!
-
-Like most programming languages, the shell supports variables.
-This challenge is designed to help you explore variables in your shell, starting with printing them out.
+Let's start with printing variables out.
 The `/challenge/run` program will not, and cannot, give you the flag, but that's okay, because the flag has been put into the variable called "FLAG"!
 Just have your shell print it out!
 
