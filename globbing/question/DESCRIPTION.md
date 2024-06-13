@@ -16,5 +16,5 @@ Look: file_cc
 ```
 
 Now, practice this yourself!
-Starting from your home directory, change your directory to `/challenge`, using the `?` character instead of `c` and `l`!
+Starting from your home directory, change your directory to `/challenge`, but use the `?` character instead of `c` and `l` in the argument to `cd`!
 Once you're there, run `/challenge/run` for the flag!

@@ -46,5 +46,5 @@ THREE: ../hacker
 ```
 
 Now, practice this yourself!
-Starting from your home directory, change your directory to `/challenge`, and use globbing to keep the path you specify to at most four characters.
+Starting from your home directory, change your directory to `/challenge`, but use globbing to keep the argument you pass to `cd` to at most four characters!
 Once you're there, run `/challenge/run` for the flag!
