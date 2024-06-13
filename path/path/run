@@ -1,0 +1,10 @@
+#!/opt/pwn.college/bash
+
+/bin/fold -s <<< "Trying to run 'ls /'..."
+if ls /
+then
+	/bin/fold -s <<< "You didn't stop me from running 'ls'! Remember, you must empty my PATH so that I have nowhere to search for 'ls'."
+else
+	/bin/fold -s <<< "Success! Here is your flag:"
+	/bin/cat /flag
+fi

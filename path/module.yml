@@ -1,0 +1,4 @@
+name: Understanding PATH
+challenges:
+- id: path
+  name: The PATH Variable
