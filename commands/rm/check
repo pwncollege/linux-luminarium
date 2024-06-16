@@ -1,0 +1,9 @@
+#!/opt/pwn.college/bash
+
+if [ -f /home/hacker/delete_me ]
+then
+	fold -s <<< "It looks like /home/hacker/delete_me still exists! rm it."
+else
+	fold -s <<< "Excellent removal. Here is your reward:"
+	cat /flag
+fi

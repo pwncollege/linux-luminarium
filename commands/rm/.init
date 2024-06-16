@@ -1,0 +1,4 @@
+#!/bin/bash
+
+touch /home/hacker/delete_me
+chmod hacker:hacker /home/hacker/delete_me
