@@ -15,6 +15,14 @@ parser.add_argument("-v", "--version", action='store_true', help="get the versio
 parser.add_argument("-g", "--give-the-flag", type=int, help="get the flag, if given the correct value")
 parser.add_argument("-p", "--print-value", action='store_true', help="print the value that will cause the -g option to give you the flag")
 
+if (
+	"-g" in sys.argv and "-p" in sys.argv and
+	sys.argv.index("-g") + 1 == sys.argv.index("-p")
+):
+	print("You passed -p as an argument to -g! Please read the usage")
+	print("carefully: -g takes *its own* numerical argument.")
+	sys.exit(1)
+
 args = parser.parse_args()
 
 if args.fortune:
