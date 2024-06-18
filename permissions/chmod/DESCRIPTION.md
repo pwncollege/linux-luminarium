@@ -14,7 +14,7 @@ In this level, we will cover former: modifying an existing mode.
 As a reminder, permissions tracked for the _user_, _group_, and _world_.
 `chmod` allows you to tweak each one with the mode format of `WHO`+/-`WHAT`.
 For example, to add _read_ access to the _user_, you would specify a mode of `u+r`.
-`w`rite and e`x`exute access for the `g`roup and the w`o`rld (or `a`ll the modes) are specified the same way.
+`w`rite and e`x`ecute access for the `g`roup and the `o`ther (or `a`ll the modes) are specified the same way.
 For example:
 
 - `u+r`, as above, adds read access to the user's permissions
