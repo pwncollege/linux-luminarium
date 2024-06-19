@@ -1,13 +1,13 @@
-Thus far, you have invoked commands in several ways:
+So far, you've invoked commands in several ways:
 
 - Through an absolute path (e.g., `/challenge/run`).
 - Through a relative path (e.g., `./run`).
 - Through a bare command name (e.g., `ls`).
 
-The first two cases, the absolute and the relative path case, are straightforward: the `run` file lives in the `/challenge` directory, and both cases refer to it (provided, of course, that the relative path is invoked with a current working directory of `/challenge`).
-But what about the last one?
-Where is the `ls` program located?
-How does the shell know to search for it there?
+The first two cases—absolute and relative paths—are straightforward: the `run` file resides in the `/challenge` directory, and both paths correctly reference it (assuming the relative path is invoked from within `/challenge`).
+But what about the last case?
+Where exactly is the `ls` program located?
+How does the shell know where to find it?
 
-In this module, we will pull back the veil and answer this question!
-Stay with us.
+In this module, we will explore and demystify these questions!
+Stay tuned.

@@ -1,5 +1,5 @@
 Next, we will cover `[]`.
-The square brackes are, essentially, a limited form of `?`, in that instead of matching any character, `[]` is a wildcard for some subset of potential characters, specified within the brackets.
+The square brackets are, essentially, a limited form of `?`, in that instead of matching any character, `[]` is a wildcard for some subset of potential characters, specified within the brackets.
 For example, `[pwn]` will match the character `p`, `w`, or `n`.
 For example:
 

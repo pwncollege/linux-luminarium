@@ -1,11 +1,8 @@
-So now we know how to list, read, and create files.
-But how do we find them?
-We use the `find` command!
+Now that we know how to list, read, and create files, let's learn how to find them using the `find` command!
 
-The `find` command takes optional arguments describing the search criteria and the search location.
-If you don't specify a search criteria, `find` matches every file.
-If you don't specify a search location, `find` uses the current working directory (`.`).
-For example:
+The `find` command allows us to search for files based on various criteria in a specified location. If no location is provided, `find` starts its search from the current directory (`.`). Here's how it works:
+
+1. **Basic Usage**: Without any specific criteria, `find` lists all files and directories recursively.
 
 ```console
 hacker@dojo:~$ mkdir my_directory
@@ -21,7 +18,7 @@ hacker@dojo:~$ find
 hacker@dojo:~$
 ```
 
-And when specifying the search location:
+2. **Searching Specific Locations**:
 
 ```console
 hacker@dojo:~$ find my_directory/my_subdirectory
@@ -30,8 +27,7 @@ my_directory/my_subdirectory/my_subfile
 hacker@dojo:~$
 ```
 
-And, of course, we can specify the criteria!
-For example, here, we filter by name:
+3. **Filtering by Name**:
 
 ```console
 hacker@dojo:~$ find -name my_subfile
@@ -41,7 +37,7 @@ hacker@dojo:~$ find -name my_subdirectory
 hacker@dojo:~$
 ```
 
-You can search the whole filesystem if you want!
+4. **Searching the Entire Filesystem**:
 
 ```console
 hacker@dojo:~$ find / -name hacker
@@ -49,13 +45,10 @@ hacker@dojo:~$ find / -name hacker
 hacker@dojo:~$
 ```
 
-Now it's your turn.
-I've hidden the flag in a random directory on the filesystem.
-It's still called `flag`.
-Go find it!
+Now it's your turn! I've hidden the flag in a random directory on the filesystem, and it's named `flag`. Your task is to locate it.
 
-Several notes. First, there are other files named `flag` on the filesystem.
-Don't panic if the first one you try doesn't have the actual flag in it.
-Second, there're plenty of places in the filesystem that are not accessible to a normal user.
-These will cause `find` to generate errors, but you can ignore those; we won't hide the flag there!
-Finally, `find` can take a while; be patient!
+- There may be multiple files named `flag` on the filesystem. If the first one you find doesn't have the actual flag, keep searching.
+- Some parts of the filesystem are not accessible to normal users, causing `find` to generate errors. Ignore these errors as the flag isn't hidden there.
+- Be patient, as `find` can take some time to complete its search.
+
+Good luck!

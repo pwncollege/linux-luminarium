@@ -1,5 +1,4 @@
-Next, let's learn about `?`.
-When it encounters a `?` character in any argument, the shell will treat it as **single-character** wildcard.
+Next, let's learn about `?`. When it encounters a `?` character in any argument, the shell will treat it as **single-character** wildcard.
 This works like `*`, but only matches _one_ character.
 For example:
 

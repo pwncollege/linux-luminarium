@@ -1,7 +1,7 @@
 Some commands, rather than being programs with man pages and help options, are built into the shell itself.
 These are called *builtins*.
 Builtins are invoked just like commands, but the shell handles them internally instead of launching other programs.
-You can get a list of shell builtins by running the *builtin* `help`, as so:
+You can get a list of shell builtins by running the *builtin* `help`, as shown:
 
 ```console
 hacker@dojo:~$ help
@@ -20,7 +20,7 @@ cd: cd [-L|[-P [-e]] [-@]] [dir]
 ...
 ```
 
-Some good information!
+Some good information:
 In this challenge, we'll practice using `help` to look up help for builtins.
 This challenge's `challenge` command is a shell builtin, rather than a program.
-Like before, you need to lookup its help to figure out the secret value to pass to it!
+Like before, you need to look up its help to figure out the secret value to pass to it!

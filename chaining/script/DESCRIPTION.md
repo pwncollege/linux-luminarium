@@ -1,6 +1,6 @@
-As you combine more and more commands to achieve complex effects, the length of the combined prompt quickly gets really annoying to deal with.
-When this happens, you can put these commands in a file, called a _shell script_, and run them by executing the file!
-For example, consider our semicolon technique:
+As you combine more commands to achieve complex effects, dealing with lengthy command sequences can quickly become cumbersome. To streamline this process, you can organize commands into a file called a shell script and execute the file directly.
+
+For instance, using our semicolon technique:
 
 ```console
 hacker@dojo:~$ echo COLLEGE > pwn; cat pwn
@@ -8,15 +8,14 @@ COLLEGE
 hacker@dojo:~$
 ```
 
-We can create a shell script called `pwn.sh` (by convention, shell scripts are frequently named with a `sh` suffix):
+We can create a shell script named `pwn.sh` (typically named with a `.sh` suffix):
 
 ```sh
 echo COLLEGE > pwn
 cat pwn
 ```
 
-And then we can execute by passing it as an argument to a new instance of our shell (`bash`)!
-When a shell is invoked like this, rather than taking commands from the user, it reads commands from the file.
+Then, execute it by passing it as an argument to a new instance of the shell (`bash`). When invoked this way, the shell reads commands from the script file rather than from user input:
 
 ```console
 hacker@dojo:~$ ls
@@ -27,11 +26,10 @@ pwn
 hacker@dojo:~$
 ```
 
-You can see that the shell script executed both commands, creating and printing the `pwn` file.
+As shown, the shell script executed both commands, creating and printing the `pwn` file.
 
-Now, it's your turn!
-Same as last level, run `/challenge/pwn` and then `/challenge/college`, but this time in a shell script called `x.sh`, then run it with `bash`!
+Now, it's your turn! Just like the previous level, create a shell script named `x.sh` that runs `/challenge/pwn` followed by `/challenge/college`, and then execute it using `bash`!
 
 ---
-**NOTE:** We haven't yet talked about Linux's amazing array of competent command line file editors.
+**NOTE:** We haven't discussed Linux's rich selection of capable command-line text editors yet.
 For now, feel free to use the `Text Editor` application in Desktop mode (`Applications->Accessories->Text Editor`) or the default editor in the VSCode Workspace!
