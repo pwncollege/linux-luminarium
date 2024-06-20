@@ -5,8 +5,9 @@ function hideflag {
 }
 
 alias cd='hideflag; cd'
-if [ -f /flag ]
+if [ -f /flag ] || [ "$DID_HIDE" != 1 ]
 then
+	DID_HIDE=1
 	fold -s <<< "You cannot use the 'cd' command in this level, and must retrieve the flag by absolute path. But in this level, I'll put the flag in some crazy directory!"
 	/challenge/.hide_flag
 fi
