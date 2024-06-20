@@ -25,6 +25,6 @@ then
 fi
 
 echo -e "${COLOR_GREEN}Correct!!!${COLORLESS}"
-echo "$0 is an absolute path, invoked from the right directory!"
+echo "$0 is a relative path, invoked from the right directory!"
 echo "Here is your flag:"
 /bin/cat /flag
