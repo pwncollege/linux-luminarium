@@ -3,6 +3,7 @@
 import random
 import sys
 import re
+import os
 
 def randbytes(n):
 	return bytes(RND.randrange(0,256) for _ in range(n))
