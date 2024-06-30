@@ -1,5 +1,3 @@
-In the piping module, you've explored the concept of using several commands, with data flowing between them via pipes, to accomplish something slightly more complex than the individual commands can do.
-Of course, this concept also applies independent of the data transfer: sometimes, you might want to run several commands in quick succession to achieve up some cumulative effect.
+In the piping module, you explored how multiple commands can be connected together using pipes to achieve complex tasks that individual commands cannot accomplish alone. Beyond just data transfer, this concept extends to running several commands in sequence to achieve cumulative effects.
 
-This module will cover a few ways, aside from piping, that commands can be chained.
-By the end, you'll be on your way to writing _shell scripts_!
+This module will explore various methods of chaining commands together, aside from piping. By the end, you'll be equipped to start writing your own _shell_ scripts!

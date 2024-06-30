@@ -1,5 +1,3 @@
-You can scroll man pages with the arrow keys (and PgUp/PgDn) and search with `/`.
-After searching, you can hit `n` to go to the next result and `N` to go to the previous result.
-Instead of `/`, you can use `?` to search backwards!
+You can scroll through man pages using the arrow keys, PgUp, and PgDn keys, and search within them using `/`. After searching, press `n` to move to the next result and `N` to go to the previous one. Alternatively, you can use `?` to search backwards.
 
-Find the option that will give you the flag by reading the `challenge` man page.
+Discover the option that will give you the flag by reading the `challenge` man page.

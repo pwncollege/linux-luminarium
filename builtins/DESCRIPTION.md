@@ -1,12 +1,11 @@
-Many see shells as shallow: simply small wrappers around useful utilities.
-This is true to an extent, but ignoring the power of the shell can hamper you when you try to accomplish complex things in Linux.
-In this module, we will delve into using the _shell_ itself, as opposed to the commandline tools that Linux offers.
+While many view shells as simple wrappers around useful utilities, this perspective can underestimate the shell's power. Neglecting its capabilities can limit your ability to accomplish complex tasks in Linux. In this module, we will explore using the _shell_ itself, beyond relying solely on command-line tools.
 
-Some questions that we will explore:
+Some questions we will delve into include:
 
-- How would you print out a file without using `cat`, `more`, and friends?
-- How to do math, number base conversion (especially relevant for raw memory operations and hacking).
-- How to implement complex functionality right in your shell!
+- How can you print out a file without using `cat`, `more`, or similar commands?
+- How do you perform mathematical calculations and number base conversions, especially useful for tasks like raw memory operations and hacking?
+- How can you implement complex functionality directly within your shell?
 
-We will learn how to use the functionality built into the shell itself (e.g., builtins and other functionality).
-No, go forth and learn!
+We'll uncover how to leverage the shell's built-in functionalities, such as builtins and other powerful features.
+
+Let's dive in and discover the capabilities of the shell!

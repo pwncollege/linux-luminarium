@@ -1,6 +1,6 @@
-The easiest way to chain commands is `;`.
-In most contexts, `;` separates commands in a similar way to how Enter separates lines.
-So, this:
+The easiest way to chain commands in the shell is using `;`.
+In most contexts, `;` functions similarly to how hitting Enter separates lines of commands.
+For example:
 
 ```console
 hacker@dojo:~$ echo COLLEGE > pwn
@@ -9,7 +9,7 @@ COLLEGE
 hacker@dojo:~$
 ```
 
-Is roughly the same as this:
+Is equivalent to:
 
 ```console
 hacker@dojo:~$ echo COLLEGE > pwn; cat pwn
@@ -17,7 +17,6 @@ COLLEGE
 hacker@dojo:~$
 ```
 
-Basically, when you hit Enter, your shell executes your typed command and, after that command terminates, give you the prompt to input another command.
-The semicolon is analogous, just without the prompt and with you entering both commands before anything is executed.
+When you hit Enter after typing a command, the shell executes it, waits for it to complete, and then provides the prompt for the next command. Using a semicolon allows you to input both commands without waiting for the first one to finish before entering the next.
 
-Give it a try now! In this level, you must run `/challenge/pwn` and then `/challenge/college`, chaining them with a semicolon.
+Give it a try now! In this challenge, you need to run `/challenge/pwn` followed by `/challenge/college`, chaining them together with a semicolon.

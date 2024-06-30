@@ -1,3 +1,1 @@
-This module will teach you one of the most important Linux skills: looking for help on how to use programs.
-This skill will serve you quite well in your journey.
-Dive in below!
+This module will teach you one of the most essential Linux skills: learning how to seek help on using programs effectively. Mastering this skill will greatly benefit you on your Linux journey. Let's dive in!
