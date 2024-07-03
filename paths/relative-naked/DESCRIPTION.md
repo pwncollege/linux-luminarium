@@ -1,12 +1,19 @@
-Now you're familiar with the concept of refering to absolute paths and changing directories.
+Now you're familiar with the concept of referring to absolute paths and changing directories.
 If you put in absolute paths everywhere, then it really doesn't matter what directory you are in, as you likely found out in the previous three challenges.
 
-However, the current working directory matters for *relative* paths.
-If a path does not start with a `/`, it is not an absolute, but a relative path.
-Relative paths are interpreted *relative* to the current working directory, rather than starting from `/`.
-When used by programs, relative paths will be *resolved* into absolute paths.
-For example, if you are in the `/var` directory, and your relative path is `asdf`, the full resolved path is `/var/asdf`.
-If your relative path is `asdf/fdsa`, the full resolved path will be `/var/asdf/fdsa`.
+However, the current working directory matters for **relative** paths.
+
+- A relative path is any path that does not start at root, it does not start with `/`.
+- A relative path is **relative**  to your current working directory (`cwd`).
+- Your `cwd` is the directory that your prompt is currently located at.
+
+This means how you specify a particular file, depends on where the terminal prompt is located.
+
+Imagine we want to access some file located at `/tmp/a/b/my_file`.
+
+- If my `cwd` is `/`, then a relative path to the file is `tmp/a/b/my_file`.
+- If my `cwd` is `/tmp`, then a relative path to the file is `a/b/my_file`.
+- If my `cwd` is `/tmp/a/b/c`, then a relative path to the file is `../my_file`.  The `..` refers to the parent directory.
 
 Let's try it here!
 You'll need to run `/challenge/run` using a relative path while having a current working directory of `/`.
