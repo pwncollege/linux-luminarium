@@ -1,0 +1,3 @@
+#!/bin/bash
+
+fold -s <<< "It looks like you launched the 'hackers' command instead of launching the 'hello' command with an argument of 'hackers'! Make sure your command is 'hello'."

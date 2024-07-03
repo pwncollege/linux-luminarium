@@ -1,0 +1,4 @@
+#!/opt/pwn.college/bash
+
+fold -s <<< "Success! Here is your flag:"
+cat /flag

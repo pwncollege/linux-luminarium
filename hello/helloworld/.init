@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ln -s /challenge/hello /usr/local/bin
+ln -s /challenge/hackers /usr/local/bin
