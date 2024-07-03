@@ -4,6 +4,7 @@ type: welcome
 award:
   emoji: 🐧
 modules:
+- id: "hello"
 - id: "paths"
 - id: "commands"
 - id: "man"
