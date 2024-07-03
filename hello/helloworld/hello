@@ -1,6 +1,6 @@
 #!/opt/pwn.college/bash
 #
-if [ "$BASH_ARGC" -eq 0 ]
+if [ "$1" == "" ]
 then
 	fold -s <<< "It looks like you've invoked this command without an argument. Please invoke this with a single argument of 'hackers'!"
 	exit 1
