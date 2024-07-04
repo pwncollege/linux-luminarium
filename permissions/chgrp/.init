@@ -1,0 +1,4 @@
+#!/bin/bash
+
+chmod u+s /usr/bin/chgrp
+chmod g+r /flag

@@ -8,6 +8,10 @@ resources:
 challenges:
 - id: "chown"
   name: "Changing File Ownership"
+- id: "chgrp"
+  name: "Groups and Files"
+- id: "chgrp-random"
+  name: "Fun With Groups Names"
 - id: "chmod-game"
   name: "Permission Tweaking Practice"
 - id: "chmod-absolute"
