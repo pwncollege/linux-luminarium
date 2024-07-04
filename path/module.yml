@@ -6,3 +6,5 @@ challenges:
   name: Setting PATH
 - id: path-win-yours
   name: Adding Commands
+- id: command-hijack
+  name: Hijacking Commands
