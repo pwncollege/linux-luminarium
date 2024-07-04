@@ -1,0 +1,24 @@
+#!/opt/pwn.college/.bash
+
+if ls -l /proc/$$/fd/{0,1,2} | grep -vq pts
+then
+	fold -s 1>&2 <<< "It looks like you may have chained me with a pipe or other input redirection method. In this level, you must script the commands to run one after the other, without piping or redirection!"
+	exit 1
+fi
+
+CMDLINE=$(cat /proc/$PPID/cmdline | tr -d '\0')
+
+if [[ "$CMDLINE" != /bin/bash$HOME/* ]] && [[ "$CMDLINE" != /bin/bash.* ]]
+then
+	fold -s <<< "You must invoke /challenge/pwn from a shell script inside your home directory!"
+	exit 2
+fi
+
+if [ ! -f /tmp/.good_launch ]
+then
+	fold -s <<< "You must make your shellscript executable and invoke it without explicitly specifying 'bash'!"
+	exit 3
+fi
+
+fold -s <<< "Congratulations on your shell script execution! Your flag:"
+cat /flag
