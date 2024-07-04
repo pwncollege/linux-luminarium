@@ -1,6 +1,9 @@
 #!/opt/pwn.college/bash
 
 /bin/fold -s <<< "Trying to remove /flag..."
+
+RM=$(which rm 2>/dev/null)
+[ -n "$RM" ] && echo "Found 'rm' command at $RM. Executing!"
 rm -f /flag
 
 if ! [ -f /flag ]
