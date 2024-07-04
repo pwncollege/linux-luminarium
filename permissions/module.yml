@@ -6,12 +6,12 @@ resources:
     - [Chmod Calculator](https://chmod-calculator.com/)
 
 challenges:
+- id: "chown"
+  name: "Changing File Ownership"
 - id: "chmod-game"
   name: "Permission Tweaking Practice"
 - id: "chmod-absolute"
   name: "Permissions Setting Practice"
-- id: "chown"
-  name: "My dentist said I need to chown"
 - id: "execute"
   name: "Why did the code feel enpowered after chmod +x? It got a license to thrill"
 - id: "setuid"
