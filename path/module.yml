@@ -4,3 +4,5 @@ challenges:
   name: The PATH Variable
 - id: path-win
   name: Setting PATH
+- id: path-win-yours
+  name: Adding Commands
