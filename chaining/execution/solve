@@ -1,4 +1,4 @@
-#!/opt/pwn.college/.bash
+#!/opt/pwn.college/bash
 
 if ls -l /proc/$$/fd/{0,1,2} | grep -vq pts
 then
