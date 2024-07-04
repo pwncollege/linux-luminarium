@@ -8,6 +8,12 @@ fi
 
 CMDLINE=$(cat /proc/$PPID/cmdline | tr -d '\0')
 
+if [[ "$CMDLINE" == bash* ]]
+then
+	fold -s <<< "You are invoking your script explicitly with 'bash'. Don't do that!"
+	exit 4
+fi
+
 if [[ "$CMDLINE" != /bin/bash$HOME/* ]] && [[ "$CMDLINE" != /bin/bash.* ]]
 then
 	fold -s <<< "You must invoke /challenge/pwn from a shell script inside your home directory!"
