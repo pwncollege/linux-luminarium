@@ -57,7 +57,7 @@ hacker@dojo:~$
 ```
 
 The group had access!
-That is why `chgrp`ing the group enabled you to read the file.
+That is why `chgrp`ing the file enabled you to read the file.
 
 Anyways!
 Like ownership, file permissions can also be changed.
