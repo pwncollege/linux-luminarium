@@ -12,6 +12,8 @@ challenges:
   name: "Groups and Files"
 - id: "chgrp-random"
   name: "Fun With Groups Names"
+- id: "chmod-flag"
+  name: "Changing Permissions"
 - id: "chmod"
   name: "Permission Tweaking Practice"
 - id: "chmod-absolute"
