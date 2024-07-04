@@ -8,6 +8,12 @@ fi
 
 CMDLINE=$(cat /proc/$PPID/cmdline | tr -d '\0')
 
+if [ "$CMDLINE" == "bash" ]
+then
+	fold -s <<< "You are invoking me directly! Please invoke me from a shell script."
+	exit 5
+fi
+
 if [[ "$CMDLINE" == bash* ]]
 then
 	fold -s <<< "You are invoking your script explicitly with 'bash'. Don't do that!"
