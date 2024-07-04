@@ -6,10 +6,10 @@ resources:
     - [Chmod Calculator](https://chmod-calculator.com/)
 
 challenges:
-- id: "chmod"
-  name: "Tweaking permissions"
+- id: "chmod-game"
+  name: "Permission Tweaking Practice"
 - id: "chmod-absolute"
-  name: "Setting permissions"
+  name: "Permissions Setting Practice"
 - id: "chown"
   name: "My dentist said I need to chown"
 - id: "execute"
