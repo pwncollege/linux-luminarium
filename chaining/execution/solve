@@ -8,7 +8,7 @@ fi
 
 CMDLINE=$(cat /proc/$PPID/cmdline | tr -d '\0')
 
-if [ "$CMDLINE" == "bash" ]
+if [ "$CMDLINE" == "bash" ] && [ ! -f /tmp/.good_launch ]
 then
 	fold -s <<< "You are invoking me directly! Please invoke me from a shell script."
 	exit 5

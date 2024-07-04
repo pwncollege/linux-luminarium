@@ -8,5 +8,5 @@ function check_cmd {
 	touch /tmp/.good_launch
 }
 
-shopt -s extdebug
+set -T
 PROMPT_COMMAND="trap check_cmd debug; rm -f /tmp/.good_launch"
