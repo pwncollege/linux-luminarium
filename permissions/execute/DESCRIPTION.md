@@ -5,7 +5,7 @@ In this level, we will explore execute permissions.
 When you invoke a program, such as `/challenge/run`, Linux will only actually execute it if you have execute-access to the program file.
 Consider:
 
-```
+```console
 hacker@dojo:~$ ls -l /challenge/run
 -rwxr-xr-x 1 root root    0 May 22 13:42 /challenge/run
 hacker@dojo:~$ /challenge/run
@@ -17,7 +17,7 @@ In this case, `/challenge/run` runs because it is executable by the `hacker` use
 Because the file is owned by the `root` user and `root` group, this requires that the execute bit is set on the `other` permissions).
 If we remove these permissions, the execution will fail!
 
-```
+```console
 hacker@dojo:~$ chmod o-x /challenge/run
 hacker@dojo:~$ ls -l /challenge/run
 -rwxr-xr-- 1 root root    0 May 22 13:42 /challenge/run
