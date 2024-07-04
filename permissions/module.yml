@@ -12,7 +12,7 @@ challenges:
   name: "Groups and Files"
 - id: "chgrp-random"
   name: "Fun With Groups Names"
-- id: "chmod-game"
+- id: "chmod"
   name: "Permission Tweaking Practice"
 - id: "chmod-absolute"
   name: "Permissions Setting Practice"
