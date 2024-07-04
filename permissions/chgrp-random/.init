@@ -2,4 +2,4 @@
 
 chmod u+s /usr/bin/chgrp
 chmod g+r /flag
-sed -i -e "s/^hacker/grp$RANDOM/" /etc/groups
+sed -i -e "s/^hacker/grp$RANDOM/" /etc/group
