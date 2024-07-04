@@ -1,10 +1,10 @@
 #!/opt/pwn.college/bash
 
-#if [ "$(readlink /proc/$PPID/exe)" != "/challenge/run" ]
-#then
-#	fold -s <<< "You MUST invoke me via /challenge/run to solve this challenge."
-#	exit 1
-#fi
+if [ "$(cat /proc/$PPID/cmdline | tr -d '\0')" != "/bin/bash/challenge/run" ]
+then
+	fold -s <<< "You MUST invoke me via /challenge/run to solve this challenge."
+	exit 1
+fi
 
 fold -s <<< "Successful execution! Here is your flag:"
 cat /flag
