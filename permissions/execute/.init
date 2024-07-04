@@ -1,4 +1,4 @@
 #!/bin/bash
 
 chown hacker:hacker /challenge/run
-chmod 754 /challenge/run
+chmod 444 /challenge/run
