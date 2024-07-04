@@ -8,26 +8,31 @@ hacker@dojo:~$ mkdir pwn_directory
 hacker@dojo:~$ touch college_file
 hacker@dojo:~$ ls -l
 total 4
--rw-r--r-- 1 yans yans    0 May 22 13:42 college_file
-drwxr-xr-x 2 yans yans 4096 May 22 13:42 pwn_directory
+-rw-r--r-- 1 hacker hacker    0 May 22 13:42 college_file
+drwxr-xr-x 2 hacker hacker 4096 May 22 13:42 pwn_directory
+hacker@dojo:~$
 ```
 
-The first column represents the file type and file permissions.
-There are four parts to these file details:
+Lots of information, there, and we'll learn about a lot of it in this module!
+For now, let's look at the output above at a high level:
 
-The first character represents the file type.
+## The File Type
+
+The first character of each line represents the file type.
 In `pwn_directory`'s case, the `d` indicates that it's a directory, and in `pwn_file`'s case, the `-` represents that it's a normal file.
-There are other types, but we will cover that later in the module.
+There are other types as well, and you will encounter some of them later in your pwn.college journey.
 
-The next nine characters are the actual access permissions of the file or directory, split into 3 characters denoting the permissions that the user who owns the file (termed the "owner") has to the file, 3 characters denoting the permissions that the group that owns the file (termed the "group") has to the file, and 3 characters denoting the permissions that all other access (e.g., by other users and other groups, termed the "world") has to the file.
+### The Permissions
 
-Each character of the three represent permission for a different type:
+The next nine characters are the actual access permissions of the file or directory, split into 3 characters denoting the permissions that the user who owns the file (termed the "owner") has to the file, 3 characters denoting the permissions that the group that owns the file (termed the "group") has to the file, and 3 characters denoting the permissions that all other access (e.g., by other users and other groups) has to the file.
+We will learn all about these later in the module.
 
-```
-r - user can read the file (or list the directory)
-w - user can modify the files (or create/delete files in the directory)
-x - user can execute the file as a program (or can enter the directory, e.g., using `cd`)
-- - nothing 
-```
+### Ownership Information
 
-So, let's get started with permissions!
+There are two columns showing the user that owns the file (in this case, user `hacker`) and then the group that owns the file (in this case, also group `hacker`).
+You'll mess around with that here!
+
+----
+
+In this module, you will practice perceiving permissions.
+Let's get started!
