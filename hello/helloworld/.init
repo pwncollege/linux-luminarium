@@ -1,4 +1,0 @@
-#!/bin/bash
-
-ln -s /challenge/bin/hello /usr/local/bin
-ln -s /challenge/bin/hackers /usr/local/bin

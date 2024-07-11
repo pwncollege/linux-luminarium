@@ -1,3 +1,0 @@
-#!/bin/bash
-
-ln -s /challenge/bin/hello /usr/local/bin
