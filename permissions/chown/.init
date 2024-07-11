@@ -1,3 +1,4 @@
 #!/bin/bash
 
 chmod u+s /usr/bin/chown
+mkdir -p /challenge/bin && ln -s /usr/bin/chown /challenge/bin/

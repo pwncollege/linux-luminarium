@@ -1,0 +1,8 @@
+#!/bin/bash
+
+/usr/bin/chmod "$@"
+exit_code=$?
+
+[[ -t 1 ]] && /challenge/run check && /challenge/run
+
+exit $exit_code
