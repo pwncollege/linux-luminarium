@@ -64,7 +64,7 @@ if __name__ == "__main__":
 	elif ROUND == MAX_ROUNDS:
 		os.chown("/flag", 1000, 1000)
 		os.chmod("/flag", 0)
-		os.rename("/usr/bin/.chmod.real", "/usr/bin/chmod")
+		os.unlink("/challenge/bin/chmod")
 		print(f"You've solved all {MAX_ROUNDS} rounds! I have changed the ownership")
 		print("of the /flag file so that you can 'chmod' it. You won't be able to read")
 		print("it until you make it readable with chmod!")

@@ -4,8 +4,6 @@ import gzip
 import re
 import os
 
-os.rename("/usr/bin/man", "/usr/bin/man-real")
-os.rename("/challenge/man", "/usr/bin/man")
 os.chmod("/challenge/challenge", 0o4711)
 
 FLAG = open("/flag").read().strip()
