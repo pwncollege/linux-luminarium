@@ -1,1 +1,1 @@
-export PATH=PATH:/challenge
+export PATH="$PATH:/challenge"
