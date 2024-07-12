@@ -1,5 +1,8 @@
 #!/opt/pwn.college/bash
 
+# don't interfere with dojo initialization code
+[ -f /run/dojo/.initialized ] || exec /usr/bin/chmod "$@"
+
 if [ "$#" -ne 2 ]
 then
 	echo "This challenge restricts chmod to its simple usage:"
@@ -14,4 +17,4 @@ then
 	exit 2
 fi
 
-/usr/bin/chmod $1 $2
+exec /usr/bin/chmod $1 $2

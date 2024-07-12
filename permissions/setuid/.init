@@ -1,3 +1,4 @@
 #!/bin/bash
 
+touch /run/dojo/.initialized
 /usr/bin/chmod 755 /challenge/getroot
