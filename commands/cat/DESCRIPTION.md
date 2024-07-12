@@ -1,7 +1,7 @@
 One of the most critical Linux commands is `cat`.
 `cat` is most often used for reading out files, like so:
 
-```
+```console
 hacker@dojo:~$ cat /challenge/DESCRIPTION.md
 One of the most critical Linux commands is `cat`.
 `cat` is most often used for reading out files, like so:
@@ -10,7 +10,7 @@ One of the most critical Linux commands is `cat`.
 `cat` will con**cat**enate (hence the name) multiple files if provided multiple arguments.
 For example:
 
-```
+```console
 hacker@dojo:~$ cat myfile
 This is my file!
 hacker@dojo:~$ cat yourfile
