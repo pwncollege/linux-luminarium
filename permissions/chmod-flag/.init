@@ -1,0 +1,4 @@
+#!/bin/bash
+
+chmod u+s /usr/bin/chmod
+mkdir -p /challenge/bin && ln -s /usr/bin/chmod /challenge/bin/

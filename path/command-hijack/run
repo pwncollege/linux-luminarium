@@ -1,0 +1,12 @@
+#!/opt/pwn.college/bash
+
+/bin/fold -s <<< "Trying to remove /flag..."
+
+RM=$(which rm 2>/dev/null)
+[ -n "$RM" ] && echo "Found 'rm' command at $RM. Executing!"
+rm -f /flag
+
+if ! [ -f /flag ]
+then
+	/bin/fold -s <<< "Uh oh, looks like I successfully removed the flag! That means you did not properly set PATH to keep me from finding 'rm'. Since the flag is gone, you will need to re-launch the challenge from the module page! Better luck next time."
+fi

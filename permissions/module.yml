@@ -6,14 +6,20 @@ resources:
     - [Chmod Calculator](https://chmod-calculator.com/)
 
 challenges:
-- id: "chmod"
-  name: "Tweaking permissions"
-- id: "chmod-absolute"
-  name: "Setting permissions"
 - id: "chown"
-  name: "My dentist said I need to chown"
+  name: "Changing File Ownership"
+- id: "chgrp"
+  name: "Groups and Files"
+- id: "chgrp-random"
+  name: "Fun With Groups Names"
+- id: "chmod-flag"
+  name: "Changing Permissions"
 - id: "execute"
-  name: "Why did the code feel enpowered after chmod +x? It got a license to thrill"
+  name: "Executable Files"
+- id: "chmod"
+  name: "Permission Tweaking Practice"
+- id: "chmod-absolute"
+  name: "Permissions Setting Practice"
 - id: "setuid"
   name: "I tried to tell a setuid joke, but it escalated too quickly"
 

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+chmod u+s /usr/bin/chgrp
+mkdir -p /challenge/bin && ln -s /usr/bin/chgrp /challenge/bin/
+chmod g+r /flag
+sed -i -e "s/^hacker/grp$RANDOM/" /etc/group

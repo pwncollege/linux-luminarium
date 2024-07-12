@@ -1,0 +1,40 @@
+#!/opt/pwn.college/bash
+#
+if [ "$1" == "" ]
+then
+	fold -s <<< "It looks like you've invoked this command without an argument. Please invoke this with a single argument of 'hackers'!"
+	exit 1
+fi
+
+if [ "$BASH_ARGC" -ne 1 ]
+then
+	fold -s <<< "It looks like you've invoked this command with more than one argument. Please invoke this with a single argument of 'hackers'!"
+	exit 1
+fi
+
+if [ "$1" == "world" ]
+then
+	fold -s <<< "We are not that conventional! Make sure to greet the hackers, not the world :-)"
+	exit 2
+fi
+
+if [ "${1,,}" == "hackers" ] && [ "$1" != "hackers" ]
+then
+	fold -s <<< "Like the command itself, most arguments are case sensitive (though this depends on the command and what it uses the arguments for). Make sure to pass a lowercase 'hackers' to this command!"
+	exit 3
+fi
+
+if [ "${1,,}" == "hackers!" ]
+then
+	fold -s <<< "Don't be so excited! Invoke me without the exclamation point."
+	exit 4
+fi
+
+if [ "$1" != "hackers" ]
+then
+	fold -s <<< "Please run this command with the argument 'hackers' (rather than '$1')."
+	exit 5
+fi
+
+fold -s <<< "Success! Here is your flag:"
+cat /flag

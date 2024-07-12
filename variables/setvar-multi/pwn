@@ -1,5 +1,0 @@
-#!/bin/bash
-
-echo "bash: $(basename $0): command not found"
-echo
-fold -s <<< "You put spaces around your '=' in your assignment! This caused the shell to execute the '$(basename $0)' command instead of setting the '$0' environment variable. Try again without spaces around '='!"

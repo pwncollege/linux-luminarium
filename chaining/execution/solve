@@ -1,0 +1,18 @@
+#!/opt/pwn.college/bash
+
+if ls -l /proc/$$/fd/{0,1,2} | grep -vq pts
+then
+	fold -s 1>&2 <<< "It looks like you may have chained me with a pipe or other input redirection method. In this level, you must invoke me via a shell script!"
+	exit 1
+fi
+
+CMDLINE=$(cat /proc/$PPID/cmdline | tr -d '\0')
+
+if [ ! -f /tmp/.good_launch ]
+then
+	fold -s <<< "You must make a shellscript in your home directory that will launch /challenge/solve, make it executable, and invoke it without explicitly specifying 'bash'!"
+	exit 3
+fi
+
+fold -s <<< "Congratulations on your shell script execution! Your flag:"
+cat /flag

@@ -1,0 +1,6 @@
+name: Hello Hackers
+challenges:
+- id: hello
+  name: Intro to Commands
+- id: helloworld
+  name: Intro to Arguments

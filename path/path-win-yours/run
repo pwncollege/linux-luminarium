@@ -1,0 +1,9 @@
+#!/opt/pwn.college/bash
+
+echo "Invoking 'win'...."
+win
+
+if [ $? -ne 0 ]
+then
+	/bin/fold -s <<< "It looks like that did not work... Did you set PATH correctly?"
+fi

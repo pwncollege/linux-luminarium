@@ -4,13 +4,14 @@ type: welcome
 award:
   emoji: 🐧
 modules:
+- id: "hello"
 - id: "paths"
 - id: "commands"
 - id: "man"
 - id: "globbing"
 - id: "piping"
 - id: "variables"
-- id: "path"
-- id: "chaining"
 - id: "processes"
 - id: "permissions"
+- id: "chaining"
+- id: "path"

@@ -1,10 +1,10 @@
 Now you're familiar with the concept of referring to absolute paths and changing directories.
 If you put in absolute paths everywhere, then it really doesn't matter what directory you are in, as you likely found out in the previous three challenges.
 
-However, the current working directory matters for **relative** paths.
+However, the current working directory does matter for **relative** paths.
 
-- A relative path is any path that does not start at root, it does not start with `/`.
-- A relative path is **relative**  to your current working directory (`cwd`).
+- A relative path is any path that does not start at root (i.e., it does not start with `/`).
+- A relative path is interpreted **relative** to your **c**urrent **w**orking **d**irectory (`cwd`).
 - Your `cwd` is the directory that your prompt is currently located at.
 
 This means how you specify a particular file, depends on where the terminal prompt is located.

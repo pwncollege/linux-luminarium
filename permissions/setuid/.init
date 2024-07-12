@@ -2,3 +2,4 @@
 
 chown root:root /challenge/getroot
 chmod +s /bin/chmod
+mkdir -p /challenge/bin && ln -s /bin/chmod /challenge/bin/

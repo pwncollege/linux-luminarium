@@ -1,6 +1,6 @@
 It turns out that the answer to "How does the shell find `ls`?" is fairly simple.
 There is a special shell variable, called `PATH`, that stores a bunch of directory paths in which the shell will search for programs corresponding to commands.
-If you blank you the variable, things go badly:
+If you blank out the variable, things go badly:
 
 ```console
 hacker@dojo:~$ ls

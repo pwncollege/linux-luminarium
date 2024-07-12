@@ -1,6 +1,4 @@
 #!/bin/bash
 
-chmod 666 /flag
-mv /flag /etc/ctfconf
-chown hacker:hacker /challenge/getflag
-chmod 666 /challenge/getflag
+chown hacker:hacker /challenge/run
+chmod 444 /challenge/run

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ "$UID" -ne 0 ]
+then
+	/bin/fold -s <<< "It looks like 'win' was improperly launched. Don't launch it directly; it MUST be launched by /challenge/run!"
+	exit 1
+fi
+
+/bin/fold -s <<< "Congratulations! You properly set the flag and 'win' has launched!"
+/bin/cat /flag

@@ -1,3 +1,0 @@
-mv /bin/tee /tmp/tee
-mv /challenge/tee /usr/bin/tee
-chmod 4755 /usr/bin/tee
