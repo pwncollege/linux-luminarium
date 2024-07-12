@@ -1,7 +1,7 @@
 #!/opt/pwn.college/bash
 
 # don't interfere with dojo initialization code
-[ -f /run/dojo/.initialized ] || exec /usr/bin/chmod "$@"
+[ -f /challenge/.initialized ] || exec /usr/bin/chmod "$@"
 
 if [ "$#" -ne 2 ]
 then
