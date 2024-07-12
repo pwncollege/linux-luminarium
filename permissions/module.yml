@@ -21,19 +21,4 @@ challenges:
 - id: "chmod-absolute"
   name: "Permissions Setting Practice"
 - id: "setuid"
-  name: "I tried to tell a setuid joke, but it escalated too quickly"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
+  name: "The SUID Bit"
