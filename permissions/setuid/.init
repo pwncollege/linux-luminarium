@@ -1,4 +1,4 @@
 #!/bin/bash
 
-/usr/bin/chmod 755 /challenge/getroot
-touch /challenge/.initialized
+chmod 755 /challenge/getroot
+mv /challenge/bin/chmod-replacement /challenge/bin/chmod
