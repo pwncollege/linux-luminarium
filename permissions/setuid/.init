@@ -1,3 +1,3 @@
 #!/bin/bash
 
-chmod 755 /challenge/getroot
+/usr/bin/chmod 755 /challenge/getroot
