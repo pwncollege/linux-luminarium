@@ -12,3 +12,8 @@ If you have questions, comments, feedback, and so on, join us on [the Discord ch
 **NOTE:**
 The Linux Luminarium is _very_ introductory.
 If you are already comfortable in Linux, feel free to skip it!
+
+**NOTE:**
+This dojo is NOT meant to be tricky!
+Sometimes, upgrades and architectural challenges in the pwn.college platform itself might break some challenges.
+If a challenge is being weird, please let us know on the discord channel!
