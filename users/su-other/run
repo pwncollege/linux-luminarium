@@ -1,4 +1,4 @@
-#!/opt/pwn.college/env -iS /bin/bash
+#!/usr/bin/env -iS /opt/pwn.college/bash
 
 if cat /etc/passwd | grep "x:$UID:" | grep -q "^zardus:"
 then
