@@ -2,7 +2,7 @@
 
 if [ "$#" -eq 0 ]
 then
-	fold -s <<< "WARNING: you are invoking `su` without specifying a user. This will default to the 'root' user, which is not achievable in this challenge.'
+	fold -s <<< "WARNING: you are invoking `su` without specifying a user. This will default to the 'root' user, which is not achievable in this challenge."
 fi
 
 if [ "$1" != "zardus" ]
