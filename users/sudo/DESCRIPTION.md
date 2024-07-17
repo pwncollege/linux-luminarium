@@ -30,3 +30,8 @@ In fact, even pwn.college's Practice Mode works by giving you `sudo` access to e
 
 In this level, we will give you `sudo` access, and you will use it to read the flag.
 Nice and easy!
+
+----
+**NOTE:**
+After this level, we will enable Practice Mode!
+When you launch a challenge in Practice Mode (by clicking the `Practice` button instead of the `Start` button), the resulting container will give you full `sudo` access to allow you to introspect and debug to your heart's content, but of course with a placeholder flag.

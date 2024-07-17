@@ -1,6 +1,6 @@
 You're well on your way to your new life as a shell scripter!
 However, so far, your shellscripts _can only be launched from the shell_.
-So, things worked great in the previous level (because you were invoking your script from the `bash` shell), but they won't work if your script was being invoked by, say, a program written in Python (or any other language).
+Things worked great in the previous level (because you were invoking your script from the `bash` shell), but they won't work if your script was being invoked by, say, a program written in Python (or any other language).
 
 When a program is invoked in Linux, the Linux kernel first inspects the file to determine how it should be run.
 This does NOT use the extension (which is why you don't _have_ to name your shell scripts with a `.sh` extension, or your Python scripts with a `.py` extension, or so on).
