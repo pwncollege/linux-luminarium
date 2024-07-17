@@ -4,5 +4,5 @@ visibility:
 challenges:
 - id: "su"
   name: "Becoming root with su"
-- id: "su-others"
+- id: "su-other"
   name: "Other users with su"
