@@ -1,0 +1,17 @@
+#!/bin/bash
+
+useradd -m -s /bin/bash zardus
+echo 'zardus:aardvark' | chpasswd
+cp /etc/shadow /challenge/shadow-leak
+chmod 644 /challenge/shadow-leak
+
+echo "root:$RANDOM$RANDOM$RANDOMrRANDOM" | chpasswd
+
+chown root:zardus /challenge/.catflag
+chmod 4754 /challenge/.catflag
+
+mkdir -p /challenge/bin
+cp /usr/bin/su /challenge/bin/su-real
+chmod 4755 /challenge/bin/su-real
+
+rm -f /challenge/.init

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ "$#" -eq 0 ]
+then
+	fold -s <<< "WARNING: you are invoking 'su' without specifying a user. This will default to the 'root' user, which is not achievable in this challenge."
+elif [ "$1" != "zardus" ]
+then
+	fold -s <<< "WARNING: you are invoking 'su' without specifying the 'zardus' user."
+fi
+
+exec -a su su-real "$@"
