@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cat <<END >>/etc/sudoers
+hacker ALL=(ALL) NOPASSWD:ALL
+END
+
+mkdir -p /challenge/bin
+cp /usr/bin/sudo /challenge/bin
+chmod 4755 /challenge/bin/sudo

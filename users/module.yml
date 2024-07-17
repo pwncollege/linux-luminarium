@@ -6,3 +6,7 @@ challenges:
   name: "Other users with su"
 - id: "su-crack"
   name: "Cracking passwords"
+- id: "sudo"
+  name: "Using sudo"
+  visibility:
+    start: "2029-08-21T10:30:00-07:00"
