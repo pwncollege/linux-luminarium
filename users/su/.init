@@ -3,4 +3,4 @@
 echo 'root:hack-the-planet' | chpasswd
 mkdir -p /challenge/bin
 cp /usr/bin/su /challenge/bin
-chmod 4755 /challenge/bin
+chmod 4755 /challenge/bin/su
