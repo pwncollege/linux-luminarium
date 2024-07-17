@@ -30,11 +30,11 @@ mysql:x:104:105:MySQL Server,,,:/nonexistent:/bin/false
 messagebus:x:105:106::/nonexistent:/usr/sbin/nologin
 sshd:x:106:65534::/run/sshd:/usr/sbin/nologin
 hacker:x:1000:1000::/home/hacker:/bin/bash
-root:x:0:0:root:/root:/nix/var/nix/profiles/default/bin/bash\n
-hacker:x:1000:1000:hacker:/home/hacker:/nix/var/nix/profiles/default/bin/bash
 ```
 
-A lot of users here!
+A lot of users here, and a lot of info!
+Each line contains, separated by `:`s, the username, an `x` as a placeholder for where the password _used_ to be (we'll cover where it actually is later), the numerical user ID, the numerical default group ID, long-form user details, the home directory, and the default shell.
+
 We can see `hacker` and `root`, along with a bunch of others.
 Many are there for historical reasons, some are service accounts to support various installed software, and some are "utility" accounts (e.g., the `nobody` user is used to ensure that, e.g., a program runs without any special privileges).
 
