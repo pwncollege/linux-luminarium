@@ -2,6 +2,7 @@
 
 useradd -m -s /bin/bash zardus
 echo 'zardus:dont-hack-me' | chpasswd
+echo "root:$RANDOM$RANDOM$RANDOM$RANDOM" | chpasswd
 
 chown root:zardus /challenge/bin/catflag
 chmod 4754 /challenge/bin/catflag
