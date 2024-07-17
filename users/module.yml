@@ -1,0 +1,6 @@
+name: Untangling Users
+visibility:
+  start: "2029-08-21T10:30:00-07:00"
+challenges:
+- id: "su"
+  name: "Switching Users with su"

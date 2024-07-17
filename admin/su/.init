@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo 'root:hack-the-planet' | sudo chpasswd
+mkdir -p /challenge/bin
+cp /usr/bin/su /challenge/bin
+chmod 4755 /challenge/bin
