@@ -8,4 +8,4 @@ then
 	fold -s <<< "WARNING: you are invoking 'su' without specifying the 'zardus' user."
 fi
 
-exec su-real "$@"
+exec -a su su-real "$@"
