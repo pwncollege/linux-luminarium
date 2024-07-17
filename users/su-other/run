@@ -1,11 +1,11 @@
-#!/usr/bin/env -iS /opt/pwn.college/bash
+#!/bin/bash
 
 USER=$(whoami)
 
 if [ "$USER" == "zardus" ]
 then
 	echo "Congratulations, you have become Zardus! Here is your flag:"
-	cat /flag
+	catflag
 else
 	fold -s <<< "You are the $USER user... You MUST become the zardus user before executing this command."
 fi

@@ -2,6 +2,10 @@
 
 useradd -m -s /bin/bash zardus
 echo 'zardus:dont-hack-me' | chpasswd
+
+chown root:zardus /challenge/bin/catflag
+chmod 4754 /challenge/bin/catflag
+
 mkdir -p /challenge/bin
-cp /usr/bin/su /challenge/bin
-chmod 4755 /challenge/bin/su
+cp /usr/bin/su-real /challenge/bin
+chmod 4755 /challenge/bin/su-real
