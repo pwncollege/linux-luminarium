@@ -13,5 +13,6 @@ modules:
 - id: "variables"
 - id: "processes"
 - id: "permissions"
+- id: "users"
 - id: "chaining"
 - id: "path"
