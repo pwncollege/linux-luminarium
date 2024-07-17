@@ -3,4 +3,6 @@ visibility:
   start: "2029-08-21T10:30:00-07:00"
 challenges:
 - id: "su"
-  name: "Switching Users with su"
+  name: "Becoming root with su"
+- id: "su-others"
+  name: "Other users with su"

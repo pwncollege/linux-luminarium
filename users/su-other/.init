@@ -1,0 +1,7 @@
+#!/bin/bash
+
+useradd -m zardus
+echo 'zardus:dont-hack-me' | chpasswd
+mkdir -p /challenge/bin
+cp /usr/bin/su /challenge/bin
+chmod 4755 /challenge/bin/su

@@ -1,0 +1,9 @@
+#!/opt/pwn.college/env -iS /bin/bash
+
+if cat /etc/passwd | grep "x:$UID:" | grep -q "^zardus:"
+then
+	echo "Congratulations, you have become Zardus! Here is your flag:"
+	cat /flag
+else
+	fold -s <<< "You are the $USER user... You MUST become the zardus user before executing this command."
+fi
