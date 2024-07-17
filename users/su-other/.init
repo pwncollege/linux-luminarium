@@ -7,5 +7,5 @@ chown root:zardus /challenge/bin/catflag
 chmod 4754 /challenge/bin/catflag
 
 mkdir -p /challenge/bin
-cp /usr/bin/su-real /challenge/bin
+cp /usr/bin/su /challenge/bin/su-real
 chmod 4755 /challenge/bin/su-real
