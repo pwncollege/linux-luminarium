@@ -56,6 +56,7 @@ password1337      (zardus)
 1g 0:00:00:22 3/3 0.04528g/s 10509p/s 10509c/s 10509C/s lykys..lank
 Use the "--show" option to display all of the cracked passwords reliably
 Session completed
+hacker@dojo:~$
 ```
 
 Here, John the Ripper cracked Zardus' leaked password hash to find the real value of `password1337`.
