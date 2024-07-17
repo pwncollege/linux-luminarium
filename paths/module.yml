@@ -1,4 +1,5 @@
 name: Pondering Paths
+allow_privileged: false
 resources:
 - name: Resources
   type: markdown

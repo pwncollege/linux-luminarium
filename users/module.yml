@@ -1,4 +1,5 @@
 name: Untangling Users
+allow_privileged: false
 challenges:
 - id: "su"
   name: "Becoming root with su"

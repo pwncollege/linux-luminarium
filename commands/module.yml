@@ -1,4 +1,5 @@
 name: Comprehending Commands
+allow_privileged: false
 
 challenges:
 - id: "cat"

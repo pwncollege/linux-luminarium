@@ -1,4 +1,5 @@
 name: Shell Variables
+allow_privileged: false
 resources:
 - name: Resources
   type: markdown

@@ -1,4 +1,5 @@
 name: Processes and Jobs
+allow_privileged: false
 
 challenges:
 - id: "ps"

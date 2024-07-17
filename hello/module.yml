@@ -1,4 +1,5 @@
 name: Hello Hackers
+allow_privileged: false
 challenges:
 - id: hello
   name: Intro to Commands

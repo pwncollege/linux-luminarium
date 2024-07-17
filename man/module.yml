@@ -1,4 +1,5 @@
 name: Digesting Documentation
+allow_privileged: false
 resources:
 - name: Resources
   type: markdown

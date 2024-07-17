@@ -1,4 +1,5 @@
 name: Practicing Piping
+allow_privileged: false
 resources:
 - name: Resources
   type: markdown
