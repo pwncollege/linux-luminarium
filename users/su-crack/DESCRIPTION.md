@@ -63,4 +63,4 @@ Here, John the Ripper cracked Zardus' leaked password hash to find the real valu
 Poor Zardus!
 
 This level simulates this story, giving you a leak of `/etc/shadow` (in `/challenge/shadow-leak`).
-Crack it, `su` to `zardus`, and run `/challenge/run` to get the flag!
+Crack it (this could take a few minutes), `su` to `zardus`, and run `/challenge/run` to get the flag!
