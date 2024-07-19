@@ -17,6 +17,8 @@ challenges:
   name: "Exporting Variables"
 - id: "env"
   name: "Printing Exported Variables"
+- id: "command-substitution"
+  name: "Storing Command Output"
 - id: "read"
   name: "Reading Input"
 - id: "readfile"
