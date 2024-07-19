@@ -8,7 +8,7 @@ then
 	exit 1
 fi
 
-if [ "$2" != "/challenge/getroot" ] 
+if [ "$(realpath $2)" != "/challenge/getroot" ]
 then
 	fold -s <<< "This challenge restricts chmod to ONLY work on /challenge/get-root-shell! You may not chmod any other file in this challenge."
 	exit 2
