@@ -1,0 +1,5 @@
+#!/opt/pwn.college/bash
+
+touch /challenge/.challenge-key
+chmod 600 /challenge/.challenge-key
+echo $RANDOM$RANDOM$RANDOM$RANDOM > /challenge/.challenge-key

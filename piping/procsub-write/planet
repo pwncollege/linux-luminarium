@@ -1,0 +1,11 @@
+#!/opt/pwn.college/bash
+
+read CORRECT < /challenge/.challenge-key
+read ATTEMPT < <(tail -n 1)
+
+if [ "$CORRECT" == "$ATTEMPT" ]
+then
+	echo "$CORRECT" > /challenge/.planet
+else
+	fold -s >&2 <<< "Are you sure you're properly redirecting input into '/challenge/planet'?"
+fi

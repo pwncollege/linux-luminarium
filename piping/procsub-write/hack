@@ -1,0 +1,10 @@
+#!/opt/pwn.college/bash
+
+if [ -t 1 ] || [ -f /dev/fd/1 ]
+then
+	fold -s >&2 <<< "You must redirect my output into another command!"
+	exit 1
+fi
+
+fold -s <<< "This secret data must directly and simultaneously make it to /challenge/the and /challenge/planet. Don't try to copy-paste it; it changes too fast."
+cat /challenge/.challenge-key

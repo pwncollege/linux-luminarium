@@ -26,4 +26,6 @@ challenges:
   name: "Grepping errors"
 - id: "tee"
   name: "Duplicating piped data with tee"
+- id: "procsub-write"
+  name: "Writing to multiple programs"
 

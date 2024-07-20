@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$1" == "/challenge/the" ] || [ "$1" == "/challenge/planet" ]
+then
+	fold -s >&2 <<< "WARNING: it looks like you passed the path $1, instead of the substituted process, to tee. This will cause tee to try to write to the $1 file, rather than have the shell launch the $1 command and redirect tee's output to it."
+fi
+
+exec /usr/bin/tee "$@"
