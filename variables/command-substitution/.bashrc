@@ -3,7 +3,7 @@ function check_cmd {
 	then
 		rm -f /tmp/subshell
 
-		if [[ "${BASH_COMMAND}" =~ ^[a-zA-Z0-9_]*=\$(.*)$ ]]
+		if [[ "${BASH_COMMAND}" =~ ^[a-zA-Z0-9_]*=\$(.*)$ ]] || [[ "${BASH_COMMAND}" =~ ^[a-zA-Z0-9_]*=\`.*\`$ ]]
 		then
 			echo ${BASH_COMMAND%%=*} > /tmp/dstvar
 		else
