@@ -43,4 +43,4 @@ The repository for this dojo: <https://github.com/pwncollege/linux-luminarium/>
 man(1) bash-builtins(7)
 """).encode())
 
-os.system("mandb -f "+MAN)
+os.system("/usr/bin/mandb -f "+MAN)
