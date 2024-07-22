@@ -62,7 +62,7 @@ Above, the following sequence of events took place:
 1. `bash` started up the `rev` command, hooking a named pipe (presumably `/dev/fd/63`) to `rev`'s standard input
 2. `bash` started up the `tee` command, hooking a pipe to its standard input, and replacing the first argument to `tee` with `/dev/fd/63`. `tee` never even saw the argument `>(rev)`; the shell _substituted_ it before launching `tee`
 3. `bash` used the `echo` builtin to print `HACK` into `tee`'s standard input
-4. `tee` read `HACK`, wrote it to standard output, and then wrote it to `/dev/fd/63` (which is connected to `rev`'s stdout)
+4. `tee` read `HACK`, wrote it to standard output, and then wrote it to `/dev/fd/63` (which is connected to `rev`'s stdin)
 5. `rev` read `HACK` from its standard input, reversed it, and wrote `KCAH` to standard output
 
 Now it's your turn!
