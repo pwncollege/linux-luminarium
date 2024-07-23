@@ -1,0 +1,4 @@
+#!/opt/pwn.college/bash
+
+fold -s <<< "About to read out the /home/hacker/not-the-flag file!"
+cat /home/hacker/not-the-flag

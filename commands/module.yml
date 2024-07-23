@@ -24,3 +24,5 @@ challenges:
   name: "making directories"
 - id: "find"
   name: "finding files"
+- id: "ln-s"
+  name: "linking files"
