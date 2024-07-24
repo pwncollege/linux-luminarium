@@ -12,10 +12,8 @@ hacker@dojo:~$
 And you've used `tee` to duplicate data to a file and a command:
 
 ```console
-hacker@dojo:~$ echo HACK | tee THE > PLANET
+hacker@dojo:~$ echo HACK | tee THE | cat
 hacker@dojo:~$ cat THE
-HACK
-hacker@dojo:~$ cat PLANET
 HACK
 hacker@dojo:~$
 ```
