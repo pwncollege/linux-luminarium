@@ -12,7 +12,7 @@ read SS < <(tail -n1)
 
 if [ "$SS" != "SUPERSECRET:$(tail -c+20 /flag | head -c4)" ]
 then
-	fold -s <<< "The input is incorrect! No flag for you (use 'tee' to intercept the output of 'pwn' and figure out what's going on)."
+	fold -s <<< "The input to 'college' does not contain the correct secret code! This code should be provided by the 'pwn' command. HINT: use 'tee' to intercept the output of 'pwn' and figure out what the code needs to be."
 	exit 2
 fi
 
