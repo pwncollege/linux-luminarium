@@ -13,8 +13,10 @@ You entered: Hello!
 Now that you're familiar with the `read` command, here it is without that prompt:
 
 ```console
+hacker@dojo:~$ echo $MY_VARIABLE
+
 hacker@dojo:~$ read MY_VARIABLE
-Hello!
+Hello!                                           <- NOTE: this "Hello!" is *input*, entered on the terminal
 hacker@dojo:~$ echo "You entered: $MY_VARIABLE"
 You entered: Hello!
 ```
