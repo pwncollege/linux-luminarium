@@ -10,15 +10,18 @@ hacker@dojo:~$ echo "You entered: $MY_VARIABLE"
 You entered: Hello!
 ```
 
-Now that you're familiar with the `read` command, here it is without that prompt:
+Keep in mind, `read` reads data from your standard input!
+The first `Hello!`, above, was _inputted_ rather than _outputted_.
+Let's try to be more explicit with that.
+Here, we annotated the beginning of each line with whether the line represents `INPUT` from the user or `OUTPUT` to the user:
 
 ```console
-hacker@dojo:~$ echo $MY_VARIABLE
-
-hacker@dojo:~$ read MY_VARIABLE
-Hello!                                           <- NOTE: this "Hello!" is *input*, entered on the terminal
-hacker@dojo:~$ echo "You entered: $MY_VARIABLE"
-You entered: Hello!
+ INPUT: hacker@dojo:~$ echo $MY_VARIABLE
+OUTPUT:
+ INPUT: hacker@dojo:~$ read MY_VARIABLE
+ INPUT: Hello!
+ INPUT: hacker@dojo:~$ echo "You entered: $MY_VARIABLE"
+OUTPUT: You entered: Hello!
 ```
 
 In this challenge, your job is to use `read` to set the `PWN` variable to the value `COLLEGE`.
