@@ -14,7 +14,6 @@ CANDIDATES=(
 	"/var/log"
 	"/sys/kernel"
 	"/etc/apt/sources.list.d"
-	"/etc/X11/fonts/Type1"
 	"/usr/include"
 	"/usr/share/zoneinfo/posix/Asia"
 	"/usr/aarch64-linux-gnu/include/gnu"
@@ -22,10 +21,13 @@ CANDIDATES=(
 	"/usr/share/doc/fontconfig"
 	"/usr/share/build-essential"
 	"/var/lib/apt/lists"
-	"/var/lib/ghostscript/CMap"
-	"/usr/share/locale/lb/LC_MESSAGES"
 )
 NEEDED=${CANDIDATES[ $RANDOM % ${#CANDIDATES[@]} ]}
+
+while [[ ! -d "$NEEDED" ]]
+do
+	NEEDED=${CANDIDATES[ $RANDOM % ${#CANDIDATES[@]} ]}
+done
 
 if [ "$PWD" != "$NEEDED" ]
 then
