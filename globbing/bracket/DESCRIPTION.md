@@ -15,4 +15,4 @@ Look: file_a file_b
 
 Try it here!
 We've placed a bunch of files in `/challenge/files`.
-Change your working directory to `/challenge/files` and, with a single argument, run `/challenge/run` with a single argument that bracket-globs into `file_b`, `file_a`, `file_s`, and `file_h`!
+Change your working directory to `/challenge/files` and run `/challenge/run` with a single argument that bracket-globs into `file_b`, `file_a`, `file_s`, and `file_h`!
