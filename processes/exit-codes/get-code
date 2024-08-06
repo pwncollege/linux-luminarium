@@ -1,0 +1,13 @@
+#!/opt/pwn.college/bash
+
+if [ ! -t 1 ]
+then
+	echo "ERROR!" 1>&2
+	fold -s 1>&2 <<< 'It looks like you are redirecting my standard output! This is not how you save off the error code. The error code is not outputted anywhere; simply returned from this program as it exits. It will end up in the $? variable. Please re-launch this program without output redirection.'
+	exit 1
+fi
+
+CODE=$(($RANDOM%255+1))
+echo "Exiting with an error code!"
+echo "$CODE" > /tmp/.code
+exit "$CODE"

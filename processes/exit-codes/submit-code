@@ -1,0 +1,20 @@
+#!/opt/pwn.college/bash
+
+read CODE < /tmp/.code
+
+if [ -z "$1" ]
+then
+	fold -s <<< "You must run $0 with the exit code you retrieved from /challenge/get-code as the first argument:"
+	echo ""
+	echo "Usage: $0 [EXIT_CODE]"
+	exit 1
+fi
+
+if [ "$CODE" != "$1" ]
+then
+	fold -s <<< 'Incorrect... Make sure to use $? immediately after running /challenge/get-code. Your shell will overwrite the $? variable with the exit value of any other command you run!'
+	exit 1
+fi
+
+fold -s <<< "CORRECT! Here is your flag:"
+cat /flag

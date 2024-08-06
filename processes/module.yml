@@ -18,3 +18,5 @@ challenges:
   name: Foregrounding Processes
 - id: "start-backgrounded"
   name: Starting Backgrounded Processes
+- id: "exit-codes"
+  name: Process Exit Codes
