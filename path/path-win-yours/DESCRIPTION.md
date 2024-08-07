@@ -17,6 +17,8 @@ Previously, the `win` command that `/challenge/run` executed was stored in `/cha
 This time, `win` does not exist!
 Recall the final level of [Chaining Commands](../chaining), and make a shell script called `win`, add its location to the `PATH`, and enable `/challenge/run` to find it!
 
+----
+**Elaboration:**
 The functionality of `win` is simple: `/challenge/run` runs as `root`, so `win` can simply `cat` the flag file.
 Again, the `win` command is the _only_ thing that `/challenge/run` needs, so you can just overwrite `PATH` with that one directory.
 But remember, if you do that, your `win` command won't be able to find `cat`.
