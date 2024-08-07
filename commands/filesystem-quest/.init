@@ -33,7 +33,7 @@ def get_dirs(root):
 			continue
 		yield dirpath
 
-def make_trail(root="/", num_clues=12):
+def make_trail(root="/", num_clues=8):
 	candidates = list(get_dirs(root))
 	clue_locations = RND.sample(candidates, num_clues)
 	clue_types = TYPES + RND.sample(TYPES*num_clues, num_clues-len(TYPES))
