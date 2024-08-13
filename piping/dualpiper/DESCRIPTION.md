@@ -11,7 +11,7 @@ How to do it is a task I'll leave to you.
 In this challenge, you have:
 
 - `/challenge/hack`: this produces data on stdout and stdin
-- `/challenge/the`: you must redirect `hack`'s stdout to this program
-- `/challenge/planet`: you must redirect `hack`'s stderr to this program
+- `/challenge/the`: you must redirect `hack`'s std**err** to this program
+- `/challenge/planet`: you must redirect `hack`'s std**out** to this program
 
 Go get the flag!

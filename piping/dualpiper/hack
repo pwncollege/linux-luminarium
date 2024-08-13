@@ -2,18 +2,18 @@
 
 if [ -t 1 ] || [ -f /dev/fd/1 ]
 then
-	fold -s <<< "You must redirect my standard output into another command!"
+	fold -s <<< "You must redirect my standard output into '/challenge/planet'!"
 	exit 1
 else
-	fold -s <<< "This secret data must directly make it to /challenge/the over my stdout. Don't try to copy-paste it; it changes too fast."
+	fold -s <<< "This secret data must directly make it to /challenge/planet over my stdout. Don't try to copy-paste it; it changes too fast."
 	cat /challenge/.challenge-key-stdout
 fi
 
-if [ -t 2 ] || [ -f /dev/fd/1 ]
+if [ -t 2 ] || [ -f /dev/fd/2 ]
 then
-	fold -s >&2 <<< "You must redirect my standard error into another command!"
+	fold -s >&2 <<< "You must redirect my standard error into '/challenge/the'!"
 	exit 1
 else
-	fold -s 2>&1 <<< "This secret data must directly make it to /challenge/hack over my stderr. Don't try to copy-paste it; it changes too fast."
-	cat /challenge/.challenge-key-stderr 2>&1
+	fold -s >&2 <<< "This secret data must directly make it to /challenge/the over my stderr. Don't try to copy-paste it; it changes too fast."
+	cat /challenge/.challenge-key-stderr >&2
 fi

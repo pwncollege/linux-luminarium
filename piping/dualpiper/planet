@@ -1,11 +1,11 @@
 #!/opt/pwn.college/bash
 
-read CORRECT < /challenge/.challenge-key-stderr
+read CORRECT < /challenge/.challenge-key-stdout
 read ATTEMPT < <(tail -n 1)
 
 if [ "$CORRECT" == "$ATTEMPT" ]
 then
 	echo "$CORRECT" > /challenge/.planet
 else
-	fold -s >&2 <<< "Are you sure you're properly redirecting /challenge/hack's standard error into '/challenge/planet'?"
+	fold -s >&2 <<< "Are you sure you're properly redirecting /challenge/hack's standard output into '/challenge/planet'?"
 fi
