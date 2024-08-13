@@ -4,20 +4,16 @@ if [ -t 1 ] || [ -f /dev/fd/1 ]
 then
 	fold -s <<< "You must redirect my standard output into another command!"
 	exit 1
+else
+	fold -s <<< "This secret data must directly make it to /challenge/the over my stdout. Don't try to copy-paste it; it changes too fast."
+	cat /challenge/.challenge-key-stdout
 fi
 
 if [ -t 2 ] || [ -f /dev/fd/1 ]
 then
 	fold -s >&2 <<< "You must redirect my standard error into another command!"
 	exit 1
+else
+	fold -s 2>&1 <<< "This secret data must directly make it to /challenge/hack over my stderr. Don't try to copy-paste it; it changes too fast."
+	cat /challenge/.challenge-key-stderr 2>&1
 fi
-
-(
-	fold -s <<< "This secret data must directly make it to /challenge/the over my stdout. Don't try to copy-paste it; it changes too fast."
-	cat /challenge/.challenge-key-stdout
-)
-
-(
-	fold -s <<< "This secret data must directly make it to /challenge/hack over my stderr. Don't try to copy-paste it; it changes too fast."
-	cat /challenge/.challenge-key-stderr
-) 2>&1
