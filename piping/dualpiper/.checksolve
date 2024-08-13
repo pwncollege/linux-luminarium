@@ -1,0 +1,12 @@
+#!/opt/pwn.college/bash
+
+[ -f /challenge/.the ] || exit
+[ -f /challenge/.planet ] || exit
+read THE < /challenge/.the
+read PLANET < /challenge/.planet
+
+if [ "$THE" == "$PLANET" ]
+then
+	fold -s <<< "Congratulations, you have learned a redirection technique that even experts struggle with! Here is your flag:"
+	cat /flag
+fi

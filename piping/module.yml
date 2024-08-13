@@ -28,4 +28,8 @@ challenges:
   name: "Duplicating piped data with tee"
 - id: "procsub-write"
   name: "Writing to multiple programs"
+- id: "dualpiper"
+  name: "Split-piping stderr and stdout"
+  visibility:
+    start: "3024-02-23T00:00:00-07:00"
 
