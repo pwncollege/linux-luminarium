@@ -3,7 +3,7 @@
 touch /challenge/.challenge-key-solve
 touch /challenge/.challenge-key-stdout
 touch /challenge/.challenge-key-stderr
-chmod 600 /challenge/.challenge-key-union
+chmod 600 /challenge/.challenge-key-solve
 chmod 600 /challenge/.challenge-key-stdout
 chmod 600 /challenge/.challenge-key-stderr
 echo $RANDOM$RANDOM$RANDOM$RANDOM > /challenge/.challenge-key-solve
