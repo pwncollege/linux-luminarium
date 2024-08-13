@@ -3,6 +3,11 @@
 read CORRECT < /challenge/.challenge-key-stderr
 read ATTEMPT < <(tail -n 1)
 
+if [ ! -t 2 ]
+then
+	fold -s <<< "You are redirecting standard error *of /challenge/the*! Instead, you must redirect standard error of 'hack'. This must be done *before* any |. The right side of the pipe is a different command, with its own redirection, than the left side!"
+fi
+
 if [ "$CORRECT" == "$ATTEMPT" ]
 then
 	cp /challenge/.challenge-key-solve /challenge/.the
