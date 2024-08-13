@@ -2,7 +2,7 @@
 
 if [ -t 1 ] || [ -f /dev/fd/1 ]
 then
-	fold -s >&2 <<< "You must redirect my standard output into another command!"
+	fold -s <<< "You must redirect my standard output into another command!"
 	exit 1
 fi
 
