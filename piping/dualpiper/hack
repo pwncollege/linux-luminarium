@@ -3,7 +3,6 @@
 if [ -t 1 ] || [ -f /dev/fd/1 ]
 then
 	fold -s <<< "You must redirect my standard output into '/challenge/planet'!"
-	exit 1
 else
 	fold -s <<< "This secret data must directly make it to /challenge/planet over my stdout. Don't try to copy-paste it; it changes too fast."
 	cat /challenge/.challenge-key-stdout
@@ -12,7 +11,6 @@ fi
 if [ -t 2 ] || [ -f /dev/fd/2 ]
 then
 	fold -s >&2 <<< "You must redirect my standard error into '/challenge/the'!"
-	exit 1
 else
 	fold -s >&2 <<< "This secret data must directly make it to /challenge/the over my stderr. Don't try to copy-paste it; it changes too fast."
 	cat /challenge/.challenge-key-stderr >&2
