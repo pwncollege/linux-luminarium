@@ -5,7 +5,7 @@ read ATTEMPT < <(tail -n 1)
 
 if [ "$CORRECT" == "$ATTEMPT" ]
 then
-	echo "$CORRECT" > /challenge/.planet
+	cp /challenge/.challenge-key-solve /challenge/.planet
 else
 	fold -s >&2 <<< "Are you sure you're properly redirecting /challenge/hack's standard output into '/challenge/planet'?"
 fi
