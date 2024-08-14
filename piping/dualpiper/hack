@@ -1,5 +1,10 @@
 #!/opt/pwn.college/bash
 
+if [[ "$1" =~ "/dev/fd"* ]]
+then
+	fold -s <<< "It looks like you passed something like '>(something)' as an *argument* to /challenge/hack rather than redirecting /challenge/hack's out/error to '>(something)'. Remember, 'cmd1 >(cmd2)' does *NOT* redirect output of cmd1; rather, it'll run cmd2, hook a file up to its standard input, and pass that file as an argument to cmd1. If you want to redirect cmd1's output into that file, you will need to do: 'cmd1 > >(cmd2)', which is equivalent to 'cmd1 | cmd2'."
+fi
+
 if [ -t 1 ] || [ -f /dev/fd/1 ]
 then
 	fold -s <<< "You must redirect my standard output into '/challenge/planet'!"
