@@ -20,3 +20,5 @@ else
 	fold -s >&2 <<< "This secret data must directly make it to /challenge/the over my stderr. Don't try to copy-paste it; it changes too fast."
 	cat /challenge/.challenge-key-stderr >&2
 fi
+
+sleep 1
