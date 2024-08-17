@@ -65,7 +65,7 @@ Above, the following sequence of events took place:
 
 Now it's your turn!
 In this challenge, we have `/challenge/hack`, `/challenge/the`, and `/challenge/planet`.
-Run the `/challenge/hack` command, and duplicate its output input input to both the `/challenge/the` and the `/challenge/planet` commands!
+Run the `/challenge/hack` command, and duplicate its output as input to both the `/challenge/the` and the `/challenge/planet` commands!
 
 ----
 **Trivia!**
