@@ -1,5 +1,5 @@
 While using most commands is straightforward, the usage of some commands can get quite complex.
-For example, the arguments to commands, like `sed` and `awk`, which we're definitely not getting into right now, are entire programs in an esoteric programming language!
+For example, the arguments to commands like `sed` and `awk`, which we're definitely not getting into right now, are entire programs in an esoteric programming language!
 Somewhere on the spectrum between `cd` and `awk` are commands that take arguments to their arguments...
 
 This sounds crazy, but you've already encountered this with the `find` level in [Basic Commands](../commands).
