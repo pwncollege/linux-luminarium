@@ -4,4 +4,4 @@ In this level, we'll explore how this works and, in the next level, we'll figure
 
 This level's `run` wants to see another copy of itself running _and using the same terminal_.
 How?
-Use suspend to launch it, then suspend it, then launch another copy while the first is suspended!
+Use the terminal to launch it, then suspend it, then launch another copy while the first is suspended!
