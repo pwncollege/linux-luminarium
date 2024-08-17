@@ -19,7 +19,7 @@ For now, let's look at the output above at a high level:
 #### The File Type
 
 The first character of each line represents the file type.
-In `pwn_directory`'s case, the `d` indicates that it's a directory, and in `pwn_file`'s case, the `-` represents that it's a normal file.
+In `pwn_directory`'s case, the `d` indicates that it's a directory, and in `college_file`'s case, the `-` represents that it's a normal file.
 There are other types as well, and you will encounter some of them later in your pwn.college journey.
 
 #### The Permissions
