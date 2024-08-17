@@ -11,7 +11,7 @@ hacker@dojo:~$
 ```
 
 Here, the `hacker` user is _only_ in the `hacker` group.
-The most common use-case for groups to control access to different system resources.
+The most common use-case for groups is to control access to different system resources.
 For example, "Practice Mode" in pwn.college grants you root access to allow better debugging and so on.
 This is handled by giving you an extra group when you launch in practice mode:
 
