@@ -4,7 +4,7 @@ This will allow the process to keep running, while giving you your shell back to
 
 This level's `run` wants to see another copy of itself running, _not suspended_, and using the same terminal.
 How?
-Use suspend to launch it, then suspend it, then _background_ it with `bg` and launch another copy while the first is running in the background!
+Use the terminal to launch it, then suspend it, then _background_ it with `bg` and launch another copy while the first is running in the background!
 
 ---
 

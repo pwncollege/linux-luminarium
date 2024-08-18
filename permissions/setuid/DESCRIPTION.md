@@ -12,7 +12,7 @@ hacker@dojo:~$
 ```
 
 The `s` part in place of the executable bit means that the program is executable _with SUID_.
-It means that, regardless of what user runs the program (as long as they have executbale permissions), the program will execute as the owner user (in this case, the `root` user).
+It means that, regardless of what user runs the program (as long as they have executable permissions), the program will execute as the owner user (in this case, the `root` user).
 
 As the owner of a file, you can set a file's SUID bit by using chmod:
 

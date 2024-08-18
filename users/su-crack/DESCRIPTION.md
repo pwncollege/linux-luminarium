@@ -44,7 +44,7 @@ If you have the hashed value of the password, you can _crack_ it!
 Even though `/etc/shadow` is, by default, only readable by root, leaks can happen!
 For example, backups are often stored, unencrypted and insufficiently protected, on file servers, and this has led to countless data disclosures.
 
-If a hacker gets their hands on a leaked `/etc/shadow`, they can start cracked passwords and wreaking havoc.
+If a hacker gets their hands on a leaked `/etc/shadow`, they can start cracking passwords and wreaking havoc.
 The cracking can be done via the famous [John the Ripper](https://www.openwall.com/john/), as so:
 
 ```console
