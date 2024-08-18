@@ -1,5 +1,5 @@
 You've resumed processes in the _foreground_ with the `fg` command.
-You can also reume processes in the _background_ with the `bg` command!
+You can also resume processes in the _background_ with the `bg` command!
 This will allow the process to keep running, while giving you your shell back to invoke more commands in the meantime.
 
 This level's `run` wants to see another copy of itself running, _not suspended_, and using the same terminal.
