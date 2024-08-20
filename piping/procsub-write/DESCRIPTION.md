@@ -13,6 +13,7 @@ And you've used `tee` to duplicate data to a file and a command:
 
 ```console
 hacker@dojo:~$ echo HACK | tee THE | cat
+HACK
 hacker@dojo:~$ cat THE
 HACK
 hacker@dojo:~$
