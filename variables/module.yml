@@ -4,7 +4,7 @@ resources:
 - name: Resources
   type: markdown
   content: |
-    - The Linux Documentation Project has a section n [shell variables](https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-5.html)
+    - The Linux Documentation Project has a section on [shell variables](https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-5.html)
 
 challenges:
 - id: "echo"
