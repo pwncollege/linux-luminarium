@@ -11,7 +11,7 @@ If you have questions, comments, feedback, and so on, join us on [the Discord ch
 
 **NOTE:**
 The Linux Luminarium is _very_ introductory.
-If you are already comfortable in Linux, feel free to skip it!
+If you are already comfortable in Linux, feel free to skip it (unless it's assigned as part of a course, in which case, obviously do not skip it)!
 
 **NOTE:**
 This dojo is NOT meant to be tricky!
