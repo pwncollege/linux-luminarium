@@ -8,7 +8,7 @@ import os
 
 old_flag = pathlib.Path("/flag")
 FLAG = old_flag.read_text().strip()
-BAD_PATHS = { "home", "proc", "sys", "dev", "root" }
+BAD_PATHS = { "home", "proc", "sys", "dev", "root", "nix"}
 RND = random.Random(int(re.sub("[^0-9]", "", FLAG) + "1"))
 
 def get_dirs(root):
