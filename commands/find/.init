@@ -5,7 +5,9 @@ import random
 import re
 import os
 
-FLAG = pathlib.Path("/flag").read_text().strip()
+
+old_flag = pathlib.Path("/flag")
+FLAG = old_flag.read_text().strip()
 BAD_PATHS = { "home", "proc", "sys", "dev", "root" }
 RND = random.Random(int(re.sub("[^0-9]", "", FLAG) + "1"))
 
@@ -17,6 +19,8 @@ def get_dirs(root):
 			continue
 		yield dirpath
 
-flag_dir = RND.choice(list(get_dirs("/")))
-os.chmod("/flag", 0o644)
-os.rename("/flag", os.path.join(flag_dir, "flag"))
+flag_dir = pathlib.Path(RND.choice(list(get_dirs("/"))))
+flag_path = flag_dir / "flag"
+flag_path.write_text(FLAG, encoding='latin1')
+flag_path.chmod(0o644)
+old_flag.unlink()
