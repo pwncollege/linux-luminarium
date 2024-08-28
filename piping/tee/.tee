@@ -7,4 +7,8 @@ then
 	exit 1
 fi
 
+[ -f "$1" ] && echo "WARNING: you are overwriting file $1 with tee's output..." >&2
+[ -f "$2" ] && echo "WARNING: you are overwriting file $2 with tee's output..." >&2
+[ -f "$3" ] && echo "WARNING: you are overwriting file $3 with tee's output..." >&2
+
 exec /bin/tee "$@"
