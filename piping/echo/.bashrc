@@ -20,7 +20,7 @@ function give_flag {
 		return
 	fi
 
-	fold -s <<< "Correct! You can successfully redirected 'PWN' to the file 'COLLEGE'! Here is your flag:"
+	fold -s <<< "Correct! You successfully redirected 'PWN' to the file 'COLLEGE'! Here is your flag:"
 	cat /tmp/.$FLA-$FLB
 }
 
