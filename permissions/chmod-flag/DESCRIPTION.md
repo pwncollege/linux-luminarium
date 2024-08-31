@@ -61,7 +61,7 @@ That is why `chgrp`ing the file enabled you to read the file.
 
 Anyways!
 Like ownership, file permissions can also be changed.
-This is done with the `chmod` (**ch**nge **mod**e) command.
+This is done with the `chmod` (**ch**ange **mod**e) command.
 The basic usage for chmod is:
 
 ```
