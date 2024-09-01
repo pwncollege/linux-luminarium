@@ -61,7 +61,7 @@ That is why `chgrp`ing the file enabled you to read the file.
 
 Anyways!
 Like ownership, file permissions can also be changed.
-This is done with the `chmod` (**ch**nge **mod**e) command.
+This is done with the `chmod` (**ch**ange **mod**e) command.
 The basic usage for chmod is:
 
 ```
@@ -70,7 +70,7 @@ chmod [OPTIONS] MODE FILE
 
 You can specify the `MODE` in two ways: as a modification of the existing permissions mode, or as a completely new mode to overwrite the old one.
 
-In this level, we will cover former: modifying an existing mode.
+In this level, we will cover the former: modifying an existing mode.
 `chmod` allows you to tweak permissions with the mode format of `WHO`+/-`WHAT`, where `WHO` is user/group/other and `WHAT` is read/write/execute.
 For example, to add _read_ access for the owning _user_, you would specify a mode of `u+r`.
 `w`rite and e`x`ecute access for the `g`roup and the `o`ther (or `a`ll the modes) are specified the same way.
