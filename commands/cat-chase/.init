@@ -1,3 +1,4 @@
 #!/bin/bash
 
 chmod 644 /flag
+/challenge/.hide_flag

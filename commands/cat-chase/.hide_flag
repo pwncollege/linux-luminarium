@@ -10,4 +10,3 @@ fi
 read NEW_PATH < <(dirname $(su -c "ls -d /{usr,lib,bin,opt}/{,*,*/*}/." hacker | sort -R | head -n1))
 mv "$OLD_PATH/flag" "$NEW_PATH/flag"
 echo "$NEW_PATH" > /tmp/.flag-path
-echo "I hid the flag in $NEW_PATH/flag!"
