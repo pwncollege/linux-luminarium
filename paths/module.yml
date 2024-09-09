@@ -1,10 +1,5 @@
 name: Pondering Paths
 allow_privileged: false
-resources:
-- name: Resources
-  type: markdown
-  content: |
-    - [What is PATH?](https://www.linfo.org/path_env_var.html)
 
 challenges:
 - id: "root"
