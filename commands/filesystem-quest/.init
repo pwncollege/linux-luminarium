@@ -12,7 +12,7 @@ NAMES = [
     "LEAD", "BLUEPRINT", "CUE", "DISPATCH", "TRACE", "INFO",
     "DOSSIER", "BRIEF"
 ]
-BAD_PATHS = { "home", "proc", "sys", "dev", "root", "nix" }
+BAD_PATHS = { "home", "proc", "sys", "dev", "root", "nix", "run"}
 TYPES = [ 'NORMAL', 'TRAP', 'HIDDEN', 'DELAYED' ]
 GREETINGS = [
 	"Congratulations, you found the clue!",
