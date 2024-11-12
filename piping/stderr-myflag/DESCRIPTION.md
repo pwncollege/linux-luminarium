@@ -1,6 +1,6 @@
 Just like standard output, you can also redirect the error channel of commands.
 Here, we'll learn about *File Descriptor numbers*.
-A File Descriptor (FD) is a number the *describes* a communication channel in Linux.
+A File Descriptor (FD) is a number that *describes* a communication channel in Linux.
 You've already been using them, even though you didn't realize it.
 We're already familiar with three:
 
