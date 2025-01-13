@@ -22,7 +22,7 @@ hacker:$6$Xro.e7qB3Q2Jl2sA$j6xffIgWn9xIxWUeFzvwPf.nOH2NTWNJCU5XVkPuONjIC7jL467SR
 hacker@dojo:~$
 ```
 
-Also unlike `su`, rather than authenticating via password, `sudo` relies on policies that it checks to determine the user's authorization run things as root.
+Unlike `su`, which relies on password authentication, `sudo` checks policies to determine whether the user is authorized to run commands as root.
 These policies are defined in `/etc/sudoers`, and though it's mostly out of scale for our purposes, there are plenty of [resources](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file) for learning about this!
 
 So, the world has moved to `sudo` and has (for the purposes of system administration) left `su` behind.
