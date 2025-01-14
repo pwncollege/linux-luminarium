@@ -6,6 +6,11 @@ challenges:
 - id: helloworld
   name: Intro to Arguments
 resources:
+  - name: "The Command Line"
+    type: lecture
+    video: g_85EVO3IC0
+    playlist: PL-ymxv0nOtqqRAz1x90vxNbhmSkeYxHVC
+    slides: 1jcGoKcjupqcszYD-GfNLlMZYgKSBXRr5jKmbe0iLO_k
   - name: Other Tutorials
     type: markdown
     content: |

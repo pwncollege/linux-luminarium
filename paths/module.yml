@@ -1,6 +1,11 @@
 name: Pondering Paths
 allow_privileged: false
-
+resources:
+- name: "The File System"
+  type: lecture
+  video: b67Jq6IZ3U8
+  playlist: PL-ymxv0nOtqqRAz1x90vxNbhmSkeYxHVC
+  slides: 1rZYXk2waekELrSYIiBTk0z0XXx8e8ovvARrH0n6XeO8
 challenges:
 - id: "root"
   name: The Root
