@@ -44,3 +44,9 @@ In this challenge, `/challenge/run` will write a copy of the flag to any file yo
 1. Your argument must be an absolute path.
 2. The path must be inside your home directory.
 3. Before expansion, your argument must be three characters or less.
+
+Again, you must specify your path as an _argument_ to `/challenge/run` as so:
+
+```console
+hacker@dojo:~$ /challenge/run YOUR_PATH_HERE
+```
