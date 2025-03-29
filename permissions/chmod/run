@@ -8,7 +8,7 @@ import os
 
 RND = random.Random(int(re.sub("[^0-9]", "", open("/flag").read()) + "1"))
 TARGET = "/challenge/pwn"
-STATE_PATH = "/tmp/.state"
+STATE_PATH = "/challenge/.state"
 PERMSTRS = { 7: "rwx", 6: "rw-", 5: "r-x", 4: "r--", 3: "-wx", 2: "-w-", 1: "--x", 0: "---" }
 STRSPERM = { v:k for k,v in PERMSTRS.items() }
 MAX_ROUNDS = 8
