@@ -4,8 +4,8 @@ Luckily, Linux provides a solution to this quandry: _links_.
 Links come in two flavors: _hard_ and _soft_ (also known as _symbolic_) links.
 We'll differentiate the two with an analogy:
 
-- A **hard** link is when you address your appartment using multiple addresses that all lead directly to the same place (e.g., `Apt 2` vs `Unit 2`).
-- A **soft** link is when you move appartments and have the postal service automatically forward your mail from your old place to your new place.
+- A **hard** link is when you address your apartment using multiple addresses that all lead directly to the same place (e.g., `Apt 2` vs `Unit 2`).
+- A **soft** link is when you move apartments and have the postal service automatically forward your mail from your old place to your new place.
 
 In a filesystem, a file is, conceptually, an address at which the contents of that file live.
 A hard link is an alternate address that indexes that data --- accesses to the hard link and accesses to the original file are completely identical, in that they immediate yield the necessary data.
