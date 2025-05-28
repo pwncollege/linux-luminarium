@@ -16,7 +16,7 @@ challenges:
 - id: "bracket-absolute"
   name: "Matching paths with []"
 - id: "multiglob"
-  name: "Multible globs"
+  name: "Multiple globs"
 - id: "mixing"
   name: "Mixing globs"
 - id: "unmatching"
