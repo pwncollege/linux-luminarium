@@ -1,4 +1,4 @@
-So far, you've specified one glob at a time, but you cna do more!
+So far, you've specified one glob at a time, but you can do more!
 Bash supports the expansion of multiple globs in a single word.
 For example:
 
