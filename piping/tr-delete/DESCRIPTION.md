@@ -1,5 +1,5 @@
 `tr` can also translate characters to nothing (i.e., _delete_ them).
-This is done via a `-d` flag and an argument of what characters to delte:
+This is done via a `-d` flag and an argument of what characters to delete:
 
 ```console
 hacker@dojo:~$ echo PAWN | tr -d 'A'

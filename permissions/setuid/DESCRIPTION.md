@@ -3,7 +3,7 @@ The system admin can't be there to give them the password every time a user want
 The "Set User ID" (SUID) permissions bit allows the user to run a program as the owner of that program's file.
 
 This is actually the exact mechanism used to let the challenge programs you run read the flag or, outside of pwn.college, to enable system administration tools such as `su`, `sudo`, and so on.
-The permission of a file with SUID list look like this:
+The permissions of a file with SUID look like this:
 
 ```console
 hacker@dojo:~$ ls -l /usr/bin/sudo
