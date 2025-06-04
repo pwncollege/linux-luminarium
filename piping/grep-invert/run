@@ -1,0 +1,18 @@
+#!/opt/pwn.college/bash
+
+FLAG=$(cat /flag)
+FLAG_CONTENT=$(sed 's/pwn\.college{\(.*\)}/\1/' <<< "$FLAG")
+
+# Generate 1000+ lines with decoys and the real flag
+REAL_FLAG_LINE=$((RANDOM % 1000 + 1))
+
+for i in {1..1200}; do
+    if [ $i -eq $REAL_FLAG_LINE ]; then
+        # Print the real flag
+        echo "$FLAG"
+    else
+        echo -n "pwn.college{"
+        while read -n1; do echo ${REPLY:-DECOY}; done <<< "$FLAG_CONTENT" | tail -n+6 | shuf | tr -d "\n"
+        echo "}"
+    fi
+done
