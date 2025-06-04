@@ -1,0 +1,5 @@
+#!/opt/pwn.college/bash
+
+cat /flag | while IFS= read -n1 C; do
+    [ -n "$C" ] && echo "$RANDOM $C"
+done
