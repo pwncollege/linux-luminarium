@@ -5,7 +5,7 @@ One of these is `tr`, which `tr`anslates characters it receives over standard in
 In its most basic usage, `tr` translates the character provided in its first argument to the character provided in its second argument:
 
 ```console
-hacker@dojo:~$ echo 'OWN' | tr 'O' 'P'
+hacker@dojo:~$ echo OWN | tr O P
 PWN
 hacker@dojo:~$
 ```
@@ -13,7 +13,7 @@ hacker@dojo:~$
 It can also handle multiple characters, with the characters in different positions of the first argument replaced with associated characters in the second argument.
 
 ```console
-hacker@dojo:~$ echo 'OWN.COLLAGE' | tr 'AO' 'EP'
+hacker@dojo:~$ echo OWN.COLLAGE | tr AO EP
 PWN.COLLEGE
 hacker@dojo:~$
 ```

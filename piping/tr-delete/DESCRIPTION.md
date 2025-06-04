@@ -2,7 +2,7 @@
 This is done via a `-d` flag and an argument of what characters to delete:
 
 ```console
-hacker@dojo:~$ echo PAWN | tr -d 'A'
+hacker@dojo:~$ echo PAWN | tr -d A
 PWN
 hacker@dojo:~$
 ```
