@@ -1,0 +1,9 @@
+#!/opt/pwn.college/bash
+
+echo "Your character-stuffed flag:"
+cat /flag | while IFS= read -n1 c; do
+  printf '%s' "$c"
+  (( RANDOM % 100 < 60 )) && printf '^'
+  (( RANDOM % 100 < 60 )) && printf '%%'
+done
+echo

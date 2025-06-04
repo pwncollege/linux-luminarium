@@ -2,3 +2,4 @@
 
 echo "Your case-swapped flag:"
 cat /flag | tr '[A-Z][a-z]' '[a-z][A-Z]'
+echo
