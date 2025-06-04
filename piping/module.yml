@@ -30,3 +30,5 @@ challenges:
   name: "Writing to multiple programs"
 - id: "dualpiper"
   name: "Split-piping stderr and stdout"
+- id: "tr"
+  name: "Translating characters"
