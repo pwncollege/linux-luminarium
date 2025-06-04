@@ -11,7 +11,7 @@ hacker@dojo:~$ goodscript
 bash: goodscript: command not found
 hacker@dojo:~$ /home/hacker/scripts/goodscript
 YEAH! This is the best script!
-hacker@dojo:~l
+hacker@dojo:~$
 ```
 
 If you maintain useful scripts that you want to be able to launch by bare name, this is annoying.

@@ -41,7 +41,7 @@ zardus@yourcomputer:~$
 ```
 
 This file is a special _device file_ (type `c` means it is a "character device"), and interacting with it results in changes to the display output (rather than changes to disk storage, as for a normal file!).
-Zardus' user account on his machine can interact with it because the the file has a group ownership of `video`, and Zardus is a member of the `video` group.
+Zardus' user account on his machine can interact with it because the file has a group ownership of `video`, and Zardus is a member of the `video` group.
 
 No such luck for the `/flag` file in the dojo, though!
 Consider the following:
