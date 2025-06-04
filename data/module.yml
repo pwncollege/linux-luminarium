@@ -1,0 +1,29 @@
+name: Data Manipulation
+allow_privileged: false
+resources:
+- name: Further Programs to Learn
+  type: markdown
+  content: |
+    There are _countless_ programs that shell wizards use to manipulate data.
+    Each program does specific different things, typically adhering to the [Unix Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) of doing one thing and doing it well.
+    You can chain these programs into really awesome composite logic.
+    Some examples, that you should learn on your own when you are ready after completing the Linux Luminarium, are:
+
+    - [awk](https://linux.die.net/man/1/awk) for complex text processing
+    - [cut](https://linux.die.net/man/1/cut) for extracting parts of lines
+    - [less](https://linux.die.net/man/1/less) for an interactive file reader
+    - [more](https://linux.die.net/man/1/more) to read parts of files at a time
+    - [paste](https://linux.die.net/man/1/paste) to combine files
+    - [sed](https://linux.die.net/man/1/sed) for complex text manipulation
+    - [sort](https://linux.die.net/man/1/sort) for sorting data
+    - [tail](https://linux.die.net/man/1/tail) as an inverse of `head`
+    - [uniq](https://linux.die.net/man/1/uniq) for filtering out unique data in a stream
+challenges:
+- id: "tr"
+  name: "Translating characters"
+- id: "tr-delete"
+  name: "Deleting characters"
+- id: "tr-delete-newlines"
+  name: "Deleting newlines"
+- id: "head"
+  name: "Extracting the first lines with head"

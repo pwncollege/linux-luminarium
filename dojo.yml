@@ -12,6 +12,7 @@ modules:
 - id: "globbing"
 - id: "piping"
 - id: "variables"
+- id: "data"
 - id: "processes"
 - id: "permissions"
 - id: "users"
