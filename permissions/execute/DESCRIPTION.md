@@ -14,7 +14,7 @@ hacker@dojo:~$
 ```
 
 In this case, `/challenge/run` runs because it is executable by the `hacker` user.
-Because the file is owned by the `root` user and `root` group, this requires that the execute bit is set on the `other` permissions).
+Because the file is owned by the `root` user and `root` group, this requires that the execute bit is set on the `other` permissions.
 If we remove these permissions, the execution will fail!
 
 ```console

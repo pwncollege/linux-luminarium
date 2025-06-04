@@ -30,7 +30,7 @@ NAME
 ```
 
 Luckily, Linux follows the philosophy that ["everything is a file"](https://en.wikipedia.org/wiki/Everything_is_a_file).
-This is, the system strives to provide file-like access to most resources, including the input and output of running programs!
+That is, the system strives to provide file-like access to most resources, including the input and output of running programs!
 The shell follows this philosophy, allowing you to, for example, use any utility that takes file arguments on the command line (such as `tee`) and hook it up to the input or output side of a program!
 
 This is done using what's called [Process Substitution](https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html).
@@ -71,7 +71,7 @@ Run the `/challenge/hack` command, and duplicate its output as input to both the
 ----
 **Trivia!**
 
-The observant learner will realize that the following are equivalant:
+The observant learner will realize that the following are equivalent:
 
 ```console
 hacker@dojo:~$ echo hi | rev

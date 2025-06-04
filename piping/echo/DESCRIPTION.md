@@ -1,4 +1,4 @@
-First, let's look at redirect stdout to files.
+First, let's look at redirecting stdout to files.
 You can accomplish this with the `>` character, as so:
 
 ```console

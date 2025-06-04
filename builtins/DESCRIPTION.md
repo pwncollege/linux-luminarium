@@ -9,4 +9,4 @@ Some questions that we will explore:
 - How to implement complex functionality right in your shell!
 
 We will learn how to use the functionality built into the shell itself (e.g., builtins and other functionality).
-No, go forth and learn!
+Now, go forth and learn!
