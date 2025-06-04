@@ -34,5 +34,5 @@ challenges:
   name: "Translating characters"
 - id: "tr-delete"
   name: "Deleting characters"
-- id: "tr-delete"
-  name: "Deleting characters"
+- id: "head"
+  name: "Extracting the first lines with head"
