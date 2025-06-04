@@ -1,0 +1,9 @@
+#!/opt/pwn.college/bash
+
+if [ -t 1 ]
+then
+  echo 'Refusing to print codes to a terminal! Pipe me.'
+  exit 1
+fi
+
+cat /challenge/.codes

@@ -1,0 +1,14 @@
+#!/opt/pwn.college/bash
+
+if [ -t 0 ]; then
+  echo 'Refusing to read codes from a terminal! Pipe codes in.'
+  exit 1
+fi
+
+if diff -q <(head -n 7 /challenge/.codes) - >/dev/null
+then
+  echo 'Congratulations, you piped the right codes!'
+  cat /flag
+else
+  echo 'Invalid codes!' 
+fi

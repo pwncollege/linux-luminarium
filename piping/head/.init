@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in $(seq 1 20)
+do
+  echo "SECRET-CODE-$RANDOM"
+done > /challenge/.codes
