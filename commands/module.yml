@@ -21,6 +21,8 @@ challenges:
   name: "touching files"
 - id: "rm"
   name: "removing files"
+- id: "mv"
+  name: "moving files"
 - id: "ls-a"
   name: "hidden files"
 - id: "filesystem-quest"
