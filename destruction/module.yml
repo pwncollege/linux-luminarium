@@ -3,3 +3,5 @@ allow_privileged: true
 challenges:
   - id: "forkbomb"
     name: "The Fork Bomb"
+  - id: "disk-doomsday"
+    name: "Disk-Space Doomsday"

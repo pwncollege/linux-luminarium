@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+
+import errno
+import os
+
+MARKER = "/tmp/disk_doomsday_phase1"
+TEST_FILE = "/home/hacker/.space_test"
+TEST_SIZE = 1 * 1024 * 1024
+
+def try_create():
+    try:
+        with open(TEST_FILE, "wb") as fh:
+            fh.truncate(TEST_SIZE)
+    except OSError as e:
+        if e.errno == errno.ENOSPC:
+            return False
+        raise
+    else:
+        return True
+    finally:
+        os.remove(TEST_FILE)
+
+can_create = try_create()
+
+if not os.path.exists(MARKER):
+    if can_create:
+        print(
+            "Plenty of space remains. Fill up /home/hacker until a 1 MB file cannot be created "
+            "and run this checker again."
+        )
+    else:
+        open(MARKER, "w").close()
+        print(
+            "Well done, you clogged the disk. Now free that space (remove the file you created) "
+            "and run /challenge/check again to prove you cleaned up!"
+        )
+elif not can_create:
+    print("Still no space left. Clean up more and try again!")
+else:
+    print("Disk space restored. Here is your flag:")
+    print(open("/flag").read().strip())
