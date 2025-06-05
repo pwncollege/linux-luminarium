@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import errno
+import sys
 import os
 
 MARKER = "/tmp/disk_doomsday_phase1"
@@ -12,9 +13,10 @@ def try_create():
         with open(TEST_FILE, "wb") as fh:
             fh.truncate(TEST_SIZE)
     except OSError as e:
-        if e.errno == errno.ENOSPC:
+        if "quota" in str(e):
             return False
-        raise
+        print("Unexpected failure creating temporary file.")
+        sys.exit(1)
     else:
         return True
     finally:
