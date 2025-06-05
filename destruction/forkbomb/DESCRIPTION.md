@@ -1,5 +1,7 @@
 As you learned in the [Processes and Jobs](../../processes) module, whenever you start a program the Linux operating system creates a new process.
 If you create processes faster than the kernel can handle, the process table fills up and *everything* grinds to a halt.
+This new process (e.g., of an `ls` invocation) is ``forked'' off of a parent process (e.g., a shell instance).
+Thus, the induced explosion of processes is called a "Fork Bomb".
 
 You have the tools to do this:
 
