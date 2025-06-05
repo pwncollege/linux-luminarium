@@ -18,9 +18,8 @@ def try_create():
         print("Unexpected failure creating temporary file.")
         sys.exit(1)
     else:
-        return True
-    finally:
         os.remove(TEST_FILE)
+        return True
 
 can_create = try_create()
 
