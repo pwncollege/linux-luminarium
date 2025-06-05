@@ -1,0 +1,5 @@
+name: Daring Destruction
+allow_privileged: true
+challenges:
+  - id: "forkbomb"
+    name: "The Fork Bomb"

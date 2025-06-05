@@ -18,3 +18,4 @@ modules:
 - id: "users"
 - id: "chaining"
 - id: "path"
+- id: "destruction"

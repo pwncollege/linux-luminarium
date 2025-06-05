@@ -1,0 +1,15 @@
+#!/opt/pwn.college/bash
+
+while :
+do
+    if ! /bin/true
+    then
+        echo "You successfully saturated the process table.  Here is your hard-earned flag:"
+        read -r flag < /flag
+        echo "$flag"
+        exit 0
+    else
+        echo "It looks like the system can still spawn processes... Will check again in 5 seconds!"
+        read -t5
+    fi
+done
