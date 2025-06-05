@@ -1,5 +1,3 @@
-# Ways to Destroy Your Linux System
-
 > With great power comes great responsibility.
 
 Over the course of the Luminarium, you have learned how to navigate, manipulate, and control a Linux machine.
