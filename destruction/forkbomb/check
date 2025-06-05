@@ -1,15 +1,23 @@
-#!/opt/pwn.college/bash
+#!/opt/pwn.college/python
 
-while :
-do
-    if ! /bin/true
-    then
-        echo "You successfully saturated the process table.  Here is your hard-earned flag:"
-        read -r flag < /flag
-        echo "$flag"
-        exit 0
-    else
-        echo "It looks like the system can still spawn processes... Will check again in 5 seconds!"
-        read -t5
-    fi
-done
+import time
+import sys
+import os
+
+while True:
+    try:
+        pid = os.fork()
+        if pid == 0:
+            os._exit(0)
+    except OSError as e:
+        print("You successfully saturated the process table.  Here is your hard-earned flag:")
+        print(open("/flag").read().strip())
+        sys.exit(0)
+
+    try:
+        os.waitpid(pid, 0)
+    except ChildProcessError:
+        pass
+
+    print("It looks like the system can still spawn processes. We'll check again in 5 seconds...")
+    time.sleep(5)
