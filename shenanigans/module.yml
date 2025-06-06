@@ -5,4 +5,5 @@ challenges:
     name: "Bashrc Backdoor"
   - id: "flag-checker-hijack"
     name: "Sniffing Input"
-    visibility: False
+    visibility:
+      start: "2029-01-27T00:00:00-07:00"
