@@ -1,9 +1,9 @@
-#!/opt/pwn.college/bash
+#!/bin/bash
 
 case "$0" in
   /*)
     /bin/fold -s <<< "Great job finding me! Here is your flag:"
-    /bin/cat /flag
+    win-actual
     ;;
   *)
     /bin/fold -s <<< "Nope! You must invoke me by my full path. Try using 'which win' to find my location."
