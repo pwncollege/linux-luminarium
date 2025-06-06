@@ -8,7 +8,6 @@ echo "zardus:$VICTIM_PASS" | chpasswd
 
 su -c "auto.sh --user zardus --pass $VICTIM_PASS" zardus &
 
-# fix su perms
 mkdir -p /challenge/bin
 cp /bin/su /bin/sudo /challenge/bin
 chmod 4755 /challenge/bin/su /bin/su /challenge/bin/sudo /bin/sudo

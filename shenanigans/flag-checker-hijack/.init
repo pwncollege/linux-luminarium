@@ -5,7 +5,6 @@ VICTIM_PASS="$RANDOM$RANDOM"
 echo "$VICTIM_PASS" > /challenge/.victim_pass
 chmod 600 /challenge/.victim_pass
 echo "zardus:$VICTIM_PASS" | chpasswd
-chown zardus /flag
 
 cat <<END > /home/zardus/.bashrc
 # this sets up a scary red shell prompt!
