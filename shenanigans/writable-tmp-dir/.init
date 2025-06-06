@@ -17,7 +17,7 @@ chown zardus /home/zardus/.bashrc
 mkdir /tmp/collab
 chmod 777 /tmp/collab
 echo "rm -rf /" > /tmp/collab/evil-commands.txt
-chmod -R zardus:zardus /tmp/collab/
+chown -R zardus:zardus /tmp/collab/
 
 mkdir /challenge/bin
 cp /bin/su /challenge/bin
