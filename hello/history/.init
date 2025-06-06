@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "the flag is $(cat /flag)" >> /home/hacker/.bash_history
+chown hacker:hacker /home/hacker/.bash_history

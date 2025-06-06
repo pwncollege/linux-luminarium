@@ -5,6 +5,8 @@ challenges:
   name: Intro to Commands
 - id: helloworld
   name: Intro to Arguments
+- id: history
+  name: Command History
 resources:
   - name: "The Command Line"
     type: lecture
