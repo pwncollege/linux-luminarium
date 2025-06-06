@@ -7,3 +7,5 @@ challenges:
     name: "Disk-Space Doomsday"
   - id: "rm-rf-root"
     name: "rm -rf /"
+  - id: "rm-rf-root-read"
+    name: "Life after rm -rf /"
