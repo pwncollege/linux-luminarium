@@ -1,12 +1,3 @@
 #!/bin/bash
 
-case "$0" in
-  /*)
-    /bin/fold -s <<< "Great job finding me! Here is your flag:"
-    win-actual
-    ;;
-  *)
-    /bin/fold -s <<< "Nope! You must invoke me by my full path. Try using 'which win' to find my location."
-    exit 1
-    ;;
-esac
+/bin/fold -s <<< "Search for the flag in the same directory in which I am located!"

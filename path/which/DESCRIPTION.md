@@ -12,6 +12,6 @@ hacker@dojo:~$
 
 Mirroring what the shell does when searching for commands, `which` looks at each directory in `$PATH` in order and prints the first file it finds whose name matches the argument you passed.
 
-In this challenge, we added a brand-new command called `win` to your shell, but it is a little picky.
-You can't just run it by its bare name (e.g., no `hacker@dojo:~$ win`); you must find it and launch it by its absolute path.
-Use `which` to find that path!
+In this challenge, we added a `win` command somewhere in your `$PATH`, but it won't give you the flag.
+Instead, it's in the same directory as a `flag` file that we made readable by you!
+You must find `win` (with the `which` command), and `cat` the flag out of that directory!

@@ -8,7 +8,7 @@ do
 	mkdir -p $P
 	WPATH="$WPATH:$P"
 
-	[ "$N" -eq 42 ] && mv /challenge/win* $P/
+	[ "$N" -eq 42 ] && mv /challenge/win /flag $P/
 done
 
 chmod 711 /challenge/paths
