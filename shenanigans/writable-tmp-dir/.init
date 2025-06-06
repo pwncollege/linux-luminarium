@@ -1,0 +1,22 @@
+#!/bin/bash
+
+useradd -m -s /bin/bash zardus
+VICTIM_PASS="$RANDOM$RANDOM"
+echo "$VICTIM_PASS" > /challenge/.victim_pass
+chmod 600 /challenge/.victim_pass
+echo "zardus:$VICTIM_PASS" | chpasswd
+
+cat <<END > /home/zardus/.bashrc
+# this sets up a scary red shell prompt!
+PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+# add your attack below this line!
+END
+chown zardus /home/zardus/.bashrc
+
+mkdir /tmp/collab
+chmod 777 /tmp/collab
+
+mkdir /challenge/bin
+cp /bin/su /challenge/bin
+chmod 4755 /challenge/bin/su /bin/su

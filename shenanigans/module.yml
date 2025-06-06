@@ -7,5 +7,7 @@ challenges:
     name: "Sniffing Input"
   - id: "writable-home-dir"
     name: "Overshared Directories"
+  - id: "writable-tmp-dir"
+    name: "Tricky Linking"
   - id: "process-sniffing"
     name: "Sniffing Process Arguments"
