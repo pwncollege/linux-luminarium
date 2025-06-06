@@ -17,6 +17,7 @@ And then a hacker comes along and does the following, _despite not owning the to
 hacker@dojo:~$ ls -l /tmp/collab/todo-list
 -rw-r--r-- 1 zardus zardus 15 Jun  6 13:12 /tmp/collab/todo-list
 hacker@dojo:~$ rm /tmp/collab/todo-list
+rm: remove write-protected regular file '/tmp/collab/todo-list'? y
 hacker@dojo:~$ echo "send hacker money" > /tmp/collab/todo-list
 hacker@dojo:~$ ls -l /tmp/collab/todo-list
 -rw-r--r-- 1 hacker hacker 18 Jun  6 13:12 /tmp/collab/todo-list
