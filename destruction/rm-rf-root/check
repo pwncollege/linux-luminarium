@@ -6,7 +6,7 @@ import os
 flag = open("/flag").read()
 
 while True:
-    if len(os.listdir("/")) > 10 or len(os.listdir("/usr") > 3) or len(os.listdir("/etc")) > 5 or os.path.exists("/flag"):
+    if len(os.listdir("/")) > 10 or len(os.listdir("/usr")) > 3 or len(os.listdir("/etc")) > 5 or os.path.exists("/flag"):
         print("Looks like you haven't wiped the system! We'll check again in 5 seconds...")
     else:
         print("YES! You wiped it, you wild hacker! The flag is yours:")
