@@ -6,3 +6,9 @@ Instead he'll run a command named `flag_checker`, manually typing the flag into 
 Your mission is to use your continued write access to Zardus's `.bashrc` to intercept this flag.
 Remember how you hijacked commands in the [Pondering PATH](../path) module?
 Can you use that capability to hijack the `flag_checker`?
+
+----
+**HINT:**
+Is Zardus getting spooked by your hijack?
+He's careful --- he checks for the `flag_checker` prompt of `Type your flag`.
+Make sure your hijack also prints this prompt (e.g., `echo "Type your flag"`).
