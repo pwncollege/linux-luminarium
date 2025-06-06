@@ -33,3 +33,26 @@ Pull off the attack, and get `/flag` (which, for this level, Zardus can read aga
 ----
 **HINT:**
 You'll need to run `/challenge/victim` twice: once to get `cat /flag` written to where you want, and once to trigger it!
+
+**Is `/tmp` dangerous to use???**
+Despite the attack shown here, `/tmp` can be used safely.
+The directory _is world-writable_, but has a special permission bit set:
+
+```console
+hacker@dojo:~$ ls -ld /tmp
+drwxrwxrwt 29 root root 1056768 Jun  6 14:06 /tmp
+hacker@dojo:~$
+```
+
+That `t` bit at the end is the _sticky_ bit.
+The sticky bit means that the directory only allows the owners of files to rename or remove files in the directory.
+It's designed to prevent this exact attack!
+The problem in this challenge, of course, was that Zardus did not enable the sticky bit on `/tmp/collab`.
+This would have closed the hole in this specific case:
+
+```console
+zardus@dojo:~$ chmod +t /tmp/collab
+```
+
+Of course, shared resources like world-writable directories are still dangerous.
+Much later, in the [Race Conditions](../../system-security/race-conditions) of the Green Belt material, you'll see many ways in which such resources can cause security issues!
