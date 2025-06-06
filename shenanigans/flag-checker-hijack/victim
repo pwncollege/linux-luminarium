@@ -36,7 +36,7 @@ def login(username, password):
     return p
 
 p = login("zardus", open("/challenge/.victim_pass").read().strip())
-if "Type the flag" not in cmd(p, "flag_checker\n"):
+if b"Type the flag" not in cmd(p, "flag_checker\n"):
     print("ERROR: unexpected session behavior! Zardus has been spooked!")
     sys.exit(1)
 
