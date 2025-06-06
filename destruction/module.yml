@@ -5,3 +5,5 @@ challenges:
     name: "The Fork Bomb"
   - id: "disk-doomsday"
     name: "Disk-Space Doomsday"
+  - id: "rm-rf-root"
+    name: "rm -rf /"
