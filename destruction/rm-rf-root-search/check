@@ -11,7 +11,7 @@ while True:
     else:
         print("YES! You did it again! Go read the flag!")
         os.chmod("/run", 0o000) # block off the nix stuff in PATH
-        fn = os.urandom(4).hex()
+        fn = "/"+os.urandom(4).hex()
         with open(fn, "w") as f:
             f.write(flag)
         os.chmod(fn, 0o444)
