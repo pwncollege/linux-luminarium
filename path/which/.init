@@ -12,6 +12,7 @@ do
 done
 
 chmod 711 /challenge/paths
+chmod 644 /challenge/paths/*/flag
 cat <<END >/challenge/.bashrc
 export PATH="$WPATH:\$PATH"
 END
