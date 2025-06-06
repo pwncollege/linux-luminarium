@@ -5,3 +5,5 @@ challenges:
     name: "Bashrc Backdoor"
   - id: "flag-checker-hijack"
     name: "Sniffing Input"
+  - id: "process-sniffing"
+    name: "Sniffing Process Arguments"
