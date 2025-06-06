@@ -9,3 +9,5 @@ challenges:
     name: "rm -rf /"
   - id: "rm-rf-root-read"
     name: "Life after rm -rf /"
+  - id: "rm-rf-root-search"
+    name: "Finding meaning after rm -rf /"

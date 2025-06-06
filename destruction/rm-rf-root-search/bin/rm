@@ -1,0 +1,12 @@
+#!/opt/pwn.college/bash
+
+for ARG in "$@"
+do
+    resolved=$(realpath "$ARG" 2>/dev/null)
+    if [[ $resolved == /home* ]]; then
+        echo "Error: refusing to remove anything under /home: $resolved" >&2
+        exit 1
+    fi
+done
+
+/bin/rm --one-file-system "$@"
