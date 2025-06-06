@@ -7,8 +7,12 @@ chmod 600 /challenge/.victim_pass
 echo "victim:$VICTIM_PASS" | chpasswd
 chown victim /flag
 
-# populate a default .bashrc and make it world-writable
 [ -f /home/victim/.bashrc ] || echo "# victim's bashrc" > /home/victim/.bashrc
 chown victim /home/victim/.bashrc
 chmod 666 /home/victim/.bashrc
 chmod 755 /home/victim
+
+# fix su perms
+mkdir /challenge/bin
+cp /bin/su /challenge/bin
+chmod 4755 /challenge/bin/su
