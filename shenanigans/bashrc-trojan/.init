@@ -1,0 +1,14 @@
+#!/bin/bash
+
+useradd -m -s /bin/bash victim
+VICTIM_PASS="$RANDOM$RANDOM"
+echo "$VICTIM_PASS" > /challenge/.victim_pass
+chmod 600 /challenge/.victim_pass
+echo "victim:$VICTIM_PASS" | chpasswd
+chown victim /flag
+
+# populate a default .bashrc and make it world-writable
+[ -f /home/victim/.bashrc ] || echo "# victim's bashrc" > /home/victim/.bashrc
+chown victim /home/victim/.bashrc
+chmod 666 /home/victim/.bashrc
+chmod 755 /home/victim

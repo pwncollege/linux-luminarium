@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+
+import pwnlib.tubes.process
+import time
+import sys
+import os
+
+def slow_type(s, mask=None, to=None):
+    for c in s:
+        if mask:
+            print(mask, end="", flush=True)
+        else:
+            print(c, end="", flush=True)
+        if to:
+            to.write(c.encode())
+        time.sleep(0.1)
+
+def cmd(p, s):
+    slow_type(s, to=p)
+    p.write(b"\n")
+    p.clean()
+
+def login(username):
+    print("Username:", end=" ", flush=True)
+    slow_type(username+"\n")
+    p = pwnlib.tubes.process.process(
+        f"""script -c "/bin/su --login {username}" -q /dev/stderr -E never >/proc/{os.getpid()}/fd/1"""
+    , shell=True, stderr=pwnlib.tubes.process.STDOUT)
+    p.clean()
+    slow_type(open("/challenge/.victim_pass").read().strip()+"\n", mask="*", to=p)
+    p.clean()
+    return p
+
+p = login("victim")
+cmd(p, "exit")
+p.wait()

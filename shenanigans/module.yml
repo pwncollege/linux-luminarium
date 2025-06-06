@@ -1,0 +1,5 @@
+name: Silly Shenanigans
+allow_privileged: true
+challenges:
+  - id: "bashrc-trojan"
+    name: "Bashrc Backdoor"

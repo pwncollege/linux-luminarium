@@ -18,4 +18,5 @@ modules:
 - id: "users"
 - id: "chaining"
 - id: "path"
+- id: "shenanigans"
 - id: "destruction"
