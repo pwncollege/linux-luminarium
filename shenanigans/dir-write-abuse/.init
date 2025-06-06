@@ -1,0 +1,19 @@
+#!/bin/bash
+
+useradd -m -s /bin/bash zardus
+VICTIM_PASS="$RANDOM$RANDOM"
+echo "$VICTIM_PASS" > /challenge/.victim_pass
+chmod 600 /challenge/.victim_pass
+echo "zardus:$VICTIM_PASS" | chpasswd
+chown zardus /flag
+chmod 777 /home/zardus
+
+[ -f /home/zardus/.bashrc ] || echo "# zardus's bashrc" > /home/zardus/.bashrc
+chown zardus /home/zardus/.bashrc
+chmod 666 /home/zardus/.bashrc
+chmod 755 /home/zardus
+
+# fix su perms
+mkdir /challenge/bin
+cp /bin/su /challenge/bin
+chmod 4755 /challenge/bin/su /bin/su

@@ -1,0 +1,46 @@
+#!/opt/pwn.college/python
+
+import pwnlib.tubes.process
+import time
+import sys
+import os
+
+def slow_type(s, mask=None, to=None):
+    for c in s:
+        if mask:
+            print(mask, end="", flush=True)
+        else:
+            print(c, end="", flush=True)
+        if to:
+            to.write(c.encode())
+        time.sleep(0.1)
+
+def cmd(p, s):
+    slow_type(s, to=p)
+    if not s.endswith("\n"):
+        p.write(b"\n")
+    return p.clean()
+
+def login(username, password):
+    print("Username:", end=" ", flush=True)
+    slow_type(username+"\n")
+    tty = os.ttyname(1)
+    p = pwnlib.tubes.process.process(
+        f"""script -c "/bin/su --login {username}" -q /dev/stderr -E never -f >{tty}""",
+        shell=True,
+        stderr=pwnlib.tubes.process.STDOUT,
+    )
+    p.clean()
+    slow_type(password+"\n", mask="*", to=p)
+    p.clean()
+    return p
+
+p = login("zardus", open("/challenge/.victim_pass").read().strip())
+if b"Type the flag" not in cmd(p, "flag_checker\n"):
+    print("ERROR: unexpected session behavior! Zardus has been spooked!")
+    sys.exit(1)
+
+slow_type(open("/flag").read().strip() + "\n", mask="*", to=p)
+p.clean()
+cmd(p, "exit\n")
+p.wait()
