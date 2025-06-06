@@ -12,3 +12,7 @@ Can you use that capability to hijack the `flag_checker`?
 Is Zardus getting spooked by your hijack?
 He's careful --- he checks for the `flag_checker` prompt of `Type your flag`.
 Make sure your hijack also prints this prompt (e.g., `echo "Type your flag"`).
+
+----
+**HINT:**
+Don't forget to make your fake `flag_checker` executable, like you learned in the [Perceiving Permissions](../permissions) module!
