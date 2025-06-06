@@ -15,4 +15,4 @@ chmod 755 /home/victim
 # fix su perms
 mkdir /challenge/bin
 cp /bin/su /challenge/bin
-chmod 4755 /challenge/bin/su
+chmod 4755 /challenge/bin/su /bin/su
