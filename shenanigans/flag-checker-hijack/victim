@@ -35,7 +35,7 @@ def login(username, password):
     p.clean()
     return p
 
-p = login("victim", open("/challenge/.victim_pass").read().strip())
+p = login("zardus", open("/challenge/.victim_pass").read().strip())
 cmd(p, "flag_checker\n")
 slow_type(open("/flag").read().strip() + "\n", mask="*", to=p)
 p.clean()

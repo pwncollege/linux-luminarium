@@ -8,8 +8,8 @@ That's funny, but the same capability can be used for much more nefarious purpos
 Malicious software, for example, often targets startup scripts such as `.bashrc` to maintain persistence into the future!
 
 In this challenge, we'll pretend that you've broken into a victim user's machine!
-That user is named `victim`, with a home directory of `/home/victim`.
-You, as the `hacker` user, have write access to their `.bashrc`, and they have read-access to `/flag`.
+That user is named `zardus`, with a home directory of `/home/zardus`.
+You, as the `hacker` user, have write access to his `.bashrc`, and `zardus` has read-access to `/flag`.
 The victim is simulated by the script `/challenge/victim`, and you can launch this script at any time to observe the victim logging into the computer.
 Can you get the flag?
 
@@ -19,5 +19,5 @@ Like the scripts you explored in [Chaining Commands](../chaining), the `.bashrc`
 Adding a new line with a command on it (e.g., `echo Hello Hackers`) will get that command executed, so all you really need to think about is what command will get you the flag!
 
 **NOTE:**
-The victim's `/home/victim/.bashrc` will have a lot of stuff already in it: the shell's startup is a complex affair.
+The victim's `/home/zardus/.bashrc` will have a lot of stuff already in it: the shell's startup is a complex affair.
 Don't panic --- just add your payload to the end and hope for the best!
