@@ -7,6 +7,13 @@ chmod 600 /challenge/.victim_pass
 echo "zardus:$VICTIM_PASS" | chpasswd
 chown zardus /flag
 
+cat <<END > /home/zardus/.bashrc
+# this sets up a scary red shell prompt!
+PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+# add your attack below this line!
+END
+
 [ -f /home/zardus/.bashrc ] || echo "# zardus's bashrc" > /home/zardus/.bashrc
 chown zardus /home/zardus/.bashrc
 chmod 666 /home/zardus/.bashrc
