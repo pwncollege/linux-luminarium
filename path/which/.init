@@ -1,0 +1,17 @@
+#!/bin/bash
+
+WPATH=""
+
+for N in {1..50}
+do
+	P=/challenge/paths/$RANDOM
+	mkdir -p $P
+	WPATH="$WPATH:$P"
+
+	[ "$N" -eq 42 ] && mv /challenge/win $P/win
+done
+
+chmod 711 /challenge/paths
+cat <<END >/challenge/.bashrc
+export PATH="$WPATH:\$PATH"
+END
