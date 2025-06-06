@@ -11,5 +11,6 @@ while True:
     else:
         print("YES! You wiped it, you wild hacker! The flag is yours:")
         print(flag)
+        break
 
     time.sleep(5)
