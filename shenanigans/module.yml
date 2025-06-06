@@ -3,3 +3,6 @@ allow_privileged: true
 challenges:
   - id: "bashrc-trojan"
     name: "Bashrc Backdoor"
+  - id: "flag-checker-hijack"
+    name: "Sniffing Input"
+    visibility: False
