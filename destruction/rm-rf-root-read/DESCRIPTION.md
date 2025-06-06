@@ -9,3 +9,5 @@ That means that, even if you blow away your whole filesystem, as long as you hav
 
 This challenge will force you to try it.
 It's almost the same as the previous one, but you must read the flag yourself after you destroy the system.
+After you `rm` everything, your previously-launched `/challenge/check` will restore the `/flag` file and make it readable.
+Then you can `read` it!
