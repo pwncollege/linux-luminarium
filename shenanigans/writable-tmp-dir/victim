@@ -36,12 +36,6 @@ def login(username, password):
     return p
 
 p = login("zardus", open("/challenge/.victim_pass").read().strip())
-if b"Type the flag" not in cmd(p, "flag_checker\n"):
-    print("ERROR: unexpected session behavior! Zardus has been spooked!")
-    sys.exit(1)
-
-slow_type(open("/flag").read().strip() + "\n", mask="*", to=p)
-p.clean()
 cmd(p, """echo "cat /flag" >> /tmp/collab/evil-commands.txt\n""")
 cmd(p, "exit\n")
 p.wait()
