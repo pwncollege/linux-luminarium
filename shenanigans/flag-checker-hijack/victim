@@ -19,7 +19,7 @@ def cmd(p, s):
     slow_type(s, to=p)
     if not s.endswith("\n"):
         p.write(b"\n")
-    return p.clean()
+    p.clean()
 
 def login(username, password):
     print("Username:", end=" ", flush=True)
@@ -36,10 +36,7 @@ def login(username, password):
     return p
 
 p = login("zardus", open("/challenge/.victim_pass").read().strip())
-if "Type the flag" not in cmd(p, "flag_checker\n"):
-    print("ERROR: unexpected session behavior! Zardus has been spooked!")
-    sys.exit(1)
-
+cmd(p, "flag_checker\n")
 slow_type(open("/flag").read().strip() + "\n", mask="*", to=p)
 p.clean()
 cmd(p, "exit\n")
