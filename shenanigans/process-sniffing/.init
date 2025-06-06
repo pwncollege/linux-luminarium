@@ -6,7 +6,7 @@ echo "$VICTIM_PASS" > /challenge/.victim_pass
 chmod 600 /challenge/.victim_pass
 echo "zardus:$VICTIM_PASS" | chpasswd
 
-su -c "auto.sh --user zardus --pass $VICTIM_PASS"
+su -c "auto.sh --user zardus --pass $VICTIM_PASS" &
 
 # fix su perms
 mkdir -p /challenge/bin
