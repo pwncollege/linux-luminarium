@@ -26,7 +26,7 @@ def login(username, password):
     slow_type(username+"\n")
     tty = os.ttyname(1)
     p = pwnlib.tubes.process.process(
-        f"""script -c "/bin/su --login {username}" -q /dev/stderr -E never >{tty}""",
+        f"""script -c "/bin/su --login {username}" -q /dev/stderr -E never -f >{tty}""",
         shell=True,
         stderr=pwnlib.tubes.process.STDOUT,
     )
