@@ -6,7 +6,7 @@ echo "$VICTIM_PASS" > /challenge/.victim_pass
 chmod 600 /challenge/.victim_pass
 echo "zardus:$VICTIM_PASS" | chpasswd
 
-echo "FLAG_GETTER_API_KEY=$VICTIM_PASS" > /home/zardus/.bashrc
+echo "FLAG_GETTER_API_KEY=$VICTIM_PASS" >> /home/zardus/.bashrc
 
 mkdir -p /challenge/bin
 cp /bin/su /challenge/bin
