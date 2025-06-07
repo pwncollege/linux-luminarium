@@ -15,5 +15,5 @@ When you hit tab a _second_ time, it'll print out those options.
 Other shells and configurations, instead, will cycle through the options.
 
 This challenge has a `/challenge/files` directory with a bunch of files starting with `pwncollege`.
-Tab-complete from `/challenge/p` or so, and make your way to the flag!
+Tab-complete from `/challenge/files/p` or so, and make your way to the flag!
 
