@@ -12,7 +12,7 @@ Try it out!
 
 ```console
 hacker@dojo:~$ ls /challenge
-DESCRIPTION.md pwncollege
+DESCRIPTION.md  pwncollege
 hacker@dojo:~$ cat /challenge/pwncollege
 cat: /challenge/pwncollege: No such file or directory
 hacker@dojo:~$ cat /challenge/pwn<TAB>
