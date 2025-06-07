@@ -3,7 +3,7 @@ You can navigate around directories by using the `cd` (`c`hange `d`irectory) com
 
 ```console
 hacker@dojo:~$ cd /some/new/directory
-hacker@dojo:/some/new/directory$ cd /some/new/directory
+hacker@dojo:/some/new/directory$
 ```
 
 This affects the "current working directory" of your process (in this case, the bash shell).
