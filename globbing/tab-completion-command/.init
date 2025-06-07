@@ -1,4 +1,5 @@
 #!/bin/bash
 
+mkdir -p /challenge/bin
 mv /challenge/pwncollege /challenge/bin/pwncollege-$RANDOM
 chmod 4755 /challenge/bin/*
