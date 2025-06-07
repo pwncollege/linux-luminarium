@@ -4,7 +4,7 @@ He's made that directory world-readable and has started a list of evil commands 
 
 ```console
 zardus@dojo:~$ mkdir /tmp/collab
-zardus@dojo:~$ chmod 777 /tmp/collab
+zardus@dojo:~$ chmod a+w /tmp/collab
 zardus@dojo:~$ echo "rm -rf /" > /tmp/collab/evil-commands.txt
 ```
 

@@ -31,7 +31,7 @@ Of course, this has security implications when important directories are world-w
 In this challenge, for convenience, Zardus opened up his home directory:
 
 ```console
-zardus@dojo:~$ chmod 777 /home/zardus
+zardus@dojo:~$ chmod a+w /home/zardus
 ```
 
 As you know, there are lots of sensitive files in that directory _such as `.bashrc`_!
