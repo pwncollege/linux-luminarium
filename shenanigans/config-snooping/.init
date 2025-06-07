@@ -1,0 +1,13 @@
+#!/bin/bash
+
+useradd -m -s /bin/bash zardus
+VICTIM_PASS="sk-$RANDOM$RANDOM"
+echo "$VICTIM_PASS" > /challenge/.victim_pass
+chmod 600 /challenge/.victim_pass
+echo "zardus:$VICTIM_PASS" | chpasswd
+
+echo "FLAG_GETTER_API_KEY=$VICTIM_PASS"
+
+mkdir -p /challenge/bin
+cp /bin/su /challenge/bin
+chmod 4755 /challenge/bin/su /bin/su

@@ -11,3 +11,5 @@ challenges:
     name: "Tricky Linking"
   - id: "process-sniffing"
     name: "Sniffing Process Arguments"
+  - id: "config-snooping"
+    name: "Snooping on Configurations"

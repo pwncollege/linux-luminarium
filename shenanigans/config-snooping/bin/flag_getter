@@ -1,0 +1,14 @@
+#!/opt/pwn.college/bash
+
+read API_KEY < /challenge/.victim_pass
+
+if [ "$1" == "$API_KEY" ] || [ "$2" == "$API_KEY" ]
+then
+	echo "Correct API key! Do you want me to print the key (y/n)?"
+	read
+	[ "$REPLY" == "y" ] && cat /flag
+	echo
+else
+	echo "Incorrect API key!"
+fi
+
