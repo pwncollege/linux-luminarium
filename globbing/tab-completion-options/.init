@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp /flag /challenge/files/pwncollege-flag
+chmod 644 /challenge/files/pwncollege-flag

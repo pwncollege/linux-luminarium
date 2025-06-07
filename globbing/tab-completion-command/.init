@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mv /challenge/pwncollege /challenge/bin/pwncollege-$RANDOM
+chmod 4755 /challenge/bin/*

@@ -23,3 +23,7 @@ challenges:
   name: "Exclusionary globbing"
 - id: "tab-completion"
   name: "Tab completion"
+- id: "tab-completion-command"
+  name: "Tab completion on commands"
+- id: "tab-completion-options"
+  name: "Multiple options for tab completion"

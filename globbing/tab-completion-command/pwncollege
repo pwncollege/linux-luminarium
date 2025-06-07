@@ -1,0 +1,4 @@
+#!/opt/pwncollege/bash
+
+echo "Correct! Here is your flag:"
+cat /flag
