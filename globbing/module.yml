@@ -21,3 +21,5 @@ challenges:
   name: "Mixing globs"
 - id: "unmatching"
   name: "Exclusionary globbing"
+- id: "tab-completion"
+  name: "Tab completion"
