@@ -10,8 +10,8 @@ Can you use that capability to hijack the `flag_checker`?
 ----
 **HINT:**
 Is Zardus getting spooked by your hijack?
-He's careful --- he checks for the `flag_checker` prompt of `Type your flag`.
-Make sure your hijack also prints this prompt (e.g., `echo "Type your flag"`).
+He's careful --- he checks for the `flag_checker` prompt of `Type the flag`.
+Make sure your hijack also prints this prompt (e.g., `echo "Type the flag"`).
 Other than printing that prompt, your fake `flag_checker` can either just a) `cat` Zardus's input to stdout (e.g., `cat with no arguments`) or b) `read` it into a variable and `echo` it out.
 Up to you!
 
