@@ -13,7 +13,7 @@ hacker@dojo:~$
 It can also handle multiple characters, with the characters in different positions of the first argument replaced with associated characters in the second argument.
 
 ```console
-hacker@dojo:~$ echo OWN.COLLAGE | tr AO EP
+hacker@dojo:~$ echo PWM.COLLAGE | tr MA NE
 PWN.COLLEGE
 hacker@dojo:~$
 ```
