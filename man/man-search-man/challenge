@@ -10,7 +10,7 @@ NUMBERS = re.sub("[^0-9]", "", FLAG[FLAG.index('{'):]) + "1"
 OPT,ARG = LETTERS[:6], NUMBERS[:3]
 
 if len(sys.argv) == 1:
-	print("Incorrect usage! Please read the challenge man page!")
+	print("Incorrect usage! Please read the hidden challenge man page!")
 elif sys.argv[1] == "--fortune":
 	os.system("/usr/games/fortune")
 elif sys.argv[1] == "--version":
@@ -18,4 +18,4 @@ elif sys.argv[1] == "--version":
 elif sys.argv[1:] == ["--"+OPT, ARG]:
 	print("Correct usage! Your flag:", FLAG)
 else:
-	print("Incorrect usage! Please read the challenge man page!")
+	print("Incorrect usage! Please read the hidden challenge man page!")
