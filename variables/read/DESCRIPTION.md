@@ -1,5 +1,5 @@
 We'll start with reading input from the user (you).
-That's done using the aptly named `read` builtin, which *reads* input!
+That's done using the aptly named `read` builtin, which *reads* input into a variable!
 
 Here is an example using the `-p` argument, which lets you specify a prompt (otherwise, it would be hard for you, reading this now, to separate input from output in the example below):
 
