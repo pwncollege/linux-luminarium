@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WPATH=""
+WPATH="/bin" #lazy fix for blank entry in path
 
 for N in {1..50}
 do
