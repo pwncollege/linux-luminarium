@@ -32,4 +32,4 @@ The `-f` argument specifies the _field_ number (which column to extract).
 
 In this challenge, the `/challenge/run` program will give you a bunch of lines with random numbers and single characters (characters of the flag) as columns.
 Use `cut` to extract the flag characters, then pipe them to `tr -d "\n"` (like the previous level!) to join them together into a single line.
-Your solution will look something like `/challenge/pwn | cut ??? | tr ???`, with the `???` filled out.
+Your solution will look something like `/challenge/run | cut ??? | tr ???`, with the `???` filled out.
