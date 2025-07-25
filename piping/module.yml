@@ -28,6 +28,10 @@ challenges:
   name: "Filtering with grep -v"
 - id: "tee"
   name: "Duplicating piped data with tee"
+- id: "procsub-read"
+  name: "Process substitution for input"
+  visibility:
+    start: "2025-11-08T22:00:00-00:00"
 - id: "procsub-write"
   name: "Writing to multiple programs"
 - id: "dualpiper"
