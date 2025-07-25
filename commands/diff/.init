@@ -16,6 +16,8 @@ mapfile -t lines < "$BOTH_FILE"
 
 RANDOM_POS=$((RANDOM % 100 + 1))
 
+read FLAG < /flag
+
 > "$BOTH_FILE"
 for i in "${!lines[@]}"; do
     if [ $((i + 1)) -eq $RANDOM_POS ]; then
