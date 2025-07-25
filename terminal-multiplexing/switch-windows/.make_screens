@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Create a screen session with a specific name
+SESSION_NAME="challenge_session"
+
+# Create the screen session with first window
+screen -dmS "$SESSION_NAME" bash
+
+# Wait for session to initialize
+sleep 1
+
+# Send content to the first window (window 0)
+su -c 'screen -S "'$SESSION_NAME'" -X stuff "sleep 1\nWelcome to the window switching challenge!\nYou are currently in window 0.\nThe flag is hidden in window 1.\nUse Ctrl-A 1 to switch to window 1!\n"' hacker
+
+# Create a second window in the same session
+su -c 'screen -S "'$SESSION_NAME'" -X screen' hacker
+
+# Send the flag to window 1
+su -c 'screen -S "'$SESSION_NAME'" -p 1 -X stuff "sleep 1\nExcellent work! You found window 1!\nHere is your flag: '$FLAG'\n' hacker
