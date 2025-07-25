@@ -1,6 +1,7 @@
-This module will expose you to Linux permissions, which is one of the most important parts of your journey going ahead.
+This module will expose you to Linux permissions, which is one of the most important parts of your journey going ahead, and mediates the access to files across different users.
 
-In Linux, files have different permissions or file modes. You can check out a permissions of a file or directory using `ls -l`.
+In Linux, files have different permissions or file modes.
+You can check out a permissions of a file or directory using `ls -l`.
 Let's make some files and look at their permissions:
 
 ```console

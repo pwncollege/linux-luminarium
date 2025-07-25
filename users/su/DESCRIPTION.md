@@ -1,6 +1,6 @@
-In the previous level, you used the `/challenge/getroot` program to become the `root` user.
-Becoming root is a fairly common action that Linux users take, and your typical Linux installation obviously does not have `/challenge/getroot`.
-Instead, there are two utilities used for this purposes: `su` and `sudo`.
+It's not just hackers that need to become `root`.
+Oftentimes, you, as the owner of your computer, needs to use `root` access to administer it.
+Becoming root is a fairly common action that Linux users take, and there are two utilities that exist for this purposes: `su` and `sudo`.
 
 In this challenge, we will cover the older one, `su` (the **s**witch **u**ser command).
 This is not typically used to elevate to root access anymore, but it is an elegant utility from a more civilized time, and we'll cover it first.

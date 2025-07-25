@@ -1,5 +1,4 @@
 name: Perceiving Permissions 
-allow_privileged: false
 resources:
 - name: Resources
   type: markdown

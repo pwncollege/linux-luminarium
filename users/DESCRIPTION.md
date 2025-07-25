@@ -1,5 +1,5 @@
-You have experience with two users: `hacker` and `root`.
-These are just two users, and there are MANY more on a typical Linux system!
+Did you think you, `hacker`, are alone in the workspace?
+There are MANY users on a typical Linux system!
 The full list of users on a Linux system is specified in the `/etc/passwd` file (named so for historical reasons --- it doesn't actually hold passwords anymore).
 Here is an example from the dojo container:
 
@@ -35,7 +35,12 @@ hacker:x:1000:1000::/home/hacker:/bin/bash
 A lot of users here, and a lot of info!
 Each line contains, separated by `:`s, the username, an `x` as a placeholder for where the password _used_ to be (we'll cover where it actually is later), the numerical user ID, the numerical default group ID, long-form user details, the home directory, and the default shell.
 
-We can see `hacker` and `root`, along with a bunch of others.
-Many are there for historical reasons, some are service accounts to support various installed software, and some are "utility" accounts (e.g., the `nobody` user is used to ensure that, e.g., a program runs without any special privileges).
+We can see the `hacker` user at the bottom.
+That's you!
+Most of the rest of these users are either there for historical reasons, are service accounts to support various installed software, or some are "utility" accounts (e.g., the `nobody` user is used to ensure that, e.g., some programs run without any special privileges).
+
+One important user is `root`: the system administrator.
+The system administrator has obvious security implications: a `hacker` user that can somehow, through various functionalities of Linux, become the `root` user would be able to wreak havoc on the system.
+A very frequent goal of hackers breaking into systems is to escalate to `root`, and thus `root` must be defended at all cost!
 
 In this module, we'll explore various user shenanigans, learn the intended ways to switch users to administer the system, and have fun along the way!

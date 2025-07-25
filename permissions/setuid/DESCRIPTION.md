@@ -1,6 +1,6 @@
-There are many cases in which non-root users need elevated access to do certain system tasks.
+As you explored in the previous module, there are many cases in which non-root users need elevated access to do certain system tasks.
 The system admin can't be there to give them the password every time a user wanted to do a task that only root/sudoers can do.
-The "Set User ID" (SUID) permissions bit allows the user to run a program as the owner of that program's file.
+Instead, the "Set User ID" (SUID) permissions bit allows the user to run a program as the owner of that program's file.
 
 This is actually the exact mechanism used to let the challenge programs you run read the flag or, outside of pwn.college, to enable system administration tools such as `su`, `sudo`, and so on.
 The permissions of a file with SUID look like this:
