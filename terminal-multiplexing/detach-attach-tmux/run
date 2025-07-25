@@ -23,7 +23,8 @@ fi
 echo "Found detached tmux session: $TMUX_SESSION"
 echo "Sending flag to your tmux session..."
 
-su -c 'tmux send-keys -t "'$TMUX_SESSION'" "echo Congratulations, here is your flag: '$(</flag)'" Enter' hacker
+# Send command with leading space to avoid history (works with default HISTCONTROL)
+su -c 'tmux send-keys -t "'$TMUX_SESSION'" " echo Congratulations, here is your flag: '$(</flag)'" Enter' hacker
 
 echo ""
 echo "Flag sent! Now reattach to your tmux session with:"

@@ -12,15 +12,15 @@ screen -dmS "$SESSION3" bash
 sleep 1
 
 if [ $FLAG_SESSION -eq 1 ]; then
-    screen -S "$SESSION1" -X stuff "echo 'Congratulations! You found the right session!'\necho $1\n"
-    screen -S "$SESSION2" -X stuff "echo 'Nothing here! Try another session.'\n"
-    screen -S "$SESSION3" -X stuff "echo 'Wrong session! Keep looking.'\n"
+    screen -S "$SESSION1" -X stuff " echo 'Congratulations! You found the right session!'\n echo $1\n"
+    screen -S "$SESSION2" -X stuff " echo 'Nothing here! Try another session.'\n"
+    screen -S "$SESSION3" -X stuff " echo 'Wrong session! Keep looking.'\n"
 elif [ $FLAG_SESSION -eq 2 ]; then
-    screen -S "$SESSION1" -X stuff "echo 'Nothing here! Try another session.'\n"
-    screen -S "$SESSION2" -X stuff "echo 'Congratulations! You found the right session!'\necho $1\n"
-    screen -S "$SESSION3" -X stuff "echo 'Wrong session! Keep looking.'\n"
+    screen -S "$SESSION1" -X stuff " echo 'Nothing here! Try another session.'\n"
+    screen -S "$SESSION2" -X stuff " echo 'Congratulations! You found the right session!'\n echo $1\n"
+    screen -S "$SESSION3" -X stuff " echo 'Wrong session! Keep looking.'\n"
 else
-    screen -S "$SESSION1" -X stuff "echo 'Wrong session! Keep looking.'\n"
-    screen -S "$SESSION2" -X stuff "echo 'Nothing here! Try another session.'\n"
-    screen -S "$SESSION3" -X stuff "echo 'Congratulations! You found the right session!'\necho $1\n"
+    screen -S "$SESSION1" -X stuff " echo 'Wrong session! Keep looking.'\n"
+    screen -S "$SESSION2" -X stuff " echo 'Nothing here! Try another session.'\n"
+    screen -S "$SESSION3" -X stuff " echo 'Congratulations! You found the right session!'\n echo $1\n"
 fi

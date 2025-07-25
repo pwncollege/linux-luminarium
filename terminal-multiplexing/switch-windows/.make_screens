@@ -5,5 +5,5 @@ screen -dmS "$SESSION_NAME" bash
 sleep 1
 
 screen -S "$SESSION_NAME" -X screen                                                                                                     
-screen -S "$SESSION_NAME" -p 0 -X stuff "cat <<MSG\nExcellent work! You found window 0!\nHere is your flag: $1\nMSG\n"
-screen -S "$SESSION_NAME" -p 1 -X stuff "cat <<MSG\nWelcome to the window switching challenge!\nYou are currently in window 1.\nThe flag is hidden in window 0.\nUse Ctrl-A 0 to switch to window 0!\nMSG\n"
+screen -S "$SESSION_NAME" -p 0 -X stuff " cat <<MSG\nExcellent work! You found window 0!\nHere is your flag: $1\nMSG\n"
+screen -S "$SESSION_NAME" -p 1 -X stuff " cat <<MSG\nWelcome to the window switching challenge!\nYou are currently in window 1.\nThe flag is hidden in window 0.\nUse Ctrl-A 0 to switch to window 0!\nMSG\n"

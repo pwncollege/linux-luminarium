@@ -4,14 +4,14 @@ SESSION_NAME="challenge_session"
 tmux new-session -d -s "$SESSION_NAME" bash
 sleep 1
 
-tmux send-keys -t "$SESSION_NAME:0" "cat <<MSG
+tmux send-keys -t "$SESSION_NAME:0" " cat <<MSG
 Excellent work! You found window 0!
 Here is your flag: $1
 MSG" Enter
 
 tmux new-window -t "$SESSION_NAME"
 
-tmux send-keys -t "$SESSION_NAME:1" "cat <<MSG
+tmux send-keys -t "$SESSION_NAME:1" " cat <<MSG
 Welcome to the tmux window switching challenge!
 You are currently in window 1.
 The flag is hidden in window 0.
