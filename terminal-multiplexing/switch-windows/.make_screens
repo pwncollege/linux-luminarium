@@ -10,10 +10,10 @@ screen -dmS "$SESSION_NAME" bash
 sleep 1
 
 # Send content to the first window (window 0)
-su -c 'screen -S "'$SESSION_NAME'" -X stuff "sleep 1\nWelcome to the window switching challenge!\nYou are currently in window 0.\nThe flag is hidden in window 1.\nUse Ctrl-A 1 to switch to window 1!\n"' hacker
+screen -S "$SESSION_NAME" -X stuff "sleep 1\nWelcome to the window switching challenge!\nYou are currently in window 0.\nThe flag is hidden in window 1.\nUse Ctrl-A 1 to switch to window 1!\n"
 
 # Create a second window in the same session
-su -c 'screen -S "'$SESSION_NAME'" -X screen' hacker
+screen -S "$SESSION_NAME" -X screen
 
 # Send the flag to window 1
-su -c 'screen -S "'$SESSION_NAME'" -p 1 -X stuff "sleep 1\nExcellent work! You found window 1!\nHere is your flag: '$FLAG'\n' hacker
+screen -S "$SESSION_NAME" -p 1 -X stuff "sleep 1\nExcellent work! You found window 1!\nHere is your flag: $FLAG\n"
