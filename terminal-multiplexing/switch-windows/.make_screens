@@ -7,3 +7,4 @@ sleep 1
 screen -S "$SESSION_NAME" -X stuff "cat <<MSG\nWelcome to the window switching challenge!\nYou are currently in window 0.\nThe flag is hidden in window 1.\nUse Ctrl-A 1 to switch to window 1!\nMSG\n"
 screen -S "$SESSION_NAME" -X screen                                                                                                     
 screen -S "$SESSION_NAME" -p 1 -X stuff "cat <<MSG\nExcellent work! You found window 1!\nHere is your flag: $1\nMSG\n"
+screen -S "$SESSION_NAME" -X select 0
