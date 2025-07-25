@@ -1,6 +1,5 @@
 #!/opt/pwn.college/bash
 
-# Check if there's a detached screen session
 SCREEN_SESSION=$(su -c 'screen -ls' hacker | grep -E "Detached|Attached" | head -1 | awk '{print $1}')
 
 if [ -z "$SCREEN_SESSION" ]; then
@@ -13,7 +12,6 @@ if [ -z "$SCREEN_SESSION" ]; then
     exit 1
 fi
 
-# Check if it's detached
 if ! su -c 'screen -ls' hacker | grep -q "Detached"; then
     echo "Your screen session is still attached!"
     echo ""
@@ -25,7 +23,6 @@ fi
 echo "Found detached screen session: $SCREEN_SESSION"
 echo "Sending flag to your screen session..."
 
-# Send the flag to the screen session
 read FLAG </flag
 su -c 'screen -S "'$SCREEN_SESSION'" -X stuff "sleep 1\nYes! Flag is: '$FLAG'"' hacker &>/dev/null
 
