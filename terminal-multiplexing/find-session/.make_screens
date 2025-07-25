@@ -9,9 +9,9 @@ SESSION3="session_$(head -c 8 /dev/urandom | xxd -p)"
 FLAG_SESSION=$((RANDOM % 3 + 1))
 
 # Create the three screen sessions
-su -c 'screen -dmS "$SESSION1" bash' hacker
-su -c 'screen -dmS "$SESSION2" bash' hacker
-su -c 'screen -dmS "$SESSION3" bash' hacker
+screen -dmS "$SESSION1" bash
+screen -dmS "$SESSION2" bash
+screen -dmS "$SESSION3" bash
 
 # Wait a moment for sessions to initialize
 sleep 1
