@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mv /flag /tmp/.hidden_flag
+chmod 644 /tmp/.hidden_flag

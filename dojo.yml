@@ -17,6 +17,7 @@ modules:
 - id: "permissions"
 - id: "users"
 - id: "chaining"
+- id: "terminal-multiplexing"
 - id: "path"
 - id: "shenanigans"
 - id: "destruction"

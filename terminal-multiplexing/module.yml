@@ -1,0 +1,12 @@
+name: Terminal Multiplexing
+visibility:
+  start: "2025-11-04T13:00:00-07:00"
+challenges:
+  - id: "launch-screen"
+    name: "Launching Screen"
+  - id: "detach-attach"
+    name: "Detaching and Attaching"
+  - id: "find-session"
+    name: "Finding Sessions"
+  - id: "switch-windows"
+    name: "Switching Windows"

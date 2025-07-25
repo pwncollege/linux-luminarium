@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Check if there's a detached screen session
+SCREEN_SESSION=$(screen -ls | grep -E "Detached|Attached" | head -1 | awk '{print $1}')
+
+if [ -z "$SCREEN_SESSION" ]; then
+    echo "No screen session found!"
+    echo ""
+    echo "You need to:"
+    echo "1. Launch screen with: screen"
+    echo "2. Detach from it with: Ctrl-A then d"
+    echo "3. Then run this program again"
+    exit 1
+fi
+
+# Check if it's detached
+if ! screen -ls | grep -q "Detached"; then
+    echo "Your screen session is still attached!"
+    echo ""
+    echo "You need to detach from your screen session first."
+    echo "Press Ctrl-A then d to detach."
+    exit 1
+fi
+
+echo "Found detached screen session: $SCREEN_SESSION"
+echo "Sending flag to your screen session..."
+
+# Send the flag to the screen session
+screen -S "$SCREEN_SESSION" -X stuff "Yes! Flag is: $(</flag)"
+
+echo ""
+echo "Flag sent! Now reattach to your screen session with:"
+echo ""
+echo "  screen -r"
+echo ""
+echo "You'll find the flag waiting for you there!"
