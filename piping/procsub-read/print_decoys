@@ -1,4 +1,5 @@
 #!/opt/pwn.college/bash
 
-/challenge/.check_stdout || exit 1
+source /challenge/.check_stdout
+check_stdout || exit 1
 cat /challenge/.decoys_only
