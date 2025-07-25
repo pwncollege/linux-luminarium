@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Generate three random session names
+SESSION1="session_$(head -c 8 /dev/urandom | xxd -p)"
+SESSION2="session_$(head -c 8 /dev/urandom | xxd -p)"
+SESSION3="session_$(head -c 8 /dev/urandom | xxd -p)"
+
+# Pick a random session to contain the flag (1, 2, or 3)
+FLAG_SESSION=$((RANDOM % 3 + 1))
+
+# Create the three screen sessions
+su -c 'screen -dmS "$SESSION1" bash' hacker
+su -c 'screen -dmS "$SESSION2" bash' hacker
+su -c 'screen -dmS "$SESSION3" bash' hacker
+
+# Wait a moment for sessions to initialize
+sleep 1
+
+# Send content to each session
+if [ $FLAG_SESSION -eq 1 ]; then
+    screen -S "$SESSION1" -X stuff "echo 'Congratulations! You found the right session!'\necho $1\n"
+    screen -S "$SESSION2" -X stuff "echo 'Nothing here! Try another session.'\n"
+    screen -S "$SESSION3" -X stuff "echo 'Wrong session! Keep looking.'\n"
+elif [ $FLAG_SESSION -eq 2 ]; then
+    screen -S "$SESSION1" -X stuff "echo 'Nothing here! Try another session.'\n"
+    screen -S "$SESSION2" -X stuff "echo 'Congratulations! You found the right session!'\necho $1\n"
+    screen -S "$SESSION3" -X stuff "echo 'Wrong session! Keep looking.'\n"
+else
+    screen -S "$SESSION1" -X stuff "echo 'Wrong session! Keep looking.'\n"
+    screen -S "$SESSION2" -X stuff "echo 'Nothing here! Try another session.'\n"
+    screen -S "$SESSION3" -X stuff "echo 'Congratulations! You found the right session!'\necho $1\n"
+fi
