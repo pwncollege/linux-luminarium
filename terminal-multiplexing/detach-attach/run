@@ -27,7 +27,7 @@ echo "Sending flag to your screen session..."
 
 # Send the flag to the screen session
 read FLAG </flag
-su -c 'screen -S "$SCREEN_SESSION" -X stuff "Yes! Flag is: '$FLAG'"' hacker
+su -c 'screen -S "'$SCREEN_SESSION'" -X stuff "Yes! Flag is: '$FLAG'"' hacker
 
 echo ""
 echo "Flag sent! Now reattach to your screen session with:"
