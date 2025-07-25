@@ -14,8 +14,8 @@ These windows are handled with different keyboard shortcuts, all starting with `
 
 For this challenge, we've set up a screen session with two windows:
 
-- Window 0 has a welcome message
-- Window 1 has... well, you'll have to switch there to find out!
+- Window 0 has... well, you'll have to switch there to find out!
+- Window 1 has a welcome message
 
 Attach to the session with `screen -r`, then use one of the key combinations above to switch to Window 1.
 Go get that flag!
