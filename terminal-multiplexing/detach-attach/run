@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/opt/pwn.college/bash
 
 # Check if there's a detached screen session
 SCREEN_SESSION=$(screen -ls | grep -E "Detached|Attached" | head -1 | awk '{print $1}')

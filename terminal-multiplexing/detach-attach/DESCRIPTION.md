@@ -38,4 +38,4 @@ All `screen` functionality is activated by some command combination starting wit
 Remember: Hold Ctrl and press A, then release both and press d.
 
 **HINT:**
-If you see "[detached from...]", you did it right!
+If you see `[detached from...]`, you did it right!
