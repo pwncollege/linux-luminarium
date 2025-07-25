@@ -10,9 +10,5 @@ challenges:
     name: "Switching Windows"
   - id: "detach-attach-tmux"
     name: "Detaching and Attaching (tmux)"
-    visibility:
-      start: "2025-11-08T22:00:00-00:00"
   - id: "switch-windows-tmux"
     name: "Switching Windows (tmux)"
-    visibility:
-      start: "2025-11-08T22:00:00-00:00"
