@@ -12,15 +12,6 @@ These windows are handled with different keyboard shortcuts, all starting with `
 - `Ctrl-A 0` through `Ctrl-A 9` - Jump directly to window 0-9
 - `Ctrl-A "` - bring up a selection menu of all of the windows
 
-When you have multiple windows, screen shows you which one you're in at the bottom of the terminal.
-It looks something like this:
-```
-0 bash  1 bash*
-```
-
-The `*` shows you're currently in window 1.
-Between the `*` and the `1` is `bash`, which is the shell running inside the `screen` window.
-
 For this challenge, we've set up a screen session with two windows:
 
 - Window 0 has a welcome message
