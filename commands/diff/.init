@@ -1,0 +1,29 @@
+#!/opt/pwn.college/bash
+
+DECOYS_FILE="/challenge/decoys_only.txt"
+BOTH_FILE="/challenge/decoys_and_real.txt"
+
+> "$DECOYS_FILE"
+> "$BOTH_FILE"
+
+for i in {1..100}; do
+    decoy="pwn.college{fake_flag_number_${i}_$(head -c 8 /dev/urandom | base64 | tr -d '/+=')}"
+    echo "$decoy" >> "$DECOYS_FILE"
+    echo "$decoy" >> "$BOTH_FILE"
+done
+
+mapfile -t lines < "$BOTH_FILE"
+
+RANDOM_POS=$((RANDOM % 100 + 1))
+
+> "$BOTH_FILE"
+for i in "${!lines[@]}"; do
+    if [ $((i + 1)) -eq $RANDOM_POS ]; then
+        echo "${FLAG}" >> "$BOTH_FILE"
+    fi
+    echo "${lines[$i]}" >> "$BOTH_FILE"
+done
+
+if [ $RANDOM_POS -eq 101 ]; then
+    echo "${FLAG}" >> "$BOTH_FILE"
+fi

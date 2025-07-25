@@ -15,6 +15,10 @@ challenges:
   name: "more catting practice"
 - id: "grep"
   name: "grepping for a needle in a haystack"
+- id: "diff"
+  name: "comparing files"
+  visibility:
+    start: "2025-11-08T22:00:00-00:00"
 - id: "ls"
   name: "listing files"
 - id: "touch"
