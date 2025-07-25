@@ -1,0 +1,32 @@
+#!/opt/pwn.college/bash
+
+TMUX_SESSION=$(tmux ls 2>/dev/null | head -1 | cut -d: -f1)
+
+if [ -z "$TMUX_SESSION" ]; then
+    echo "No tmux session found!"
+    echo ""
+    echo "You need to:"
+    echo "1. Launch tmux with: tmux"
+    echo "2. Detach from it with: Ctrl-B then d"
+    echo "3. Then run this program again"
+    exit 1
+fi
+
+if [ -n "$TMUX" ]; then
+    echo "You're still inside your tmux session!"
+    echo ""
+    echo "You need to detach from your tmux session first."
+    echo "Press Ctrl-B then d to detach."
+    exit 1
+fi
+
+echo "Found detached tmux session: $TMUX_SESSION"
+echo "Sending flag to your tmux session..."
+
+su -c 'tmux send-keys -t "'$TMUX_SESSION'" "echo Congratulations, here is your flag: '$(</flag)'" Enter'
+
+echo ""
+echo "Flag sent! Now reattach to your tmux session with:"
+echo "  tmux attach"
+echo ""
+echo "You'll find the flag waiting for you there!"

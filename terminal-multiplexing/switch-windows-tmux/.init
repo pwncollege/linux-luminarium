@@ -1,0 +1,3 @@
+#!/bin/bash
+
+su -c "/challenge/.make_tmux $(/bin/cat /flag)" hacker
