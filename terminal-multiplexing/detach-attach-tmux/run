@@ -1,6 +1,6 @@
 #!/opt/pwn.college/bash
 
-TMUX_SESSION=$(tmux ls 2>/dev/null | head -1 | cut -d: -f1)
+TMUX_SESSION=$(su -c 'tmux ls' hacker 2>/dev/null | head -1 | cut -d: -f1)
 
 if [ -z "$TMUX_SESSION" ]; then
     echo "No tmux session found!"
