@@ -12,8 +12,8 @@ if [ -z "$TMUX_SESSION" ]; then
     exit 1
 fi
 
-if [ -n "$TMUX" ]; then
-    echo "You're still inside your tmux session!"
+if su -c "tmux ls" hacker 2>/dev/null | grep -q "(attached)"; then
+    echo "Your tmux session is still attached!"
     echo ""
     echo "You need to detach from your tmux session first."
     echo "Press Ctrl-B then d to detach."
