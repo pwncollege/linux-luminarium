@@ -1,0 +1,4 @@
+#!/opt/pwn.college/bash
+
+DIR=$(/bin/dirname ${BASH_SOURCE[0]})
+$DIR/chio.py --check_stdout_pipe diff --reward /challenge/.decoys_only --chio_info_fd 2 --chio_warn_fd 2 --chio_hint_fd 2 --chio_test_fd 2 --chio_pass_fd 2 --chio_fail_fd 2 --chio_flag_fd 1 --chio_hype_fd 2
