@@ -31,3 +31,8 @@ hacker@dojo:~$ bash /home/hacker/solve.sh foo
 hacker@dojo:~$
 ```
 Once your script works correctly, run `/challenge/run` to get your flag!
+
+----
+**NOTE:**
+Interested in what else you can check in a condition, other than string equality?
+Read all about it with `help test`!
