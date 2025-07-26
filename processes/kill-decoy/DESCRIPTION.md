@@ -12,3 +12,10 @@ Your general workflow should be:
 4. Run `/challenge/run` to get the flag without being overwhelmed by decoys (you don't need to redirect its output; it'll write to the FIFO on its own).
 
 Good luck!
+
+----
+**NOTE:**
+You might see a few decoy flags show up even after killing the decoy process.
+This happens because Linux pipes are _buffered_: conceptually, they have a sort of length through which data flows, and you might kill the decoy process while data is in the pipe.
+That data, having already entered the pipe, will proceed to the other end (your `cat`).
+If you wait a second, you'll see the decoys stop, and then you can `/challenge/run` and win!
