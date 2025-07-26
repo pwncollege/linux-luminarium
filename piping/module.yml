@@ -34,3 +34,7 @@ challenges:
   name: "Writing to multiple programs"
 - id: "dualpiper"
   name: "Split-piping stderr and stdout"
+- id: "fifo"
+  name: "Named pipes"
+  visibility:
+    start: "2025-11-08T22:00:00-00:00"
