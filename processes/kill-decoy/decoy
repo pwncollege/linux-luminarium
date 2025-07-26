@@ -7,7 +7,7 @@ import time
 import sys
 
 flag_length = int(subprocess.check_output(['/challenge/.flaglen']).strip())
-content_length = flag_length - 13
+content_length = flag_length - 12
 
 while True:
     random_content = ''.join(random.choices(string.ascii_letters + string.digits, k=content_length))
