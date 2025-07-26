@@ -34,7 +34,8 @@ print("Testing your script...")
 
 try:
     result = subprocess.run([SCRIPT_PATH], capture_output=True, text=True, timeout=5)
-    if result.stdout.strip() == "hack the planet":
+    output = result.stdout.strip()
+    if output == "hack the planet":
         print("Perfect! Your flag:")
         print(f"Flag: {flag}")
     else:
