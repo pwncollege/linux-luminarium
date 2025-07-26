@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FLAG_LENGTH=$(wc -c < /flag)
+FLAG_LENGTH=$(/challenge/.flaglen)
 
 while true
 do
