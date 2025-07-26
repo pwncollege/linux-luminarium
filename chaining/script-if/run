@@ -1,0 +1,32 @@
+#!/opt/pwn.college/bash
+
+SCRIPT_PATH="/home/hacker/solve.sh"
+
+if [ ! -f "$SCRIPT_PATH" ]; then
+    echo "Error: You need to create a script at $SCRIPT_PATH"
+    exit 1
+fi
+
+TEST_CASES=(
+    "pwn:college"
+    "foo:"
+    "random:"
+)
+
+for test_case in "${TEST_CASES[@]}"; do
+    INPUT="${test_case%%:*}"
+    EXPECTED="${test_case#*:}"
+    
+    OUTPUT=$(su -c "bash \"$SCRIPT_PATH\" \"$INPUT\" 2>&1" hacker)
+    
+    if [ "$OUTPUT" != "$EXPECTED" ]; then
+        echo "Test failed for input '$INPUT'"
+        echo "Expected: '$EXPECTED'"
+        echo "Got: '$OUTPUT'"
+        exit 1
+    fi
+done
+
+echo "Correct! Your script properly handles all the conditions."
+echo "Here's your flag:"
+cat /flag
