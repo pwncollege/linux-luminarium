@@ -1,7 +1,7 @@
 function monitor_redirect {
 	[ "${#FUNCNAME[@]}" -gt 1 ] && return # only trigger on direct user input
 	[[ "$BASH_COMMAND" == */challenge/run* ]] || return
-	rm /tmp/.redirected
+	rm -f /tmp/.redirected
 	[[ "$BASH_COMMAND" == *">"* ]] || return
 	TARGET=${BASH_COMMAND#*> }
 	TARGET=${TARGET// /}
