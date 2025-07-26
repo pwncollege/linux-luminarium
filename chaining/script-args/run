@@ -1,0 +1,25 @@
+#!/opt/pwn.college/bash
+
+SCRIPT_PATH="/home/hacker/solve.sh"
+
+if [ ! -f "$SCRIPT_PATH" ]; then
+    echo "Error: You need to create a script at $SCRIPT_PATH"
+    exit 1
+fi
+
+WORD1="pwn_$(head -c 8 /dev/urandom | base64 | tr -d '/+=')"
+WORD2="college_$(head -c 8 /dev/urandom | base64 | tr -d '/+=')"
+
+OUTPUT=$(bash "$SCRIPT_PATH" "$WORD1" "$WORD2" 2>&1)
+EXPECTED="$WORD2 $WORD1"
+
+if [ "$OUTPUT" = "$EXPECTED" ]; then
+    echo "Correct! Your script properly reversed the arguments."
+    echo "Here's your flag:"
+    cat /flag
+else
+    echo "Not quite right!"
+    echo "Expected: $EXPECTED"
+    echo "Got: $OUTPUT"
+    exit 1
+fi

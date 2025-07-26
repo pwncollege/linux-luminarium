@@ -8,3 +8,7 @@ challenges:
     name: Redirecting Script Output
   - id: execution
     name: Executable Shell Scripts
+  - id: script-args
+    name: Scripting with Arguments
+    visibility:
+      start: "2025-11-08T22:00:00-00:00"
