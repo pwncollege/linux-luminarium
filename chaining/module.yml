@@ -12,3 +12,7 @@ challenges:
     name: Scripting with Arguments
   - id: script-if
     name: Scripting with Conditionals
+  - id: script-else
+    name: Scripting with Default Cases
+  - id: script-elif
+    name: Scripting with Multiple Conditions
