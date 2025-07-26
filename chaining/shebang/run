@@ -37,7 +37,7 @@ try:
     output = result.stdout.strip()
     if output == "hack the planet":
         print("Perfect! Your flag:")
-        print(f"Flag: {flag}")
+        print(f"Flag: {open('/flag').read()}")
     else:
         print("Your script did not give the expected output.")
         print(f"Expected: hack the planet")
