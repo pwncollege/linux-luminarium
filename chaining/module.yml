@@ -12,5 +12,3 @@ challenges:
     name: Scripting with Arguments
   - id: script-if
     name: Scripting with Conditionals
-    visibility:
-      start: "2025-11-08T22:00:00-00:00"
