@@ -1,10 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env python3
 
-FLAG_LENGTH=$(/challenge/.flaglen)
+import subprocess
+import random
+import string
+import time
 
-while true
-do
-	RANDOM_CONTENT=$(head -c 64 /dev/urandom | base64 | tr -d '/+=' | head -c $((FLAG_LENGTH - 13)))
-	echo "pwn.college{$RANDOM_CONTENT}"
-	sleep 0.01
-done
+flag_length = int(subprocess.check_output(['/challenge/.flaglen']).strip())
+content_length = flag_length - 13
+
+while True:
+    random_content = ''.join(random.choices(string.ascii_letters + string.digits, k=content_length))
+    print(f"pwn.college{{{random_content}}}")
+    time.sleep(0.01)
