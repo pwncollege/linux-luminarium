@@ -9,6 +9,6 @@ Your general workflow should be:
 1. Check what processes are running.
 2. Find `/challenge/decoy` in the list and figure out its process ID.
 3. `kill` it.
-4. Run `/challenge/run` to get the flag without being overwhelmed by decoys.
+4. Run `/challenge/run` to get the flag without being overwhelmed by decoys (you don't need to redirect its output; it'll write to the FIFO on its own).
 
 Good luck!
