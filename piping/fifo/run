@@ -2,15 +2,15 @@
 
 if [ ! -p /dev/stdout ]
 then
-	fold -s <<< "The stdout of /challenge/run does not seem to point to a fifo!" >&2
+	fold -s <<< "The stdout of /challenge/run does not seem to point to a FIFO!" >&2
 	exit 1
 fi
 
-if [ "$(realpath /dev/stdout)" != "/tmp/flag_fifo" ]
+if [ ! -f /tmp/.redirected ]
 then
 	fold -s <<< "You did not redirect /challenge/run's stdout to /tmp/flag_fifo!" >&2
 	exit 2
 fi
 
-fold -s <<< "You've correctly redirected /challenge/run's stdout to a fifo at /tmp/flag_fifo! Here is your flag:"
+fold -s <<< "You've correctly redirected /challenge/run's stdout to a FIFO at /tmp/flag_fifo! Here is your flag:"
 cat /flag
