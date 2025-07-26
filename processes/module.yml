@@ -6,6 +6,9 @@ challenges:
   name: Listing Processes
 - id: "kill"
   name: Killing Processes
+- id: "kill-decoy"
+  visibility:
+    start: "2025-11-08T22:00:00-00:00"
 - id: "int"
   name: Interrupting Processes
 - id: "suspend"
@@ -20,3 +23,4 @@ challenges:
   name: Starting Backgrounded Processes
 - id: "exit-codes"
   name: Process Exit Codes
+
