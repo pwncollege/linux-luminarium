@@ -43,6 +43,13 @@ hacker@dojo:~$
 What happened here?
 When we ran `cat myfifo`, the pipe had both sides of the connection all set, and _unblocked_, allowing `echo pwn > myfifo` to run, which sent `pwn` into the pipe, where it was read by `cat`.
 
+But why use a FIFO instead of a regular file? Here are key differences:
+
+1. **No disk storage**: FIFOs pass data directly between processes in memory - nothing is saved to disk
+2. **Data is consumed**: Once data is read from a FIFO, it's gone (unlike files where data persists)
+3. **Blocking behavior**: Writers block when the pipe buffer is full (~64KB), readers block when it's empty. This is actually useful! It provides automatic flow control - fast writers wait for slow readers, preventing memory overflow
+4. **Real-time communication**: Perfect for streaming data between processes. The blocking ensures processes stay synchronized without you having to write any synchronization code
+
 FIFOs are useful for facilitating complex data flows, merging and splitting data in flexible ways, and so on.
 For example, FIFOs support multiple readers and writers.
 Let's assume that `cat myfifo` is running somewhere, handling the read side of the FIFO.
