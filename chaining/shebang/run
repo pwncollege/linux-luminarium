@@ -1,0 +1,51 @@
+#!/opt/pwn.college/python -I
+
+import os
+import sys
+import subprocess
+import stat
+
+SCRIPT_PATH = "/home/hacker/solve.sh"
+
+if not os.path.exists(SCRIPT_PATH):
+    print(f"Error: You need to create a script at {SCRIPT_PATH}")
+    sys.exit(1)
+
+if not os.access(SCRIPT_PATH, os.X_OK):
+    print(f"Error: {SCRIPT_PATH} is not executable!")
+    print("Hint: Use 'chmod' to make it executable")
+    sys.exit(1)
+
+with open(SCRIPT_PATH, 'rb') as f:
+    first_line = f.readline()
+
+if not first_line.startswith(b'#!/bin/bash'):
+    print(f"Error: {SCRIPT_PATH} doesn't start with a proper shebang!")
+    print("The first line should be: #!/bin/bash")
+    if first_line.strip() == b'':
+        print("Your file appears to start with a blank line.")
+    elif b'#!' in first_line:
+        print(f"Your shebang line is: {first_line.decode('utf-8', errors='ignore').strip()}")
+    else:
+        print("There's no shebang at all in your script.")
+    sys.exit(1)
+
+print("Testing your script...")
+
+try:
+    result = subprocess.run([SCRIPT_PATH], capture_output=True, text=True, timeout=5)
+    if result.stdout.strip() == "hack the planet":
+        print("Perfect! Your flag:")
+        print(f"Flag: {flag}")
+    else:
+        print("Your script did not give the expected output.")
+        print(f"Expected: hack the planet")
+        print(f"Got: {output}")
+        sys.exit(1)
+        
+except subprocess.TimeoutExpired:
+    print("Your script took too long to run!")
+    sys.exit(1)
+except Exception as e:
+    print(f"Error running your script: {e}")
+    sys.exit(1)
