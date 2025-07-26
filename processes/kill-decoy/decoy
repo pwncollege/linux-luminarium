@@ -10,7 +10,7 @@ flag_length = int(subprocess.check_output(['/challenge/.flaglen']).strip())
 content_length = flag_length - 14
 
 while True:
-    random_content = ''.join(random.choices(string.ascii_letters + string.digits, k=content_length))
+    random_content = ''.join(random.choices(string.ascii_letters + string.digits + "-.", k=content_length))
     sys.stdout.write(f"pwn.college{{{random_content}}}\n")
     sys.stdout.flush()
     time.sleep(0.01)
