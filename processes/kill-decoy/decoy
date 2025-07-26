@@ -6,5 +6,5 @@ while true
 do
 	RANDOM_CONTENT=$(head -c 64 /dev/urandom | base64 | tr -d '/+=' | head -c $((FLAG_LENGTH - 13)))
 	echo "pwn.college{$RANDOM_CONTENT}"
-	sleep 0.1
+	sleep 0.01
 done
