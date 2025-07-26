@@ -29,3 +29,7 @@ challenges:
   name: "Extracting the first lines with head"
 - id: "cut"
   name: "Extracting specific sections of text"
+- id: "sort"
+  name: "Sorting data"
+  visibility:
+    start: "2025-11-08T22:00:00-00:00"

@@ -1,0 +1,30 @@
+#!/opt/pwn.college/bash
+
+read FLAG < /flag
+(
+	for i in {1..100}; do
+		fake_flag="$FLAG"
+		num_changes=$((RANDOM % (${#FLAG}/2) + 1))
+		
+		for j in $(seq 1 $num_changes); do
+			pos=$((RANDOM % ${#FLAG} + 1))
+			char="${FLAG:$((pos-1)):1}"
+			
+			if [[ "$char" =~ [b-z] ]]; then
+				new_char=$(printf "\\$(printf '%03o' $(($(printf '%d' "'$char") - 1)))")
+			elif [[ "$char" =~ [B-Z] ]]; then
+				new_char=$(printf "\\$(printf '%03o' $(($(printf '%d' "'$char") - 1)))")
+			elif [[ "$char" =~ [1-9] ]]; then
+				new_char=$(printf "\\$(printf '%03o' $(($(printf '%d' "'$char") - 1)))")
+			else
+				new_char="$char"
+			fi
+			fake_flag="${fake_flag:0:$((pos-1))}${new_char}${fake_flag:$pos}"
+		done
+		
+		echo "$fake_flag"
+	done
+
+	echo $FLAG
+) | sort -R > /challenge/flags.txt
+chmod 644 /challenge/flags.txt
