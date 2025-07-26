@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkfifo /tmp/flag_fifo
-chmod 644 /tmp/flag_fifo
+chmod 666 /tmp/flag_fifo
 ( exec 3< /tmp/flag_fifo; sleep 6h ) & # to prevent shutdowns of the writer
 
 su -c "/challenge/decoy > /tmp/flag_fifo" hacker &
