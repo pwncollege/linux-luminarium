@@ -10,7 +10,7 @@ fi
 WORD1="pwn_$(head -c 8 /dev/urandom | base64 | tr -d '/+=')"
 WORD2="college_$(head -c 8 /dev/urandom | base64 | tr -d '/+=')"
 
-OUTPUT=$(bash "$SCRIPT_PATH" "$WORD1" "$WORD2" 2>&1)
+OUTPUT=$(su -c "bash \"$SCRIPT_PATH\" \"$WORD1\" \"$WORD2\" 2>&1" hacker)
 EXPECTED="$WORD2 $WORD1"
 
 if [ "$OUTPUT" = "$EXPECTED" ]; then
