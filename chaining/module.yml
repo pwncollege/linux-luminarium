@@ -10,8 +10,6 @@ challenges:
     name: Executable Shell Scripts
   - id: shebang
     name: Understanding Shebangs
-    visibility:
-      start: "2025-11-08T22:00:00-00:00"
   - id: script-args
     name: Scripting with Arguments
   - id: script-if
