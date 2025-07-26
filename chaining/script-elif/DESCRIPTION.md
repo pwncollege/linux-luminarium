@@ -17,6 +17,7 @@ else
 fi
 ```
 
+Note that you _do_ need a `then` after the elif, just like the `if`.
 As before the `else` at the end catches everything that didn't match.
 
 For this challenge, write a script at `/home/hacker/solve.sh` that:

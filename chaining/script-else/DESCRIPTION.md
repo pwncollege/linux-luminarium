@@ -13,6 +13,8 @@ fi
 ```
 
 Note that the `else` doesn't have a condition --- it catches everything that didn't match previously.
+It also doesn't have a `then` statement.
+Finally, the `fi` goes after the `else` block to denote the end of the whole complex statement!
 It is also optional: you didn't have it in the previous level, and you only need it if the logic you're trying to achieve demands it.
 
 Here's a practical example:
