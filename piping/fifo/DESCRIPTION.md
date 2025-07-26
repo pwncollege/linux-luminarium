@@ -43,34 +43,14 @@ hacker@dojo:~$
 What happened here?
 When we ran `cat myfifo`, the pipe had both sides of the connection all set, and _unblocked_, allowing `echo pwn > myfifo` to run, which sent `pwn` into the pipe, where it was read by `cat`.
 
-But why use a FIFO instead of a regular file? Here are key differences:
+Of course, this can somewhat be done by normal files: you've learned how to `echo` stuff into them and `cat` them out.
+Why use a FIFO instead?
+Here are key differences:
 
-1. **No disk storage**: FIFOs pass data directly between processes in memory - nothing is saved to disk
-2. **Data is consumed**: Once data is read from a FIFO, it's gone (unlike files where data persists)
-3. **Blocking behavior**: Writers block when the pipe buffer is full (~64KB), readers block when it's empty. This is actually useful! It provides automatic flow control - fast writers wait for slow readers, preventing memory overflow
-4. **Real-time communication**: Perfect for streaming data between processes. The blocking ensures processes stay synchronized without you having to write any synchronization code
-
-FIFOs are useful for facilitating complex data flows, merging and splitting data in flexible ways, and so on.
-For example, FIFOs support multiple readers and writers.
-Let's assume that `cat myfifo` is running somewhere, handling the read side of the FIFO.
-Then we can do:
-
-```console
-hacker@dojo:~$ echo pwn > myfifo
-hacker@dojo:~$ echo college > myfifo
-```
-
-If we check on our `cat`, we'll see:
-
-```console
-hacker@dojo:~$ cat myfifo
-pwn
-college
-hacker@dojo:~$
-```
-
-This effect is hard to achieve with piping, but easy with FIFOs.
-Pretty neat!
+1. **No disk storage:** FIFOs pass data directly between processes in memory - nothing is saved to disk
+2. **Ephemeral data:** Once data is read from a FIFO, it's gone (unlike files where data persists)
+3. **Automatic synchronization:** Writers block until the readers are ready, and vice-versa. This is actually useful! It provides automatic synchronization. Consider the example above: with a FIFO, it doesn't matter if `cat myfifo` or `echo pwn > myfifo` is executed first; each would just wait for the other. With files, you need to make sure to execute the writer before the reader.
+4. **Complex data flows:** FIFOs are useful for facilitating complex data flows, merging and splitting data in flexible ways, and so on. For example, FIFOs support multiple readers and writers.
 
 This challenge will be a simple introduction to FIFOs.
 You'll need to create a `/tmp/flag_fifo` file and redirect the stdout of `/challenge/run` to it.
