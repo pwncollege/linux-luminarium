@@ -6,7 +6,7 @@ function monitor_redirect {
 	TARGET=${BASH_COMMAND#*> }
 	TARGET=${TARGET// /}
 
-	if [ "$TARGET" != "/tmp/flag_fifo" ]
+	if [ "$(realpath "$TARGET" 2>/dev/null)" != "/tmp/flag_fifo" ]
 	then
 		fold -s <<< "WARNING: you are not redirecting /challenge/run to /tmp/flag_fifo, but to $TARGET."
 		return
