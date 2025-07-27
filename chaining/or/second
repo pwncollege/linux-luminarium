@@ -1,0 +1,8 @@
+#!/opt/pwn.college/bash
+
+if [ -f /tmp/.chained ] && [ -f /tmp/.or ]; then
+    echo "Nice chaining! Flag: $(cat /flag)"
+else
+    fold -s <<< "Error: /challenge/first-failure must be successfully chained with /challenge/second using ||"
+    exit 1
+fi

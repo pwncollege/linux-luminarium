@@ -25,6 +25,6 @@ hacker@dojo:~$
 
 That second invocation of `touch` failed because the hacker user does not have write access to `/file`, so the `echo` did not run.
 
-In this challenge, you need to chain the programs `/challenge/first` and `/challenge/second` using the `&&` operator. 
+In this challenge, you need to chain the programs `/challenge/first-success` and `/challenge/second` using the `&&` operator. 
 Try running each command separately first to see what happens (which is that you will _not_ get the flag).
 But if you chain them with `&&`, the flag will appear!

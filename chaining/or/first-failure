@@ -1,0 +1,4 @@
+#!/bin/bash
+
+touch /tmp/.chained
+exit 1

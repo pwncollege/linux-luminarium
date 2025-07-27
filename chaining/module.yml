@@ -4,6 +4,8 @@ challenges:
     name: Chaining with Semicolons
   - id: and
     name: Building on Success
+  - id: or
+    name: Handling Failure
   - id: script
     name: Your First Shell Script
   - id: script-pipe
