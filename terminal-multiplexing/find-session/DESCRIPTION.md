@@ -15,7 +15,7 @@ There are screens on:
 ```
 
 The identifiers of the sessions are the PID of each respective screen process, a dot, and the name of the screen session.
-To attach to a specific one, you use its or its PID by giving it as an argument to `screen -r`.
+To attach to a specific one, you use its name or its PID by giving it as an argument to `screen -r`.
 
 ```console
 hacker@dojo:~$ screen -r goodwork
