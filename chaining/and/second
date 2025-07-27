@@ -3,6 +3,6 @@
 if [ -f /tmp/.chained ] && [ -f /tmp/.and ]; then
     echo "Nice chaining! Flag: $(cat /flag)"
 else
-    echo "Error: /challenge/first must be successfully chained with this command using &&!"
+    fold -s <<< "Error: /challenge/first must be successfully chained with /challenge/second using &&!"
     exit 1
 fi
