@@ -15,7 +15,7 @@ As you recall, `rm` removes files.
 The `-r` (recursive) flag removes directories and all files containing them.
 The `-f` (force) flag ignores any errors the `rm` command runs into or compulsions that it may have.
 Combined and aimed at `/`, the results are catastrophic: a full wipe of your system.
-On a modern system, things are _that_ simple, but you'll figure that out when you see it.
+On a modern system, things aren't _that_ simple, but you'll figure that out when you see it.
 
 In this challenge, you will do something that you might never do again: wipe the whole system.
 We've actually modified things a bit to keep your home directory safe (normally, it would get wiped as well!), but otherwise, all that stands before you and the flag is your willingness to wipe the drive.
