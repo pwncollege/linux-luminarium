@@ -6,6 +6,7 @@ if [ -f "$LEVEL_FILE" ]; then
     LEVEL=$(cat "$LEVEL_FILE")
 else
     LEVEL=1
+    echo "Starting level $LEVEL."
 fi
 
 RANDOM=$(cksum /flag  | awk '{print $1}')
@@ -63,8 +64,7 @@ echo "$LEVEL" > "$LEVEL_FILE"
 
 if [ "$LEVEL" -eq 6 ]
 then
-        LEVEL=0 
-        echo "$LEVEL" > "$LEVEL_FILE"
+        rm $LEVEL_FILE
         echo "Here is your flag:"
         /bin/cat /flag
         exit 0
