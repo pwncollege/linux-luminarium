@@ -56,6 +56,7 @@ Above, the following sequence of events took place:
 Now it's your turn!
 In this challenge, we have `/challenge/hack`, `/challenge/the`, and `/challenge/planet`.
 Run the `/challenge/hack` command, and duplicate its output as input to both the `/challenge/the` and the `/challenge/planet` commands!
+Scroll back through the previous challenges "Duplicating piped data with tee" and "Process substitution for input" if you need a refresher on this method.
 
 ----
 **Trivia!**
