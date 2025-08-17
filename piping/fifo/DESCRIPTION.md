@@ -55,5 +55,9 @@ Here are key differences:
 This challenge will be a simple introduction to FIFOs.
 You'll need to create a `/tmp/flag_fifo` file and redirect the stdout of `/challenge/run` to it.
 If you're successful, `/challenge/run` will write the flag into the fifo!
-Hint: You may want to use the desktop mode for this challenge.
 Go do it!
+
+----
+**HINT:**
+The blocking behavior of FIFOs makes it hard to solve this challenge in a single terminal.
+You may want to use the Desktop or VSCode mode for this challenge so that you can launch two terminals.
