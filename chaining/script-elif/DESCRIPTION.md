@@ -27,6 +27,7 @@ For this challenge, write a script at `/home/hacker/solve.sh` that:
 - If the argument is "pwn", output "college"  
 - If the argument is "learn", output "linux"
 - For any other input, output "unknown"
+Critical note: As you're creating your script, make sure to follow the spacing closely in the examples. A a bracket `[` too close to a quotation mark `"` may result in a script failure. Keep at it even if it fails the first time, scripts don't always work on the first try. You should test your script for errors manually.
 
 Example:
 
