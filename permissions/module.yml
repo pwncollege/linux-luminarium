@@ -5,6 +5,27 @@ resources:
   content: |
     - [Chmod Calculator](https://nettools.club/chmod_calc)
 
+resources:
+- name: "Access Control: Introduction"
+  type: lecture
+  video: mdWa1SHkxmM
+  playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
+  slides: 1tBn2d4d7-kpaoAoEipts8ZqKhQsIsSvF
+- name: "Access Control: Modeling Access Control"
+  type: lecture
+  video: Nq93Xz6yn3o
+  playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
+  slides: 1xGkSmpJBt4IMg2aW2vSoY5b0qHqF2t4h
+- name: "Access Control: Implementing Access Control"
+  type: lecture
+  video: OGhKjwJ7PKE
+  playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
+  slides: 1D9C4dtWdsub504eGyzr0JEpOmwH4X8UJ
+- name: "Access Control: POSIX Access Control"
+  type: lecture
+  video: OG5yXzn-cVs
+  playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
+  slides: 172XbD83EW8kZIHHZIbXVOmbDMYRm-VN1
 challenges:
 - id: "chown"
   name: "Changing File Ownership"
