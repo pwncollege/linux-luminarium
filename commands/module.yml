@@ -1,37 +1,50 @@
 name: Comprehending Commands
 allow_privileged: false
 resources:
+- id: "cat"
+  name: "cat: not the pet, but the command!"
+  type: challenge
+- id: "cat-absolute"
+  name: "catting absolute paths"
+  type: challenge
+- id: "cat-chase"
+  name: "more catting practice"
+  type: challenge
+- id: "grep"
+  name: "grepping for a needle in a haystack"
+  type: challenge
+- id: "diff"
+  name: "comparing files"
+  type: challenge
+- id: "ls"
+  name: "listing files"
+  type: challenge
+- id: "touch"
+  name: "touching files"
+  type: challenge
+- id: "rm"
+  name: "removing files"
+  type: challenge
+- id: "mv"
+  name: "moving files"
+  type: challenge
+- id: "ls-a"
+  name: "hidden files"
+  type: challenge
+- id: "filesystem-quest"
+  name: "An Epic Filesystem Quest"
+  type: challenge
+- id: "mkdir"
+  name: "making directories"
+  type: challenge
+- id: "find"
+  name: "finding files"
+  type: challenge
 - name: "Symbolic Links"
   type: lecture
   video: m55AtwjBXpE
   playlist: PL-ymxv0nOtqqRAz1x90vxNbhmSkeYxHVC
   slides: 17OWCQsGTRsuCrB50njXbTXaEourHgdzVrN0cUshfDXI
-challenges:
-- id: "cat"
-  name: "cat: not the pet, but the command!"
-- id: "cat-absolute"
-  name: "catting absolute paths"
-- id: "cat-chase"
-  name: "more catting practice"
-- id: "grep"
-  name: "grepping for a needle in a haystack"
-- id: "diff"
-  name: "comparing files"
-- id: "ls"
-  name: "listing files"
-- id: "touch"
-  name: "touching files"
-- id: "rm"
-  name: "removing files"
-- id: "mv"
-  name: "moving files"
-- id: "ls-a"
-  name: "hidden files"
-- id: "filesystem-quest"
-  name: "An Epic Filesystem Quest"
-- id: "mkdir"
-  name: "making directories"
-- id: "find"
-  name: "finding files"
 - id: "ln-s"
   name: "linking files"
+  type: challenge
