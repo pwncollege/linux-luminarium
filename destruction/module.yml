@@ -3,6 +3,7 @@ allow_privileged: true
 challenges:
   - id: "forkbomb"
     name: "The Fork Bomb"
+    privileged: true
   - id: "disk-doomsday"
     name: "Disk-Space Doomsday"
   - id: "rm-rf-root"
