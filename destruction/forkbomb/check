@@ -4,6 +4,9 @@ import time
 import sys
 import os
 
+FLAG = open("/flag").read().strip()
+os.seteuid(65534)
+
 while True:
     try:
         pid = os.fork()
@@ -11,7 +14,7 @@ while True:
             os._exit(0)
     except OSError as e:
         print("You successfully saturated the process table.  Here is your hard-earned flag:")
-        print(open("/flag").read().strip())
+        print(FLAG)
         sys.exit(0)
 
     try:
