@@ -6,10 +6,10 @@ challenges:
   name: Listing Processes
 - id: "kill"
   name: Killing Processes
-- id: "kill-decoy"
-  name: Killing Misbehaving Processes
 - id: "int"
   name: Interrupting Processes
+- id: "kill-decoy"
+  name: Killing Misbehaving Processes
 - id: "suspend"
   name: Suspending Processes
 - id: "resume"
