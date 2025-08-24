@@ -22,3 +22,5 @@ challenges:
     name: Scripting with Default Cases
   - id: script-elif
     name: Scripting with Multiple Conditions
+  - id: reading-scripts
+    name: Reading Shell Scripts
