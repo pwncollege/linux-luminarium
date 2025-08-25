@@ -1,6 +1,6 @@
 #!/opt/pwn.college/bash
 
-LEVEL_FILE="/challenge/level.txt"
+LEVEL_FILE="/challenge/.state"
 
 if [ -f "$LEVEL_FILE" ]; then
     LEVEL=$(cat "$LEVEL_FILE")
