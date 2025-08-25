@@ -8,7 +8,7 @@ For example:
 
 But what if you want to change user permissions in a different way as group permissions?
 Say, you want to set `rw` for the owning user, but only `r` for the owning group?
-You can achieve this by chaining multiple modes to chmod with `,`!
+You can achieve this by chaining multiple modes to `chmod` with `,`!
 
 - `chmod u=rw,g=r /challenge/pwn` will set the user permissions to read and write, and the group permissions to read-only
 - `chmod a=r,u=rw /challenge/pwn` will set the user permissions to read and write, and the group and world permissions to read-only
