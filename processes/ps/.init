@@ -2,5 +2,5 @@
 
 NEWNAME=/challenge/$RANDOM-run-$RANDOM
 mv /challenge/run $NEWNAME
-$NEWNAME &
+$NEWNAME & >> /run/dojo/var/root/init.log
 chmod 711 /challenge
