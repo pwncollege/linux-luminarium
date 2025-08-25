@@ -14,7 +14,7 @@ drwxr-xr-x 2 hacker hacker 4096 May 22 13:42 pwn_directory
 hacker@dojo:~$
 ```
 
-Lots of information, there, and we'll learn about a lot of it in this module!
+Lots of information there, and we'll learn about a lot of it in this module!
 For now, let's look at the output above at a high level:
 
 #### The File Type
