@@ -44,7 +44,7 @@ hacker@dojo:~$ ls -l /flag
 hacker@dojo:~$
 ```
 
-Here, there is only one bit set: the `r`ead permission for the owning user (in this case, root).
+Here, there is only one bit set: the `r`ead permission for the owning user (in this case, `root`).
 Members of the owning group (the `root` group) and all other users have no access to the file.
 
 You might be wondering how the `chgrp` levels worked, if there is no group access to the file.
