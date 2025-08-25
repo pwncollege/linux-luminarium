@@ -22,7 +22,7 @@ cat: /flag: Permission denied
 hacker@dojo:~$
 ```
 
-Here, you can see that the flag is owned by the `root` user (the first `root` in that line) and the root group (the second `root` in that line).
+Here, you can see that the flag is owned by the `root` user (the first `root` in that line) and the `root` group (the second `root` in that line).
 When we try to read it as the `hacker` user, we are denied.
 However, if we were `root` (a hacker's dream!), we would have no problem reading this file:
 
