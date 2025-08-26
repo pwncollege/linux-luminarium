@@ -13,4 +13,4 @@ no-no
 ```
 
 Now try it for yourself! `/challenge/run` will output a hundred thousand lines of text, including the flag.
-Grep for the flag!
+`grep` for the flag!
