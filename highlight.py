@@ -9,22 +9,23 @@ def highlightWords(file, wordsToHighlight):
 
     result = []
     current_word = ""
-    for i, ch in enumerate(contents):
+    for i, ch in enumerate(contents + "0"):
         if ch.isalpha():
             current_word += ch
-        if not ch.isalpha() or i == len(contents) - 1:
+
+        if not ch.isalpha():
             if current_word.lower() in wordsToHighlight:
                 if ch != "`":
                     current_word = '`' + current_word.lower() + '`'
 
             result.append(current_word)
-            if not ch.isalpha():
-                result.append(ch)
-                
+            result.append(ch)
+
             current_word = ""
 
 
     with open(file, "w") as f:
+        result.pop()
         f.write("".join(result))
 
 
