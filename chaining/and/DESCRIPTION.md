@@ -1,4 +1,4 @@
-You learned about exit codes in the Processes module.
+You learned about exit codes in the [Processes](https://pwn.college/linux-luminarium/processes/) module.
 Now let's use them to chain commands together!
 
 The `&&` operator allows you to run a second command only if the first command succeeds (in Linux convention, this means it exited with code 0).
