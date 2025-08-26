@@ -13,4 +13,4 @@ hacker@dojo:~$ cat asdf
 hi
 ```
 
-In this challenge, you must use this input redirection to write the word `PWN` (all uppercase) to the filename `COLLEGE` (all uppercase).
+In this challenge, you must use this output redirection to write the word `PWN` (all uppercase) to the filename `COLLEGE` (all uppercase).
