@@ -1,4 +1,4 @@
-Every shell command, including every program and every builtin, exits with an _exit code_ when it finishes running and terminates, 
+Every shell command, including every program and every builtin, exits with an _exit code_ when it finishes running and terminates.
 This can be used by the shell, or the user of the shell (that's you!) to check if the process succeeded in its functionality (this determination, of course, depends on what the process is supposed to do in the first place).
 
 You can access the exit code of the most recently-terminated command using the special `?` variable (don't forget to prepend it with `$` to read its value!):
