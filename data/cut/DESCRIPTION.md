@@ -1,5 +1,5 @@
 Sometimes, you want to grab specific columns of data, such as the first column, the third column, or the 42nd column.
-For this, there"s the `cut` command.
+For this, there's the `cut` command.
 
 For example, imagine that you have the following data file:
 
@@ -26,7 +26,7 @@ hacker@dojo:~$
 ```
 
 The `-d` argument specifies the column _delimiter_ (how columns are separated).
-In this case, it"s a space character.
+In this case, it's a space character.
 Of course, it has to be in quotes here so that the shell knows that the space is an argument rather than a space separating other arguments!
 The `-f` argument specifies the _field_ number (which column to extract).
 
