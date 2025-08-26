@@ -1,8 +1,7 @@
 import os
 from collections import deque
 
-# Add the words to highlight
-wordsToHighlight = ["root", "mv", "rm", "cat"]
+wordsToHighlight = ["root", "mv", "rm"]
 
 def highlightWords(file, wordsToHighlight):
     with open(file, "r") as f:
@@ -11,16 +10,18 @@ def highlightWords(file, wordsToHighlight):
     result = []
     current_word = ""
     for i, ch in enumerate(contents):
-        if not ch.isalpha() or i == len(contents) - 1:
-            if current_word in wordsToHighlight:
-                if ch != "`":
-                    current_word = '`' + current_word + '`'
-            result.append(current_word)
-            result.append(ch)
-            current_word = ""
-
-        else:
+        if ch.isalpha():
             current_word += ch
+        if not ch.isalpha() or i == len(contents) - 1:
+            if current_word.lower() in wordsToHighlight:
+                if ch != "`":
+                    current_word = '`' + current_word.lower() + '`'
+
+            result.append(current_word)
+            if not ch.isalpha():
+                result.append(ch)
+                
+            current_word = ""
 
 
     with open(file, "w") as f:
