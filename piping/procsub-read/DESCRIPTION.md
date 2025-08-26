@@ -34,7 +34,7 @@ hi
 hacker@dojo:~$
 ```
 
-Of course, you can specify this multiple time:
+Of course, you can specify this multiple times:
 
 ```console
 hacker@dojo:~$ echo <(echo pwn) <(echo college)
