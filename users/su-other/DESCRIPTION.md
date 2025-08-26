@@ -1,5 +1,5 @@
-With no arguments, `su` will start a root shell (after authenticating with root's password).
-However, you can also give a username as an argument to switch to _that_ user instead of root.
+With no arguments, `su` will start a `root` shell (after authenticating with `root`'s password).
+However, you can also give a username as an argument to switch to _that_ user instead of `root`.
 For example:
 
 ```console
