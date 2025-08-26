@@ -2,7 +2,7 @@ It's not just hackers that need to become `root`.
 Oftentimes, you, as the owner of your computer, need to use `root` access to administer it.
 Becoming `root` is a fairly common action that Linux users take, and there are two utilities that exist for this purpose: `su` and `sudo`.
 
-In this challenge, we will cover the older one, `su` (the **s**witch **u**ser command).
+In this challenge, we will cover the older one, `su` (the **s**ubstitute **u**ser command).
 This is not typically used to elevate to `root` access anymore, but it is an elegant utility from a more civilized time, and we'll cover it first.
 
 `su` is a setuid binary:
