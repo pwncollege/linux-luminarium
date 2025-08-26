@@ -26,7 +26,7 @@ These can be combined into a single argument `-ef`.
 **"BSD" Syntax:** in this syntax, you can use `a` to list processes for all users, `x` to list processes that aren't running in a terminal, and `u` for a "user-readable" output.
 These can be combined into a single argument `aux`.
 
-These two methods, `ps -ef` and `ps aux` result in slightly different, but cross-recognizable output.
+These two methods, `ps -ef` and `ps aux`, result in slightly different, but cross-recognizable output.
 
 Let's try it in the dojo:
 
