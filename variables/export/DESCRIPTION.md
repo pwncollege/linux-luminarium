@@ -11,7 +11,7 @@ $ echo "VAR is: $VAR"
 VAR is: 
 ```
 
-In the output above, the `$` prompt is the prompt of `sh`, a minimal shell implementation that invoked as a *child* of the main shell process.
+In the output above, the `$` prompt is the prompt of `sh`, a minimal shell implementation that is invoked as a *child* of the main shell process.
 And it does not receive the `VAR` variable!
 
 This makes sense, of course.
