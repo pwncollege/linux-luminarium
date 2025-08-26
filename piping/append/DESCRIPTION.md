@@ -1,5 +1,5 @@
 A common use-case of output redirection is to save off some command results for later analysis.
-Often times, you want to do this in _aggregate_: run a bunch of commands, save their output, and grep through it later.
+Often times, you want to do this in _aggregate_: run a bunch of commands, save their output, and `grep` through it later.
 In this case, you might want all that output to keep appending to the same file, but `>` will create a new output file every time, deleting the old contents.
 
 You can redirect input in _append_ mode using `>>` instead of `>`, as so:

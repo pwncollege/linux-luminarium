@@ -11,7 +11,7 @@ The two most important user accounts are:
 2. `root`. This is the administrative account and, in most security situations, the ultimate prize. If you take over the `root` user, you've almost certainly achieved your hacking objective!
 
 So what?
-Well, it turns out that the way that we prevent you from just doing `cat /flag` is by having `/flag` owned by the root user, configure its permissions so that no other user can read it (you will learn how to do that later), and configure the actual challenge to run as the `root` user (you will learn how to do this later as well).
+Well, it turns out that the way that we prevent you from just doing `cat /flag` is by having `/flag` owned by the `root` user, configure its permissions so that no other user can read it (you will learn how to do that later), and configure the actual challenge to run as the `root` user (you will learn how to do this later as well).
 The result is that when you do `cat /flag`, you get:
 
 ```console

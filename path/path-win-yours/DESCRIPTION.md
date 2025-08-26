@@ -19,7 +19,7 @@ Recall the final level of [Chaining Commands](../chaining), and make a shell scr
 
 ----
 **Hint:**
-`/challenge/run` runs as root and will call `win`. Thus, `win` can simply cat the flag file.
+`/challenge/run` runs as `root` and will call `win`. Thus, `win` can simply cat the flag file.
 Again, the `win` command is the _only_ thing that `/challenge/run` needs, so you can just overwrite `PATH` with that one directory.
 But remember, if you do that, your `win` command won't be able to find `cat`.
 
