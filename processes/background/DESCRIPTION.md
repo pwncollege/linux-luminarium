@@ -35,7 +35,7 @@ hacker@dojo:~$
 See that `T`?
 That means that the process is suspended due to our `Ctrl-Z`.
 The `S` in `bash`'s `STAT` column means that `bash` is sleeping while waiting for input.
-the `R` in `ps`'s column means that it's actively running, and the `+` means that it's in the foreground!
+The `R` in `ps`'s column means that it's actively running, and the `+` means that it's in the foreground!
 
 Watch what happens when we resume `sleep` in the background:
 
