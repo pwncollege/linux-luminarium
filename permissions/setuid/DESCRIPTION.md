@@ -1,5 +1,5 @@
-As you explored in the previous module, there are many cases in which non-root users need elevated access to do certain system tasks.
-The system admin can't be there to give them the password every time a user wanted to do a task that only root/sudoers can do.
+As you explored in the previous module, there are many cases in which non-`root` users need elevated access to do certain system tasks.
+The system admin can't be there to give them the password every time a user wanted to do a task that only `root`/sudoers can do.
 Instead, the "Set User ID" (SUID) permissions bit allows the user to run a program as the owner of that program's file.
 
 This is actually the exact mechanism used to let the challenge programs you run read the flag or, outside of pwn.college, to enable system administration tools such as `su`, `sudo`, and so on.
@@ -21,7 +21,7 @@ chmod u+s [program]
 ```
 
 But be careful!
-Giving the SUID bit to an executable owned by root can give attackers a possible attack vector to become root.
+Giving the SUID bit to an executable owned by `root` can give attackers a possible attack vector to become `root`.
 You will learn more about this [in the Program Misuse module](/fundamentals/program-misuse/).
 
-Now, we are going to let you add the SUID bit to the `/challenge/getroot` program in order to spawn a root shell for you to `cat` the flag yourself!
+Now, we are going to let you add the SUID bit to the `/challenge/getroot` program in order to spawn a `root` shell for you to `cat` the flag yourself!
