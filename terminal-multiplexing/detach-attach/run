@@ -7,7 +7,6 @@ if [ -z "$SCREEN_SESSION" ]; then
     echo ""
     echo "You need to:"
     echo "1. Launch screen with: screen"
-    echo "Note: Make sure to press enter after attaching the screen"
     echo "2. Detach from it with: Ctrl-A then d"
     echo "3. Then run this program again"
     exit 1
