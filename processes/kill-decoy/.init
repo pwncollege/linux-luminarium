@@ -2,7 +2,7 @@
 
 mkfifo /tmp/flag_fifo
 chmod 666 /tmp/flag_fifo
-( exec 3< /tmp/flag_fifo; sleep 6h ) & # to prevent shutdowns of the writer
-( exec 4> /tmp/flag_fifo; sleep 6h ) & # to prevent shutdowns of the reader
+( exec 3< /tmp/flag_fifo; sleep 6h ) & # prevent shutdowns of the writer
+( exec 4> /tmp/flag_fifo; sleep 6h ) & # prevent shutdowns of the reader
 
-su -c "/challenge/d* > /tmp/flag_fifo" hacker &
+su -c "/challenge/decoy > /tmp/flag_fifo" hacker &

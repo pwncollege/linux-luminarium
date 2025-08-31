@@ -1,3 +1,0 @@
-#!/opt/pwn.college/bash
-
-echo $(wc -c < /flag)
