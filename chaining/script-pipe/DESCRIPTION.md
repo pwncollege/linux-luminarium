@@ -4,7 +4,7 @@ But what if you wanted to send the output of several programs to one command?
 There are a few ways to do this, and we'll explore a simple one here: redirecting output from your script!
 
 As far as the shell is concerned, your script is just another command.
-That means you can redirect its input and output just like you did for commands in the [Piping](../piping) module!
+That means you can redirect its input and output just like you did for commands in the [Piping](/linux-luminarium/piping) module!
 For example, you can write it to a file:
 
 ```console

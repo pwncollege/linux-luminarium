@@ -1,7 +1,7 @@
 Sometimes, misbehaving processes can interfere with your work.
 These processes might need to be killed...
 
-In this challenge, there's a decoy process that's hogging a critical resource - a named pipe (FIFO) at `/tmp/flag_fifo` into which (like in the [Practicing Piping](../piping) FIFO challenge) `/challenge/run` wants to write your flag.
+In this challenge, there's a decoy process that's hogging a critical resource - a named pipe (FIFO) at `/tmp/flag_fifo` into which (like in the [Practicing Piping](/linux-luminarium/piping) FIFO challenge) `/challenge/run` wants to write your flag.
 You need to `kill` this process.
 
 Your general workflow should be:

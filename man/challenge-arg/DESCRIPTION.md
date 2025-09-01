@@ -3,7 +3,7 @@ This module will mostly dig into that concept, as a proxy for figuring out how t
 Through the rest of the module, you'll go through various ways of asking the environment for help for the programs, but first, we'll dig into the concept of reading documentation.
 
 The correct usage of programs depends, in a large part, on the proper specification of arguments to them.
-Recall the `-a` of `ls -a` in the `hidden files` challenge of the [Basic Commands](../commands) module: that `-a` was an _argument_ that told `ls` to list out hidden files as well as non-hidden files.
+Recall the `-a` of `ls -a` in the `hidden files` challenge of the [Basic Commands](/linux-luminarium/commands) module: that `-a` was an _argument_ that told `ls` to list out hidden files as well as non-hidden files.
 Because we _wanted_ to list out hidden files, invoking `ls` with the `-a` argument was the correct way to use it in our scenario.
 
 The program for this challenge is `/challenge/challenge`, and you'll need to invoke it properly in order for it to give you the flag.

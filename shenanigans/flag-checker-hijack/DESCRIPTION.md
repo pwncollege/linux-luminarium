@@ -4,7 +4,7 @@ This time, Zardus doesn't keep the flag lying around in a readable file after he
 Instead he'll run a command named `flag_checker`, manually typing the flag into it for verification.
 
 Your mission is to use your continued write access to Zardus's `.bashrc` to intercept this flag.
-Remember how you hijacked commands in the [Pondering PATH](../path) module?
+Remember how you hijacked commands in the [Pondering PATH](/linux-luminarium/path) module?
 Can you use that capability to hijack the `flag_checker`?
 
 ----
@@ -17,4 +17,4 @@ Up to you!
 
 ----
 **HINT:**
-Don't forget to make your fake `flag_checker` executable, like you learned in the [Perceiving Permissions](../permissions) module!
+Don't forget to make your fake `flag_checker` executable, like you learned in the [Perceiving Permissions](/linux-luminarium/permissions) module!

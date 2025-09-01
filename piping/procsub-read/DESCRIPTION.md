@@ -46,7 +46,7 @@ hacker@dojo:~$
 ```
 
 Now for your challenge!
-Recall what you learned in the `diff` challenge from [Comprehending Commands](../commands).
+Recall what you learned in the `diff` challenge from [Comprehending Commands](/linux-luminarium/commands).
 In that challenge, you diffed two files.
 Now, you'll diff two sets of command outputs: `/challenge/print_decoys`, which will print a bunch of decoy flags, and `/challenge/print_decoys_and_flag` which will print those same decoys plus the real flag.
 

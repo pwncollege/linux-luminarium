@@ -42,4 +42,4 @@ This is _by far_ the most common cause of weird issues on pwn.college!
 
 **HELP IT BROKE!**
 If you fill the disk and don't clean it up afterwards, you'll need to `ssh` in to fix things (by removing that file).
-This is a bit tricky, but we describe how to do it under "Connecting over SSH" in the [Getting Started](../../welcome/welcome) module.
+This is a bit tricky, but we describe how to do it under "Connecting over SSH" in the [Getting Started](/welcome/welcome) module.

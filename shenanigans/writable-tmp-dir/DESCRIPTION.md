@@ -23,7 +23,7 @@ hacker@dojo:~$
 ```
 
 Recall from the previous level that, having write access to `/tmp/collab`, the `hacker` user can replace that `evil-commands.txt` file.
-Also remember from [Comprehending Commands](../commands) that files can _link_ to other files.
+Also remember from [Comprehending Commands](/linux-luminarium/commands) that files can _link_ to other files.
 What happens if `hacker` replaces `evil-commands.txt` with a symbolic link to some sensitive file that `zardus` can write to?
 Chaos and shenanigans!
 
@@ -55,4 +55,4 @@ zardus@dojo:~$ chmod +t /tmp/collab
 ```
 
 Of course, shared resources like world-writable directories are still dangerous.
-Much later, in the [Race Conditions](../../system-security/race-conditions) of the Green Belt material, you'll see many ways in which such resources can cause security issues!
+Much later, in the [Race Conditions](/system-security/race-conditions) of the Green Belt material, you'll see many ways in which such resources can cause security issues!

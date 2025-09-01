@@ -15,7 +15,7 @@ Let's start with `win`!
 
 Previously, the `win` command that `/challenge/run` executed was stored in `/challenge/more_commands`.
 This time, `win` does not exist!
-Recall the final level of [Chaining Commands](../chaining), and make a shell script called `win`, add its location to the `PATH`, and enable `/challenge/run` to find it!
+Recall the final level of [Chaining Commands](/linux-luminarium/chaining), and make a shell script called `win`, add its location to the `PATH`, and enable `/challenge/run` to find it!
 
 ----
 **Hint:**
@@ -25,8 +25,8 @@ But remember, if you do that, your `win` command won't be able to find `cat`.
 
 You have three options to avoid that:
 
-1. Figure out where the `cat` program is on the filesystem. It _must_ be in a directory that lives in the `PATH` variable, so you can print the variable out (refer to [Shell Variables](../variables) to remember how!), and go through the directories in it (recall that the different entries are separated by `:`), find which one has `cat` in it, and invoke `cat` by its absolute path.
+1. Figure out where the `cat` program is on the filesystem. It _must_ be in a directory that lives in the `PATH` variable, so you can print the variable out (refer to [Shell Variables](/linux-luminarium/variables) to remember how!), and go through the directories in it (recall that the different entries are separated by `:`), find which one has `cat` in it, and invoke `cat` by its absolute path.
 2. Set a `PATH` that has the old directories _plus_ a new entry for wherever you create `win`.
-3. Use `read` (again, refer to [Shell Variables](../variables)) to read `/flag`. Since `read` is a builtin functionality of `bash`, it is unaffected by `PATH` shenanigans.
+3. Use `read` (again, refer to [Shell Variables](/linux-luminarium/variables)) to read `/flag`. Since `read` is a builtin functionality of `bash`, it is unaffected by `PATH` shenanigans.
 
 Now, go and `win`!

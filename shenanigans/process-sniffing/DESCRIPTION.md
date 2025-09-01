@@ -27,4 +27,4 @@ This happens, and nefarious users sharing the same machine (or somehow otherwise
 That's what this challenge explores.
 Zardus is using an automation script, passing his account password to it as an argument.
 Zardus is also allowed to use `sudo` (and, thus, to `sudo cat /flag`!).
-Steal the password, log in to Zardus' account (recall the `su` command from the [Untangling Users](../users) module), and get that flag!
+Steal the password, log in to Zardus' account (recall the `su` command from the [Untangling Users](/linux-luminarium/users) module), and get that flag!
