@@ -1,12 +1,4 @@
 #!/opt/pwn.college/bash
-# HARDENED-PATH
-set -euo pipefail
-IFS=' 	
-'
-unalias -a 2>/dev/null || true
-unset BASH_ENV ENV CDPATH SHELLOPTS EDITOR VISUAL PAGER SYSTEMD_PAGER LESSOPEN GIT_EDITOR GIT_PAGER LD_PRELOAD LD_LIBRARY_PATH
-PATH="/usr/sbin:/usr/bin:/sbin:/bin"; export PATH
-umask 022
 
 if [ "${0:0:1}" != "/" ]
 then
