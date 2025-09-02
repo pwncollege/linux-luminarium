@@ -1,31 +1,39 @@
 #!/opt/pwn.college/bash
+# HARDENED-PATH
+set -euo pipefail
+IFS=' 	
+'
+unalias -a 2>/dev/null || true
+unset BASH_ENV ENV CDPATH SHELLOPTS EDITOR VISUAL PAGER SYSTEMD_PAGER LESSOPEN GIT_EDITOR GIT_PAGER LD_PRELOAD LD_LIBRARY_PATH
+PATH="/usr/sbin:/usr/bin:/sbin:/bin"; export PATH
+umask 022
 
 if [ "$#" -eq 0 ]
 then
-	fold -s <<< "You must provide an argument to /challenge/run when you invoke it!"
+	/usr/bin/fold -s <<< "You must provide an argument to /challenge/run when you invoke it!"
 	exit 4
 fi
 
 read ARG < /tmp/.last_arg
 if [ "${#ARG}" -gt 3 ]
 then
-	fold -s <<< "The argument you provided must not have been longer than 3 characters (it's currently ${#ARG} characters long)!"
+	/usr/bin/fold -s <<< "The argument you provided must not have been longer than 3 characters (it's currently ${#ARG} characters long)!"
 	exit 1
 fi
 
 if [[ "$1" != /* ]]
 then
-	fold -s <<< "The argument you provided is not an absolute path!"
+	/usr/bin/fold -s <<< "The argument you provided is not an absolute path!"
 	exit 2
 fi
 
 if [[ "$1" != /home/* ]]
 then
-	fold -s <<< "The argument you provided is not under your home directory!"
+	/usr/bin/fold -s <<< "The argument you provided is not under your home directory!"
 	exit 3
 fi
 
 echo "Writing the file to $1!"
-cat /flag > "$1"
+/bin/cat /flag > "$1"
 echo "... and reading it back to you:"
-cat "$1"
+/bin/cat "$1"

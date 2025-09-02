@@ -1,21 +1,29 @@
 #!/opt/pwn.college/bash
+# HARDENED-PATH
+set -euo pipefail
+IFS=' 	
+'
+unalias -a 2>/dev/null || true
+unset BASH_ENV ENV CDPATH SHELLOPTS EDITOR VISUAL PAGER SYSTEMD_PAGER LESSOPEN GIT_EDITOR GIT_PAGER LD_PRELOAD LD_LIBRARY_PATH
+PATH="/usr/sbin:/usr/bin:/sbin:/bin"; export PATH
+umask 022
 
 [[ "$BASH_EXECUTION_STRING" == .* ]] && exec -a bash /bin/bash $BASH_SOURCE
 
-fold -s <<< "I'll only give you the flag if there's already another copy of me running in this terminal... Let's check!"
+/usr/bin/fold -s <<< "I'll only give you the flag if there's already another copy of me running in this terminal... Let's check!"
 
 echo
-ps -f
+/bin/ps -f
 echo
 
-if ps -f | grep -v "$$" | grep -q "[r]un"
+if /bin/ps -f | grep -v "$$" | grep -q "[r]un"
 then
-	fold -s <<< "Yay, I found another version of me! Here is the flag:"
-	cat /flag
+	/usr/bin/fold -s <<< "Yay, I found another version of me! Here is the flag:"
+	/bin/cat /flag
 	exit
 fi
 
 echo "I don't see a second me!"
 echo
-fold -s <<< "To pass this level, you need to suspend me and launch me again! You can background me with Ctrl-Z or, if you're not ready to do that for whatever reason, just hit Enter and I'll exit!"
+/usr/bin/fold -s <<< "To pass this level, you need to suspend me and launch me again! You can background me with Ctrl-Z or, if you're not ready to do that for whatever reason, just hit Enter and I'll exit!"
 read A
