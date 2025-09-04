@@ -17,7 +17,7 @@ Tmux shows your windows at the bottom in a status bar that looks like:
 The `*` shows your current window, and each entry also shows the process that the window was created to run.
 
 We've created a tmux session with two windows:
-- Window 1 has the flag!
-- Window 0 has your warm welcome.
+- Window 0 has the flag!
+- Window 1 has your warm welcome.
 
 Go get that flag!
