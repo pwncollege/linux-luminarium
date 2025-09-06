@@ -1,4 +1,4 @@
-In the olden days, a typical Linux system had a `root` password that administrators would use to `su` to root (after logging into their account with their normal account password).
+In the olden days, a typical Linux system had a `root` password that administrators would use to `su` to `root` (after logging into their account with their normal account password).
 But `root` passwords are a pain to maintain, they (or their hashes!) can leak, and they don't lend themselves well to larger environments (e.g., fleets of servers).
 To address this, in recent decades, the world has moved from administration via `su` to administration via `sudo` (*Fun Fact*: `sudo` originally stood for **su**peruser **do**, but has changed to "`su` 'do'", and because `su` stands for "substitute user", the current meaning of `sudo` is "substitute user, do").
 
