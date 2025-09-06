@@ -43,3 +43,8 @@ hacker@dojo:~$
 ```
 
 Once your script works correctly, run `/challenge/run` to get your flag!
+
+----
+**NOTE:**
+As you're creating your script, make sure to follow the spacing closely in the examples.
+Unlike many other languages, bash requires the `[` and the `]` to be separated from other characters by spaces, otherwise it cannot parse the condition.
