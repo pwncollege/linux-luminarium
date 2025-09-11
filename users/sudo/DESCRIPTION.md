@@ -33,5 +33,5 @@ Nice and easy!
 
 ----
 **NOTE:**
-After this level, we will enable Practice Mode!
-When you launch a challenge in Practice Mode (by clicking the `Practice` button instead of the `Start` button), the resulting container will give you full `sudo` access to allow you to introspect and debug to your heart's content, but of course with a placeholder flag.
+After this level, we will enable Privileged Mode!
+When you launch a challenge in Privileged Mode (by clicking the `Privileged` button instead of the `Start` button), the resulting container will give you full `sudo` access to allow you to introspect and debug to your heart's content, but of course with a placeholder flag.
