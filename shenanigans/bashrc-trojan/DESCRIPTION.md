@@ -24,4 +24,4 @@ Don't panic --- just add your payload to the end and hope for the best!
 
 **HINT:**
 Need to poke around as `zardus` to debug your solution?
-In practice mode, you can use `sudo su --login zardus` to drop into a Zardus session!
+In Privileged Mode, you can use `sudo su --login zardus` to drop into a Zardus session!
