@@ -15,3 +15,5 @@ In this challenge, you have:
 - `/challenge/planet`: you must redirect `hack`'s _stdout_ to this program
 
 Go get the flag!
+
+BONUS: As a bonus challenge, find a solution that doesn't use `|`.
