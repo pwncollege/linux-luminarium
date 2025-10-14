@@ -16,4 +16,5 @@ In this challenge, you have:
 
 Go get the flag!
 
-BONUS: As a bonus challenge, find a solution that doesn't use `|`.
+----
+**BONUS:** For some added difficulty, find a solution that doesn't use `|`.
