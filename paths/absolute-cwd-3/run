@@ -1,0 +1,79 @@
+#!/opt/pwn.college/bash
+
+LEVEL_FILE="/challenge/.state"
+
+if [ -f "$LEVEL_FILE" ]; then
+    LEVEL=$(cat "$LEVEL_FILE")
+else
+    LEVEL=1
+    echo "Starting level $LEVEL."
+fi
+
+RANDOM=$(cksum /flag  | awk '{print $1}')
+CANDIDATES=(
+        "/"
+        "/tmp"
+        "/var"
+        "/etc"
+        "/sys"
+        "/proc/$PPID"
+        "/proc/$PPID/fd"
+        "/home"
+        "/usr/bin"
+        "/var/log"
+        "/sys/kernel"
+        "/etc/apt/sources.list.d"
+        "/usr/include"
+        "/usr/share/zoneinfo/posix/Asia"
+        "/usr/aarch64-linux-gnu/include/gnu"
+        "/usr/share/doc"
+        "/usr/share/doc/fontconfig"
+        "/usr/share/build-essential"
+        "/var/lib/apt/lists"
+)
+
+
+NEEDED=${CANDIDATES[ $RANDOM % ${#CANDIDATES[@]} ]}
+
+while [[ ! -d "$NEEDED" ]]
+do
+        NEEDED=${CANDIDATES[ $RANDOM % ${#CANDIDATES[@]} ]}
+done
+
+if [ "$PWD" != "$NEEDED" ]
+then
+        echo -e "${COLOR_RED}Incorrect...${COLORLESS}"
+        echo "You are not currently in the $NEEDED directory."
+        echo 'Please use the `cd` utility to change directory appropriately.'
+        exit 1
+fi
+
+if [ "${0:0:1}" != "/" ]
+then
+        echo -e "${COLOR_RED}Incorrect...${COLORLESS}"
+        echo "You did not call this challenge using an absolute path!"
+        echo "An absolute path is anchored at the root of the filesystem, so it starts with /"
+        exit 1
+fi
+
+echo -e "${COLOR_GREEN}Correct!!!${COLORLESS}"
+echo "$0 is an absolute path, invoked from the right directory!"
+((LEVEL++))
+
+echo "$LEVEL" > "$LEVEL_FILE"
+
+if [ "$LEVEL" -eq 6 ]
+then
+        rm $LEVEL_FILE
+        echo "Here is your flag:"
+        /bin/cat /flag
+        exit 0
+fi
+
+while [[ ! -d "$NEEDED" ]]
+do
+        NEEDED=${CANDIDATES[ $RANDOM % ${#CANDIDATES[@]} ]}
+done
+
+echo "Moving on to level $LEVEL"
+echo "Please use the \`cd\` utility to change directory to $NEEDED"
