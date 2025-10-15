@@ -1,2 +1,5 @@
-This dojo isn't the only way to learn Linux! For some other great resources, you can visit:
-[cmdchallenge.com](https://cmdchallenge.com)
+There is a lot of Linux Learning material on the internet!
+This module is a list of them.
+
+- [cmdchallenge.com](https://cmdchallenge.com)
+- [linuxzoo](https://linuxzoo.net/)
