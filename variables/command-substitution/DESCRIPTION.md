@@ -15,7 +15,7 @@ Read the output of the `/challenge/run` command directly into a variable called 
 
 ----
 **Trivia:**
-You can also use backticks instead of `$()`: `` FLAG=`cat /flag` `` instead of ``FLAG=$(cat /flag)`` in the example above.
+You can also use backticks: `$()`: `` FLAG=`cat /flag` `` instead of ``FLAG=$(cat /flag)`` in the example above.
 This is an older format, and has some disadvantages (for example, imagine if you wanted to _nest_ command substitutions.
 How would you do `$(cat $(find / -name flag))` with backticks?
 The official stance of pwn.college is that you should use `$(blah)` instead of `` `blah` ``.
