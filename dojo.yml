@@ -21,3 +21,4 @@ modules:
 - id: "path"
 - id: "shenanigans"
 - id: "destruction"
+- id: "further-learning"
