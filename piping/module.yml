@@ -26,6 +26,8 @@ challenges:
   name: "Grepping errors"
 - id: "grep-invert"
   name: "Filtering with grep -v"
+- id: "sed"
+  name: "Filtering with sed"
 - id: "tee"
   name: "Duplicating piped data with tee"
 - id: "procsub-read"
