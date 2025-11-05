@@ -28,6 +28,9 @@ resources:
 - id: "mv"
   name: "moving files"
   type: challenge
+- id: "cp"
+  name: "copying files"
+  type: challenge
 - id: "ls-a"
   name: "hidden files"
   type: challenge
