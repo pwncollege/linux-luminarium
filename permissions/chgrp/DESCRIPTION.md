@@ -58,7 +58,7 @@ hacker@dojo:~$
 
 Here, the flag file is owned by the `root` user and the `root` group, and the `hacker` user is neither the `root` user nor a member of the `root` group, so the file cannot be accessed.
 Luckily, group ownership can be changed with the `chgrp` (**ch**ange **gr**ou**p**) command!
-Unless you have write access to the file _and_ membership in the new group, this typically requires `root` access, so let's check it out as `root`:
+Unless you are the owner of the file _and_ a member in the new group, this typically requires `root` access, so let's check it out as `root`:
 
 ```console
 root@dojo:~# mkdir pwn_directory
