@@ -1,0 +1,36 @@
+#!/opt/pwn.college/bash
+
+if [ "${#@}" -ne 2 ]
+then
+	echo "ERROR: For this challenge, please use cp as: cp SOURCE DESTINATION"
+	exit 1
+fi
+
+if ! SRC_REALPATH=$(realpath "$1" 2>&1)
+then
+	echo "ERROR: Your SOURCE path ($1) contains a directory that does not exist."
+	exit 1
+fi
+
+if ! DST_REALPATH=$(realpath "$2" 2>&1)
+then
+	echo "ERROR: Your DESTINATION path ($2) contains a directory that does not exist."
+	exit 1
+fi
+
+
+if [ "$SRC_REALPATH" != "/flag" ]
+then
+	echo "ERROR: please make sure that you specify the flag file (/flag)"
+	echo "as your SOURCE! (You specified $SRC_REALPATH)."
+	exit 2
+fi
+
+if [ "$DST_REALPATH" != "/tmp/hack-the-planet" ]
+then
+	echo "ERROR: make sure your destination is /tmp/hack-the-planet!"
+	exit 2
+fi
+
+echo "Correct! Performing 'cp $1 $2'".
+/bin/cp "$1" "$2"
