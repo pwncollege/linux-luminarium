@@ -32,13 +32,22 @@ CANDIDATES=(
         "/var/lib/apt/lists"
 )
 
-
-NEEDED=${CANDIDATES[ $RANDOM % ${#CANDIDATES[@]} ]}
-
-while [[ ! -d "$NEEDED" ]]
-do
-        NEEDED=${CANDIDATES[ $RANDOM % ${#CANDIDATES[@]} ]}
+FILTERED=()
+for dir in "${CANDIDATES[@]}"; do
+    if [[ -d "$dir" ]]; then
+        FILTERED+=("$dir")
+    fi
 done
+CANDIDATES=("${FILTERED[@]}")
+
+for ((i=${#CANDIDATES[@]}-1; i>0; i--)); do
+    j=$((RANDOM % (i+1)))
+    tmp="${CANDIDATES[i]}"
+    CANDIDATES[i]="${CANDIDATES[j]}"
+    CANDIDATES[j]="$tmp"
+done
+
+NEEDED=${CANDIDATES[ $LEVEL ]}
 
 if [ "$PWD" != "$NEEDED" ]
 then
@@ -70,10 +79,6 @@ then
         exit 0
 fi
 
-while [[ ! -d "$NEEDED" ]]
-do
-        NEEDED=${CANDIDATES[ $RANDOM % ${#CANDIDATES[@]} ]}
-done
-
 echo "Moving on to level $LEVEL"
+NEEDED=${CANDIDATES[ $LEVEL ]}
 echo "Please use the \`cd\` utility to change directory to $NEEDED"
