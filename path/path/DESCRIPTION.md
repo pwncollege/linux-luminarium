@@ -18,3 +18,5 @@ In this level, you will disrupt the operation of the `/challenge/run` program.
 This program will **DELETE** the flag file using the `rm` command.
 However, if it can't find the `rm` command, the flag will not be deleted, and the challenge will give it to you!
 Thus, you must make it so that `/challenge/run` also can't find the `rm` command!
+
+Keep in mind: if you don't succeed, and the flag gets deleted, you will need to restart the challenge to try again!
