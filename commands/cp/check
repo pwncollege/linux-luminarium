@@ -1,0 +1,23 @@
+#!/opt/pwn.college/bash
+
+if ! [ -f /tmp/hack-the-planet ]
+then
+	fold -s <<< "Uh oh! /tmp/hack-the-planet doesn't exist..."
+	exit 1
+fi
+
+if ! [ -f /flag ]
+then
+	fold -s <<< "Uh oh! /flag doesn't exist..."
+	exit 1
+fi
+
+if ! grep -q "pwn.college{" /tmp/hack-the-planet
+then
+	fold -s <<< "Uh oh! Looks like the wrong thing somehow got copied to /tmp/hack-the-planet; there's no flag in there!"
+	exit 1
+fi
+
+fold -s <<< "Congrats! You successfully copied the flag to /tmp/hack-the-planet! Here it is:"
+cat /tmp/hack-the-planet
+echo
