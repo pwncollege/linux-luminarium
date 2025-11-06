@@ -6,7 +6,7 @@ We do our best to avoid requiring any knowledge of Linux, but we do expect you t
 
 **NOTE:**
 This dojo is a work in progress *and* a community effort!
-If you are interested in contributing, please make your way over to [github](https://github.com/pwncollege/linux-luminarium)!
+If you are interested in contributing, please make your way over to [GitHub](https://github.com/pwncollege/linux-luminarium)!
 If you have questions, comments, feedback, and so on, join us on [the Discord channel](https://discord.com/channels/750635557666816031/1241436610369949758).
 
 **NOTE:**
