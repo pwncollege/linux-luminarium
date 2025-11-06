@@ -6,10 +6,10 @@ in text with a different word. The syntax for matching and replacing is simple:
 sed "s/oldword/newword/g"
 ```
 
-`s/` - substitute 
-`oldword` - the word to replace 
-`newword` - the replacement for `oldword` 
-`/g` - global (search for all occurrences of the pattern) 
+`s/` - substitute  
+`oldword` - the word to replace  
+`newword` - the replacement for `oldword`  
+`/g` - global (search for all occurrences of the pattern)  
 
 In this challenge, `/challenge/run` will print out the flag, but between each character there will be the string
 "FAKEFLAG". Your job is to filter out the garbage data from the flag. Good luck!
