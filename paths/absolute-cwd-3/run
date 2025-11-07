@@ -1,6 +1,7 @@
 #!/opt/pwn.college/bash
 
-LEVEL_FILE="/challenge/.state"
+LEVEL_FILE="/challenge/.level"
+DIRECTORY_TO_GO_TO="/challenge/.state"
 
 if [ -f "$LEVEL_FILE" ]; then
     LEVEL=$(cat "$LEVEL_FILE")
@@ -9,45 +10,27 @@ else
     echo "Starting level $LEVEL."
 fi
 
-RANDOM=$(cksum /flag  | awk '{print $1}')
-CANDIDATES=(
-        "/"
-        "/tmp"
-        "/var"
-        "/etc"
-        "/sys"
-        "/proc/$PPID"
-        "/proc/$PPID/fd"
-        "/home"
-        "/usr/bin"
-        "/var/log"
-        "/sys/kernel"
-        "/etc/apt/sources.list.d"
-        "/usr/include"
-        "/usr/share/zoneinfo/posix/Asia"
-        "/usr/aarch64-linux-gnu/include/gnu"
-        "/usr/share/doc"
-        "/usr/share/doc/fontconfig"
-        "/usr/share/build-essential"
-        "/var/lib/apt/lists"
-)
+FINAL_DIRECTORY="/"
+DIRECTORIES="non empty value"
 
-FILTERED=()
-for dir in "${CANDIDATES[@]}"; do
-    if [[ -d "$dir" ]]; then
-        FILTERED+=("$dir")
-    fi
-done
-CANDIDATES=("${FILTERED[@]}")
+generate_random_directory() {
+  while [[ -n $DIRECTORIES ]]; do
+    DIRECTORIES=$(find $FINAL_DIRECTORY -maxdepth 1 -type d -executable -printf '%f\n' | tail -n +2 )
+    NUM_OF_DIRECTORIES=$(echo "$DIRECTORIES" | wc -l)
+    RANDOM_DIRECTORY_INDEX=$(($RANDOM % $NUM_OF_DIRECTORIES + 1))
+    RANDOM_DIRECTORY=$(echo "$DIRECTORIES" | head -n $RANDOM_DIRECTORY_INDEX | tail -n 1)
+    FINAL_DIRECTORY="${FINAL_DIRECTORY}/${RANDOM_DIRECTORY}"
+  done
+}
 
-for ((i=${#CANDIDATES[@]}-1; i>0; i--)); do
-    j=$((RANDOM % (i+1)))
-    tmp="${CANDIDATES[i]}"
-    CANDIDATES[i]="${CANDIDATES[j]}"
-    CANDIDATES[j]="$tmp"
-done
-
-NEEDED=${CANDIDATES[ $LEVEL ]}
+if [[ -f $DIRECTORY_TO_GO_TO ]]; then
+  NEEDED=$(cat $DIRECTORY_TO_GO_TO)
+else
+  generate_random_directory
+  STRING_LENGTH=${#FINAL_DIRECTORY}
+  NEEDED=${FINAL_DIRECTORY:1:STRING_LENGTH - 2}
+  echo "$NEEDED" > $DIRECTORY_TO_GO_TO
+fi
 
 if [ "$PWD" != "$NEEDED" ]
 then
@@ -80,5 +63,8 @@ then
 fi
 
 echo "Moving on to level $LEVEL"
-NEEDED=${CANDIDATES[ $LEVEL ]}
+generate_random_directory
+STRING_LENGTH=${#FINAL_DIRECTORY}
+NEEDED=${FINAL_DIRECTORY:1:STRING_LENGTH - 2}
+echo "$NEEDED" > $DIRECTORY_TO_GO_TO
 echo "Please use the \`cd\` utility to change directory to $NEEDED"
