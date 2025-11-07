@@ -1,9 +1,9 @@
 #!/opt/pwn.college/bash
 
-STATE="/challenge/.state"
+DIRECTORY_TO_GO_TO="/challenge/.state"
 
 FINAL_DIRECTORY="/"
-DIRECTORIES="non empty value"
+DIRECTORIES="something"
 
 generate_random_directory() {
   while [[ -n $DIRECTORIES ]]; do
@@ -15,13 +15,13 @@ generate_random_directory() {
   done
 }
 
-if [[ -f $STATE ]]; then
-  NEEDED=$(cat $STATE)
+if [[ -f $DIRECTORY_TO_GO_TO ]]; then
+  NEEDED=$(cat $DIRECTORY_TO_GO_TO)
 else
   generate_random_directory
   STRING_LENGTH=${#FINAL_DIRECTORY}
   NEEDED=${FINAL_DIRECTORY:1:STRING_LENGTH - 2}
-  echo "$NEEDED" > $STATE
+  echo "$NEEDED" > $DIRECTORY_TO_GO_TO
 fi
 
 if [ "$PWD" != "$NEEDED" ]
