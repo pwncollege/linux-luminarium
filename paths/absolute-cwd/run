@@ -7,7 +7,7 @@ DIRECTORIES="something"
 
 generate_random_directory() {
   while [[ -n $DIRECTORIES ]]; do
-    DIRECTORIES=$(find $FINAL_DIRECTORY -maxdepth 1 -type d -executable -printf '%f\n' | tail -n +2 )
+    DIRECTORIES=$(/bin/su -c "find $FINAL_DIRECTORY -maxdepth 1 -type d -executable -printf '%f\n' | tail -n +2" - hacker)
     NUM_OF_DIRECTORIES=$(echo "$DIRECTORIES" | wc -l)
     RANDOM_DIRECTORY_INDEX=$(($RANDOM % $NUM_OF_DIRECTORIES + 1))
     RANDOM_DIRECTORY=$(echo "$DIRECTORIES" | head -n $RANDOM_DIRECTORY_INDEX | tail -n 1)
