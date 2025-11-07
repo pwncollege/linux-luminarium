@@ -11,7 +11,7 @@ else
 fi
 
 FINAL_DIRECTORY="/"
-DIRECTORIES="non empty value"
+DIRECTORIES="something"
 
 generate_random_directory() {
   while [[ -n $DIRECTORIES ]]; do
