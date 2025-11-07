@@ -1,48 +1,43 @@
 #!/opt/pwn.college/bash
 
-RANDOM=$(cksum /flag  | awk '{print $1}')
-CANDIDATES=(
-	"/"
-	"/tmp"
-	"/var"
-	"/etc"
-	"/sys"
-	"/proc/$PPID"
-	"/proc/$PPID/fd"
-	"/home"
-	"/usr/bin"
-	"/var/log"
-	"/sys/kernel"
-	"/etc/apt/sources.list.d"
-	"/usr/include"
-	"/usr/share/zoneinfo/posix/Asia"
-	"/usr/aarch64-linux-gnu/include/gnu"
-	"/usr/share/doc"
-	"/usr/share/doc/fontconfig"
-	"/usr/share/build-essential"
-	"/var/lib/apt/lists"
-)
-NEEDED=${CANDIDATES[ $RANDOM % ${#CANDIDATES[@]} ]}
+STATE="/challenge/.state"
 
-while [[ ! -d "$NEEDED" ]]
-do
-	NEEDED=${CANDIDATES[ $RANDOM % ${#CANDIDATES[@]} ]}
-done
+FINAL_DIRECTORY="/"
+DIRECTORIES="non empty value"
+
+generate_random_directory() {
+  while [[ -n $DIRECTORIES ]]; do
+    DIRECTORIES=$(find $FINAL_DIRECTORY -maxdepth 1 -type d -executable -printf '%f\n' | tail -n +2 )
+    NUM_OF_DIRECTORIES=$(echo "$DIRECTORIES" | wc -l)
+    RANDOM_DIRECTORY_INDEX=$(($RANDOM % $NUM_OF_DIRECTORIES + 1))
+    RANDOM_DIRECTORY=$(echo "$DIRECTORIES" | head -n $RANDOM_DIRECTORY_INDEX | tail -n 1)
+    FINAL_DIRECTORY="${FINAL_DIRECTORY}/${RANDOM_DIRECTORY}"
+  done
+}
+
+if [[ -f $STATE ]]; then
+  NEEDED=$(cat $STATE)
+else
+  generate_random_directory
+  STRING_LENGTH=${#FINAL_DIRECTORY}
+  NEEDED=${FINAL_DIRECTORY:1:STRING_LENGTH - 2}
+  echo "$NEEDED" > $STATE
+fi
 
 if [ "$PWD" != "$NEEDED" ]
 then
-	echo -e "${COLOR_RED}Incorrect...${COLORLESS}"
-	echo "You are not currently in the $NEEDED directory."
-	echo 'Please use the `cd` utility to change directory appropriately.'
-	exit 1
+        echo -e "${COLOR_RED}Incorrect...${COLORLESS}"
+        echo "You are not currently in the $NEEDED directory."
+        echo 'Please use the `cd` utility to change directory appropriately.'
+        exit 1
 fi
 
 if [ "${0:0:1}" != "/" ]
 then
-	echo -e "${COLOR_RED}Incorrect...${COLORLESS}"
-	echo "You did not call this challenge using an absolute path!"
-	echo "An absolute path is anchored at the root of the filesystem, so it starts with /"
-	exit 1
+        echo -e "${COLOR_RED}Incorrect...${COLORLESS}"
+        echo "You did not call this challenge using an absolute path!"
+        echo "An absolute path is anchored at the root of the filesystem, so it starts with /"
+        exit 1
 fi
 
 echo -e "${COLOR_GREEN}Correct!!!${COLORLESS}"
