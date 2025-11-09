@@ -15,8 +15,6 @@ challenges:
   name: Position thy self
 - id: "absolute-cwd-2"
   name: "Position elsewhere"
-- id: "absolute-cwd-3"
-  name: "Position yet elsewhere"
 - id: "relative-naked"
   name: "implicit relative paths, from /"
 - id: "relative-dot"
