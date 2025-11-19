@@ -1,16 +1,24 @@
 #!/opt/pwn.college/bash
+# HARDENED-PATH
+set -euo pipefail
+IFS=' 	
+'
+unalias -a 2>/dev/null || true
+unset BASH_ENV ENV CDPATH SHELLOPTS EDITOR VISUAL PAGER SYSTEMD_PAGER LESSOPEN GIT_EDITOR GIT_PAGER LD_PRELOAD LD_LIBRARY_PATH
+PATH="/usr/sbin:/usr/bin:/sbin:/bin"; export PATH
+umask 022
 
 if [ ! -p /dev/stdout ]
 then
-	fold -s <<< "The stdout of /challenge/run does not seem to point to a FIFO!" >&2
+	/usr/bin/fold -s <<< "The stdout of /challenge/run does not seem to point to a FIFO!" >&2
 	exit 1
 fi
 
 if [ ! -f /tmp/.redirected ]
 then
-	fold -s <<< "You did not redirect /challenge/run's stdout to /tmp/flag_fifo!" >&2
+	/usr/bin/fold -s <<< "You did not redirect /challenge/run's stdout to /tmp/flag_fifo!" >&2
 	exit 2
 fi
 
-fold -s <<< "You've correctly redirected /challenge/run's stdout to a FIFO at /tmp/flag_fifo! Here is your flag:"
-cat /flag
+/usr/bin/fold -s <<< "You've correctly redirected /challenge/run's stdout to a FIFO at /tmp/flag_fifo! Here is your flag:"
+/bin/cat /flag
