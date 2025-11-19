@@ -8,7 +8,7 @@ You can, of course, specify `cat`'s arguments as absolute paths:
 ...
 ```
 
-In this directory, I will not copy it to your home directory, but I will make it readable.
+In this challenge, I will not copy it to your home directory, but I will make it readable.
 You can read it with `cat` at its absolute path: `/flag`.
 
 ----
