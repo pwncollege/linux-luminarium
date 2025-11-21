@@ -3,7 +3,7 @@ They are very handy for doing simple "system-level" tasks, and are a common tool
 In fact, a surprising fraction of the programs on a typical Linux machine are shell scripts.
 
 In this level, we will learn to read shell scripts.
-`/challenge/run` is a shell script that requires you to put in a secret password, but that password is hardcoded into the script iself!
+`/challenge/run` is a shell script that requires you to put in a secret password, but that password is hardcoded into the script itself!
 Read the script (using, say, `cat`), figure out the password, and get the flag!
 
 ----
