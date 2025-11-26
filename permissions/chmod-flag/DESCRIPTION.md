@@ -12,7 +12,7 @@ drwxr-xr-x 2 hacker hacker 4096 May 22 13:42 pwn_directory
 hacker@dojo:~$
 ```
 
-As a reminder, the first character there is the file type.
+As a reminder, the first character is the file type.
 The next nine characters are the actual access permissions of the file or directory, split into 3 characters denoting permissions for the owning user (now you understand this!), 3 characters denoting the permissions for the owning group (now you understand this as well!), and 3 characters denoting the permissions that all other access (e.g., by other users and other groups) has to the file.
 
 Each character of the three represent permission for a different type:
