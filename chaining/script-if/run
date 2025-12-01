@@ -11,13 +11,14 @@ TEST_CASES=(
     "pwn:college"
     "foo:"
     "random:"
+    "pwn college:"
 )
 
 for test_case in "${TEST_CASES[@]}"; do
     INPUT="${test_case%%:*}"
     EXPECTED="${test_case#*:}"
     
-    OUTPUT=$(su -c "bash \"$SCRIPT_PATH\" \"$INPUT\" 2>&1" hacker)
+    OUTPUT=$(su -c "bash \"$SCRIPT_PATH\" $INPUT 2>&1" hacker)
     
     if [ "$OUTPUT" != "$EXPECTED" ]; then
         echo "Test failed for input '$INPUT'"
