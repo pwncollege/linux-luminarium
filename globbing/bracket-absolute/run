@@ -1,35 +1,43 @@
 #!/opt/pwn.college/bash
+# HARDENED-PATH
+set -euo pipefail
+IFS=' 	
+'
+unalias -a 2>/dev/null || true
+unset BASH_ENV ENV CDPATH SHELLOPTS EDITOR VISUAL PAGER SYSTEMD_PAGER LESSOPEN GIT_EDITOR GIT_PAGER LD_PRELOAD LD_LIBRARY_PATH
+PATH="/usr/sbin:/usr/bin:/sbin:/bin"; export PATH
+umask 022
 
 read -a ARGS < /tmp/.last_arg
 
 if [ "$PWD" != "$HOME" ]
 then
-	fold -s <<< "Error: please run with a working directory of $HOME!"
+	/usr/bin/fold -s <<< "Error: please run with a working directory of $HOME!"
 	exit 1
 fi
 
 if [ "${#ARGS[@]}" -eq 0 ]
 then
-	fold -s <<< "Error: you called this command with no arguments! Please call me with one argument."
+	/usr/bin/fold -s <<< "Error: you called this command with no arguments! Please call me with one argument."
 	exit 2
 fi
 
 if [ "${#ARGS[@]}" -gt 1 ]
 then
-	fold -s <<< "Error: you called this command with more than 1 argument (pre-globbing)! Please call me with one argument."
+	/usr/bin/fold -s <<< "Error: you called this command with more than 1 argument (pre-globbing)! Please call me with one argument."
 	exit 3
 fi
 
 if [[ "${ARGS[0]}" != *"["* ]]
 then
-	fold -s <<< "Error: you did not use a square bracket glob..."
+	/usr/bin/fold -s <<< "Error: you did not use a square bracket glob..."
 	exit 4
 fi
 
 if [[ "${ARGS[0]}" != *"/challenge/files/"* ]]
 then
-	fold -s <<< "Error: you will need to specify the path to the files as part of your glob argument, since they are in a different directory than your current working directory!"
-	[[ "${ARGS[0]}" == *"/challenge/"* ]] && fold -s <<< "HINT: You are trying to specify files in the $(dirname ${ARGS[0]}) directory, but the files are actually in the /challenge/files directory."
+	/usr/bin/fold -s <<< "Error: you will need to specify the path to the files as part of your glob argument, since they are in a different directory than your current working directory!"
+	[[ "${ARGS[0]}" == *"/challenge/"* ]] && /usr/bin/fold -s <<< "HINT: You are trying to specify files in the $(dirname ${ARGS[0]}) directory, but the files are actually in the /challenge/files directory."
 
 	exit 5
 fi
@@ -37,9 +45,9 @@ fi
 
 if [[ "$1" == *"/file_a" ]] && [[ "$2" == *"/file_b" ]] && [[ "$3" == *"/file_h" ]] && [[ "$4" == *"/file_s" ]]
 then
-	fold -s <<< "You got it! Here is your flag!"
-	cat /flag
+	/usr/bin/fold -s <<< "You got it! Here is your flag!"
+	/bin/cat /flag
 else
-	fold -s <<< "Your expansion did not expand to the requested files (/challenge/files/file_b, /challenge/files/file_a, /challenge/files/file_s, and /challenge/files/file_h). Instead, it expanded to:"
+	/usr/bin/fold -s <<< "Your expansion did not expand to the requested files (/challenge/files/file_b, /challenge/files/file_a, /challenge/files/file_s, and /challenge/files/file_h). Instead, it expanded to:"
 	echo "$@"
 fi
