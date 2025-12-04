@@ -23,7 +23,7 @@ hacker@dojo:~$
 ```
 
 Unlike `su`, which relies on password authentication, `sudo` checks policies to determine whether the user is authorized to run commands as `root`.
-These policies are defined in `/etc/sudoers`, and though it's mostly out of scale for our purposes, there are plenty of [resources](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file) for learning about this!
+These policies are defined in `/etc/sudoers`, and though it's mostly out of scope for our purposes, there are plenty of [resources](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file) for learning about this!
 
 So, the world has moved to `sudo` and has (for the purposes of system administration) left `su` behind.
 In fact, even pwn.college's Privileged Mode works by giving you `sudo` access to elevate privileges!
