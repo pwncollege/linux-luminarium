@@ -1,6 +1,6 @@
 Okay, Zardus has wised up!
 No more sharing the home directory: despite the reduced convenience, Zardus has moved to sharing `/tmp/collab`.
-He's made that directory world-readable and has started a list of evil commands to remember!
+He's made that directory world-writable and has started a list of evil commands to remember!
 
 ```console
 zardus@dojo:~$ mkdir /tmp/collab
