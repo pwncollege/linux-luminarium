@@ -1,5 +1,6 @@
 #!/opt/pwn.college/bash
 
+
 RANDOM=$(cksum /flag  | awk '{print $1}')
 CANDIDATES=(
 	"/"

@@ -1,4 +1,6 @@
 #!/opt/pwn.college/bash
+# HARDENED-PATH
+
 
 /bin/fold -s <<< "Trying to remove /flag..."
 rm -f /flag

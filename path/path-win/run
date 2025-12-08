@@ -1,4 +1,6 @@
 #!/opt/pwn.college/bash
+# HARDENED-PATH
+
 
 echo "Invoking 'win'...."
 win

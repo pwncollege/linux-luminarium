@@ -1,5 +1,6 @@
 #!/opt/pwn.college/bash
 
+
 NEEDED="/challenge"
 
 if [ "$PWD" != "$NEEDED" ]

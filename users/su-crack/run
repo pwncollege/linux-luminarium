@@ -1,4 +1,12 @@
 #!/bin/bash
+# HARDENED-PATH
+set -euo pipefail
+IFS=' 	
+'
+unalias -a 2>/dev/null || true
+unset BASH_ENV ENV CDPATH SHELLOPTS EDITOR VISUAL PAGER SYSTEMD_PAGER LESSOPEN GIT_EDITOR GIT_PAGER LD_PRELOAD LD_LIBRARY_PATH
+PATH="/usr/sbin:/usr/bin:/sbin:/bin"; export PATH
+umask 022
 
 USER=$(whoami)
 
@@ -7,5 +15,5 @@ then
 	echo "Congratulations, you have become Zardus! Here is your flag:"
 	/challenge/.catflag
 else
-	fold -s <<< "You are the $USER user... You MUST become the zardus user before executing this command."
+	/usr/bin/fold -s <<< "You are the $USER user... You MUST become the zardus user before executing this command."
 fi

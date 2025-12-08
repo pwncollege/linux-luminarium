@@ -1,14 +1,22 @@
 #!/opt/pwn.college/bash
+# HARDENED-PATH
+set -euo pipefail
+IFS=' 	
+'
+unalias -a 2>/dev/null || true
+unset BASH_ENV ENV CDPATH SHELLOPTS EDITOR VISUAL PAGER SYSTEMD_PAGER LESSOPEN GIT_EDITOR GIT_PAGER LD_PRELOAD LD_LIBRARY_PATH
+PATH="/usr/sbin:/usr/bin:/sbin:/bin"; export PATH
+umask 022
 
 exec 5>/dev/tty
 DIR=$(/bin/dirname ${BASH_SOURCE[0]})
 if ! $DIR/chio.py --check_stdout_path /home/hacker/the-flag --chio_info_fd 5 --chio_warn_fd 5 --chio_hint_fd 5 --chio_test_fd 5 --chio_pass_fd 5 --chio_fail_fd 5 --chio_hype_fd 5
 then
-	#fold -s > /dev/tty <<< "You aren't redirecting stdout to /home/hacker/the-flag! Rerun me with the output redirected (in append mode!)."
+	#/usr/bin/fold -s > /dev/tty <<< "You aren't redirecting stdout to /home/hacker/the-flag! Rerun me with the output redirected (in append mode!)."
 	exit 1
 fi
 
-fold -s > /dev/tty <<< "I will write the flag in two parts to the file /home/hacker/the-flag! I'll do the first write directly to the file, and the second write, I'll do to stdout (if it's pointing at the file). If you redirect the output in append mode, the second write will append to (rather than overwrite) the first write, and you'll get the whole flag!"
+/usr/bin/fold -s > /dev/tty <<< "I will write the flag in two parts to the file /home/hacker/the-flag! I'll do the first write directly to the file, and the second write, I'll do to stdout (if it's pointing at the file). If you redirect the output in append mode, the second write will append to (rather than overwrite) the first write, and you'll get the whole flag!"
 
 (
 	echo " | "
@@ -22,4 +30,4 @@ echo "                              ^"
 echo "     that is the second half /|\\"
 echo "                              |"
 echo
-fold -s <<< "If you only see the second half above, you redirected in *truncate* mode (>) rather than *append* mode (>>), and so the write of the second half to stdout overwrote the initial write of the first half directly to the file. Try append mode!"
+/usr/bin/fold -s <<< "If you only see the second half above, you redirected in *truncate* mode (>) rather than *append* mode (>>), and so the write of the second half to stdout overwrote the initial write of the first half directly to the file. Try append mode!"
