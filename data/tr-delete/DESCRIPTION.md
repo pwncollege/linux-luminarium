@@ -9,5 +9,5 @@ hacker@dojo:~$
 
 Pretty simple!
 Now you give it a try.
-I'll intersperse some decoy characters (specifically: `^` and `%`) among the flag characters.
+In /challenge/run, I'll intersperse some decoy characters (specifically: `^` and `%`) among the flag characters.
 Use `tr -d` to remove them!
