@@ -1,6 +1,8 @@
 #!/opt/pwn.college/bash
 
 function resumed {
+    trap 'unset _IN_RESUMED_HANDLER' RETURN
+
     if [[ -n "$_IN_RESUMED_HANDLER" ]]; then
         return
     fi
