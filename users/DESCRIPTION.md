@@ -1,4 +1,4 @@
-Did you think you, `hacker`, are alone in the workspace?
+Did you think you, `hacker`, are the sole ghost in the machine?
 There are MANY users on a typical Linux system!
 The full list of users on a Linux system is specified in the `/etc/passwd` file (named so for historical reasons --- it doesn't actually hold passwords anymore).
 Here is an example from the dojo container:
