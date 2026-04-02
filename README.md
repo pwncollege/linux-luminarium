@@ -1,3 +1,10 @@
+# ⚠️ Repository Moved
+
+This repository is no longer maintained here.  
+Active development has moved to [https://github.com/pwncollege/challenges](https://github.com/pwncollege/challenges).
+
+---
+
 # The Linux Luminarium
 
 This is a [pwn.college](https://pwn.college) dojo built around teaching basic Linux knowledge, through hands-on challenges, from absolutely no knowledge.
